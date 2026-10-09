@@ -1,6 +1,0 @@
-cff-version: 1.2.0
-message: "Please cite the associated PhenoFuncRank manuscript and the recorded upstream tool/model references."
-title: "PhenoFuncRank computational methods"
-type: software
-version: "0.1.0"
-license: MIT
