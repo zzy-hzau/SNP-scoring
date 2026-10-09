@@ -1,0 +1,308 @@
+[
+  {
+    "QTL ID": "chickpea_q100SW3.1",
+    "Trait": "Chickpea hundred-seed weight",
+    "Chromosome": "Ca3",
+    "Start (bp)": 22210268,
+    "End (bp)": 22522936,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1371/journal.pone.0251669"
+  },
+  {
+    "QTL ID": "chickpea_q100SW4.1",
+    "Trait": "Chickpea hundred-seed weight",
+    "Chromosome": "Ca4",
+    "Start (bp)": 11279378,
+    "End (bp)": 13104366,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1371/journal.pone.0251669"
+  },
+  {
+    "QTL ID": "chickpea_q100SW6.2",
+    "Trait": "Chickpea hundred-seed weight",
+    "Chromosome": "Ca6",
+    "Start (bp)": 33751521,
+    "End (bp)": 39597629,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1371/journal.pone.0251669"
+  },
+  {
+    "QTL ID": "chickpea_q100SW6.1",
+    "Trait": "Chickpea hundred-seed weight",
+    "Chromosome": "Ca6",
+    "Start (bp)": 57632163,
+    "End (bp)": 57761758,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1371/journal.pone.0251669"
+  },
+  {
+    "QTL ID": "chickpea_q100SW7.2",
+    "Trait": "Chickpea hundred-seed weight",
+    "Chromosome": "Ca7",
+    "Start (bp)": 5677389,
+    "End (bp)": 5694170,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1371/journal.pone.0251669"
+  },
+  {
+    "QTL ID": "chickpea_q100SW7.1",
+    "Trait": "Chickpea hundred-seed weight",
+    "Chromosome": "Ca7",
+    "Start (bp)": 35343268,
+    "End (bp)": 35345316,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1371/journal.pone.0251669"
+  },
+  {
+    "QTL ID": "Axiom_PWD_Ca2",
+    "Trait": "Chickpea plant width",
+    "Chromosome": "Ca2",
+    "Start (bp)": 3300953,
+    "End (bp)": 3866863,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1111/pbi.12836"
+  },
+  {
+    "QTL ID": "Axiom_PWD_Ca3",
+    "Trait": "Chickpea plant width",
+    "Chromosome": "Ca3",
+    "Start (bp)": 22990369,
+    "End (bp)": 23636376,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1111/pbi.12836"
+  },
+  {
+    "QTL ID": "Axiom_PWD_Ca4",
+    "Trait": "Chickpea plant width",
+    "Chromosome": "Ca4",
+    "Start (bp)": 47782297,
+    "End (bp)": 47801679,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1111/pbi.12836"
+  },
+  {
+    "QTL ID": "Axiom_PWD_Ca8",
+    "Trait": "Chickpea plant width",
+    "Chromosome": "Ca8",
+    "Start (bp)": 50298,
+    "End (bp)": 80836,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1111/pbi.12836"
+  },
+  {
+    "QTL ID": "CaqPW_PH_SWi_SH_SA8.1",
+    "Trait": "Chickpea plant width",
+    "Chromosome": "Ca8",
+    "Start (bp)": 277582,
+    "End (bp)": 283771,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1111/tpj.14284"
+  },
+  {
+    "QTL ID": "QR4pwd01",
+    "Trait": "Chickpea plant width",
+    "Chromosome": "Ca8",
+    "Start (bp)": 1075283,
+    "End (bp)": 4936003,
+    "Analysis assembly": "CDC Frontier",
+    "Reference": "https://doi.org/10.1007/s00122-013-2230-6"
+  },
+  {
+    "QTL ID": "cotton_metaQTL20_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A01",
+    "Start (bp)": 101030406,
+    "End (bp)": 109112426,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL21_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A02",
+    "Start (bp)": 98205424,
+    "End (bp)": 105044518,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL22_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A03",
+    "Start (bp)": 90090211,
+    "End (bp)": 99967829,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL23_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A05",
+    "Start (bp)": 6189687,
+    "End (bp)": 16608265,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL24_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A05",
+    "Start (bp)": 23386782,
+    "End (bp)": 31666937,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL25_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A07",
+    "Start (bp)": 80889784,
+    "End (bp)": 91891370,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL26_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A09",
+    "Start (bp)": 59514211,
+    "End (bp)": 67670545,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL28_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A10",
+    "Start (bp)": 333260,
+    "End (bp)": 6032166,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL27_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "A10",
+    "Start (bp)": 107429781,
+    "End (bp)": 114220374,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL29_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D04",
+    "Start (bp)": 45510045,
+    "End (bp)": 54808338,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL30_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D05",
+    "Start (bp)": 4041277,
+    "End (bp)": 16112849,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL31_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D06",
+    "Start (bp)": 6161036,
+    "End (bp)": 15989357,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL32_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D07",
+    "Start (bp)": 47258867,
+    "End (bp)": 57224229,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL33_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D08",
+    "Start (bp)": 2716349,
+    "End (bp)": 8474528,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL34_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D10",
+    "Start (bp)": 296844,
+    "End (bp)": 8562577,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL36_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D12",
+    "Start (bp)": 925953,
+    "End (bp)": 5086041,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "cotton_metaQTL37_FS",
+    "Trait": "Cotton fibre strength",
+    "Chromosome": "D12",
+    "Start (bp)": 49895774,
+    "End (bp)": 53784792,
+    "Analysis assembly": "TM-1 CRI",
+    "Reference": "https://doi.org/10.1186/s42397-020-00075-z"
+  },
+  {
+    "QTL ID": "rice_Zhang2024_qPH3",
+    "Trait": "Rice plant height",
+    "Chromosome": "3",
+    "Start (bp)": 31938017,
+    "End (bp)": 35969034,
+    "Analysis assembly": "IRGSP-1.0",
+    "Reference": "https://doi.org/10.17221/2/2024-CJGPB"
+  },
+  {
+    "QTL ID": "rice_Zhang2024_qPH5",
+    "Trait": "Rice plant height",
+    "Chromosome": "5",
+    "Start (bp)": 23572960,
+    "End (bp)": 27090388,
+    "Analysis assembly": "IRGSP-1.0",
+    "Reference": "https://doi.org/10.17221/2/2024-CJGPB"
+  },
+  {
+    "QTL ID": "rice_Zhang2024_qPH6",
+    "Trait": "Rice plant height",
+    "Chromosome": "6",
+    "Start (bp)": 24348774,
+    "End (bp)": 25218479,
+    "Analysis assembly": "IRGSP-1.0",
+    "Reference": "https://doi.org/10.17221/2/2024-CJGPB"
+  },
+  {
+    "QTL ID": "rice_Zhang2024_qPH8",
+    "Trait": "Rice plant height",
+    "Chromosome": "8",
+    "Start (bp)": 3656744,
+    "End (bp)": 4361360,
+    "Analysis assembly": "IRGSP-1.0",
+    "Reference": "https://doi.org/10.17221/2/2024-CJGPB"
+  },
+  {
+    "QTL ID": "rice_Zhang2024_qPH10",
+    "Trait": "Rice plant height",
+    "Chromosome": "10",
+    "Start (bp)": 17516787,
+    "End (bp)": 18444514,
+    "Analysis assembly": "IRGSP-1.0",
+    "Reference": "https://doi.org/10.17221/2/2024-CJGPB"
+  }
+]
