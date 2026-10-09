@@ -1,0 +1,36 @@
+{
+  "species": "rice",
+  "assembly": "IRGSP-1.0",
+  "candidate_reference_annotation": "IRGSP-1.0_representative.all.gff.gz",
+  "wrapper": {
+    "minimum_sequence_length": 1000000,
+    "promoter_upstream": 2000,
+    "noncoding_mode": "regulatory",
+    "subgenome_mode": "none",
+    "allocated_CPUs": 24,
+    "library_threads": 4,
+    "MALLOC_ARENA_MAX": 2
+  },
+  "coding": {
+    "universe": "positions with at least one missense non-stop ALT in an accepted transcript",
+    "coordinate_base": 1,
+    "cache_dtype": "int64",
+    "union_across_transcripts": true,
+    "GFF_phase_applied": false
+  },
+  "noncoding": {
+    "universe": "gene body plus strand-aware promoter minus ALL annotated CDS",
+    "promoter_bases": 2000,
+    "reference_base_filter": [
+      "A",
+      "C",
+      "G",
+      "T"
+    ]
+  },
+  "portable_inputs": {
+    "fasta": "resources/IRGSP-1.0_genome.fasta.gz",
+    "gff": "resources/IRGSP-1.0_representative.all.gff.gz",
+    "outdir": "results/candidate_positions"
+  }
+}

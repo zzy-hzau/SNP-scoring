@@ -1,0 +1,20 @@
+{
+  "source_reference_name": "Chickpea.CDC_Frontier.fa",
+  "source_gff_name": "Chickpea.CDC_Frontier_sorted.gff",
+  "source_contig": "Ca5",
+  "original_start_1based": 33195529,
+  "original_end_1based": 33206813,
+  "coordinate_transform": "fragment_position=original_position-original_start_1based+1",
+  "original_query_position": 33198529,
+  "original_gene_record": {
+    "gene_id": "gene-LOC101488323",
+    "gene_name": "LOC101488323",
+    "start": 33197597,
+    "end": 33205813,
+    "strand": "-",
+    "distance": 0,
+    "overlapping": true
+  },
+  "actual_sequence_sha256": "99f6ff1f5ebfa933c3dd6a7bb4b490a32b745992762a87fc6e661e5674d1ccf5",
+  "scope": "Resource configuration and example inputs."
+}

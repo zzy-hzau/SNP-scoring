@@ -1,0 +1,113 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "metadata": {
+        "accession": "IPR013057",
+        "name": "Amino acid transporter, transmembrane domain",
+        "source_database": "interpro",
+        "type": "domain",
+        "integrated": null,
+        "member_databases": {
+          "pfam": {
+            "PF01490": "Transmembrane amino acid transporter protein"
+          }
+        },
+        "go_terms": null
+      },
+      "proteins": [
+        {
+          "accession": "a0a1s2y8p2",
+          "protein_length": 465,
+          "source_database": "unreviewed",
+          "organism": "3827",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 23,
+                  "end": 450,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": null,
+              "score": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "PF01490",
+        "name": "Transmembrane amino acid transporter protein",
+        "source_database": "pfam",
+        "type": "domain",
+        "integrated": "IPR013057",
+        "member_databases": null,
+        "go_terms": null
+      },
+      "proteins": [
+        {
+          "accession": "a0a1s2y8p2",
+          "protein_length": 465,
+          "source_database": "unreviewed",
+          "organism": "3827",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 23,
+                  "end": 450,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF01490",
+              "score": 4.4e-90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "PTHR48017",
+        "name": "Amino acid/polyamine transporter 2",
+        "source_database": "panther",
+        "type": "family",
+        "integrated": null,
+        "member_databases": null,
+        "go_terms": null
+      },
+      "proteins": [
+        {
+          "accession": "a0a1s2y8p2",
+          "protein_length": 465,
+          "source_database": "unreviewed",
+          "organism": "3827",
+          "in_alphafold": true,
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 24,
+                  "end": 448,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PTHR48017",
+              "score": 3.5e-96
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "counting_mode": "reference-blocks",
+  "counting_definition": "GT allele/sample counts only",
+  "source_panel_count": 50,
+  "DP_BQ_GQ_filters_applied": false,
+  "default_scanner_mode": "reference-blocks",
+  "primary_historical_tables_match_this_mode": false
+}

@@ -1,0 +1,75 @@
+{
+  "profile": "native_legume_untrimmed",
+  "preparation": "native_prefixed_standardizer",
+  "proteomes": [
+    {
+      "name": "cca_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Cajanus_cajan/annotation/Cca_protein.fas.gz",
+      "filename": "Cca_protein.fas.gz"
+    },
+    {
+      "name": "mtr_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Medicago_truncatula/annotation/Mtr_protein.fas.gz",
+      "filename": "Mtr_protein.fas.gz"
+    },
+    {
+      "name": "gmax_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Glycine_max/annotation/Gma_protein.fas.gz",
+      "filename": "Gma_protein.fas.gz"
+    },
+    {
+      "name": "gso_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Glycine_soja/annotation/Gso_protein.fas.gz",
+      "filename": "Gso_protein.fas.gz"
+    },
+    {
+      "name": "lja_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Lotus_japonicus/annotation/Lja_protein.fas.gz",
+      "filename": "Lja_protein.fas.gz"
+    },
+    {
+      "name": "pvu_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Phaseolus_vulgaris/annotation/Pvu_protein.fas.gz",
+      "filename": "Pvu_protein.fas.gz"
+    },
+    {
+      "name": "van_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Vigna_angularis/annotation/Van_protein.fas.gz",
+      "filename": "Van_protein.fas.gz"
+    },
+    {
+      "name": "vra_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Vigna_radiata/annotation/Vra_protein.fas.gz",
+      "filename": "Vra_protein.fas.gz"
+    },
+    {
+      "name": "adu_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Arachis_duranensis/annotation/Adu_protein.fas.gz",
+      "filename": "Adu_protein.fas.gz"
+    },
+    {
+      "name": "aip_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Arachis_ipaensis/annotation/Aip_protein.fas.gz",
+      "filename": "Aip_protein.fas.gz"
+    }
+  ],
+  "targets": [
+    {
+      "name": "cari_cdc_frontier",
+      "reference": "${PHENO_REFERENCE_ROOT}/chickpea/Chickpea.CDC_Frontier.fa.gz",
+      "gff": "${PHENO_REFERENCE_ROOT}/chickpea/Chickpea.CDC_Frontier_sorted.gff.gz"
+    }
+  ],
+  "threads": 32,
+  "analysis_threads": 32,
+  "orthofinder_aligner": null,
+  "msa_aligner": "source_preferred",
+  "mafft_anysymbol": true,
+  "msa_threads": 1,
+  "target_groups_only": true,
+  "recorded_tools": {
+    "orthofinder": "3.1.4",
+    "preferred_realigner": "FAMSA 2.4.1; MAFFT fallback"
+  },
+  "panel_species_count": 11
+}

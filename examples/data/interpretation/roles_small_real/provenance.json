@@ -1,0 +1,44 @@
+{
+  "status": "PASSED",
+  "scope": "Public small real evidence demonstrations with original source identity/consequence fields, curated claims and short exact source excerpts",
+  "cases": [
+    {
+      "case_id": "veib3_051",
+      "species": "rice",
+      "evidence_items": 1,
+      "original_full_pack_reasoning_equal": true,
+      "original_full_pack_critic_equal": true,
+      "maximum_quote_words": 25,
+      "input_sha256": "90125291567fecdf4f15cc17effbab6e162674b00aba3b6968d067a867244b81",
+      "candidate_table_sha256": "d5e8e7be073533a0dbe338d56342cdc811f715d0e5ee786e597f2dee5e63bbe0"
+    },
+    {
+      "case_id": "veib3_052",
+      "species": "rice",
+      "evidence_items": 1,
+      "original_full_pack_reasoning_equal": true,
+      "original_full_pack_critic_equal": true,
+      "maximum_quote_words": 25,
+      "input_sha256": "0022d505cc3384837f5e865d0e7ef414f8b6f52dd6ff7f6ddc57cc8223a6519d",
+      "candidate_table_sha256": "14f26e739cea399d1a7a2fee76f97510808cddbaf0bddffe47f39e6af55d4ad1"
+    },
+    {
+      "case_id": "veib3_054",
+      "species": "tomato",
+      "evidence_items": 1,
+      "original_full_pack_reasoning_equal": true,
+      "original_full_pack_critic_equal": true,
+      "maximum_quote_words": 25,
+      "input_sha256": "783d40f30612227dc20894ad8a90801364f18aad3f697966d7c6d563682a0977",
+      "candidate_table_sha256": "a650b7a5ba588e5bbf3914a22c4ca523510de6d58d2915af60f3c77560306b5e"
+    }
+  ],
+  "model_generation_calls": 0,
+  "comparison_exclusions": [
+    "Artifact URI and creation time only; graph/table content hashes and all scientific output fields retained"
+  ],
+  "not_covered": [
+    "Semantic adequacy of the shortened excerpt alone",
+    "Full ranking/core input preparation or live model generation"
+  ]
+}

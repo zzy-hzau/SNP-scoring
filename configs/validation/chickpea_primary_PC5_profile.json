@@ -1,0 +1,44 @@
+{
+  "target_id": "strict_best_test_fold_20261003",
+  "author_actual_workflow": "PC1-PC5 additive linearGWAS,no kinship",
+  "source_files_sha256": {
+    "fast_ld_20260918.py": "052c3605ba408983159cd7dca13af363ac20d39c2e264a80fa4ce22afded7c44",
+    "recompute_recall.py": "96ab397c036c4166019c8083cf26b196907112e501a6192b0ef1873ec5cce765",
+    "run_corrected_gwas.py": "1767b191dd6f2f383196af35c53b7c7cf0093f3cdb4d02cb285da015275da10f"
+  },
+  "PLINK_version": "v1.9.0-b.8",
+  "GEMMA_version": "0.98.5",
+  "MAF": 0.05,
+  "missing_fraction_max": 0.05,
+  "PCA_components": 5,
+  "PCA_all_QC_variants": true,
+  "extra_PCA_pruning": false,
+  "full_publication_QC_markers": 193342,
+  "full_phenotypes": {
+    "HSW": 2917,
+    "PW": 2915
+  },
+  "GEMMA_flags": [
+    "-bfile",
+    "-c",
+    "-lm",
+    "-o"
+  ],
+  "kinship_added": false,
+  "source_effective_covariates_with_intercept": 6,
+  "BH_family": "all valid tested variants within each trait",
+  "BH_threshold": 0.05,
+  "lead_order": "ascendingP,stable mergesort",
+  "LD_R2_strictly_greater_than": 0.6,
+  "LD_window_bp": 500000,
+  "LD_numeric_policy": "sourceFloat32normalized canonicaldosage,centred-zero for missing",
+  "perlead_intervals": "no chaining,source upper endpoint searchsorted-left",
+  "demo_samples": 128,
+  "demo_markers": 24,
+  "demo_significant_leads": 0,
+  "source_resource_memory_mb": 40000,
+  "source_resource_threads": 16,
+  "portable_default_resource_memory_mb": 8000,
+  "portable_default_resource_threads": 4,
+  "extra_analyses_released": false
+}

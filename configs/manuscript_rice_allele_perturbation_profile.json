@@ -1,0 +1,31 @@
+{
+  "scope": "Main manuscript per model-coded alternative-allele effect, original all-selected-GWAS all-valid rice route",
+  "effect_formula": "(mean_ALT_ALT - mean_REF_REF) / 2",
+  "genotype_states": [
+    "REF/REF",
+    "REF/ALT",
+    "ALT/ALT"
+  ],
+  "background_scope": "all_valid",
+  "invalid_phenotypes": "nonfinite or -9 excluded",
+  "folds": "1-10",
+  "total_folds_for_rate": 10,
+  "selected_snp_count": 1000,
+  "trait_prefix": "Plant_height",
+  "pheno_col": "Plant_height",
+  "execution": {
+    "snp_batch_size": 500,
+    "cnn_sub_batch": 20000,
+    "max_cnn_snps": 30,
+    "transformer_sub_batch": 100,
+    "max_transformer_sequences": 60000,
+    "pred_batch_size": 512
+  },
+  "original_numeric_profile": {
+    "python": "3.10",
+    "torch": "2.1.0+cu121",
+    "cuda": "12.1",
+    "cudnn": 8902,
+    "numpy": "1.26.4"
+  }
+}

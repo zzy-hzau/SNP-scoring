@@ -1,0 +1,42 @@
+{
+  "fold": 1,
+  "seed": 42,
+  "max_callable_n": 37,
+  "p_base_eff_edges": [
+    -Infinity,
+    0.0008369562368816767,
+    0.0010793796153815954,
+    0.0013348673290012663,
+    0.0016234445056921142,
+    0.002015894667083889,
+    0.0025144215898362456,
+    0.003301477993572878,
+    0.004750159739476411,
+    0.00919553661084468,
+    Infinity
+  ],
+  "callable_n_edges": [
+    -Infinity,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    12.0,
+    Infinity
+  ],
+  "splits": {
+    "train": {
+      "model": "inputs/label_matching/chickpea/fold01/train_model.parquet",
+      "pool": "inputs/label_matching/chickpea/fold01/train_merged_pool.parquet"
+    },
+    "val": {
+      "model": "inputs/label_matching/chickpea/fold01/val_model.parquet",
+      "pool": "inputs/label_matching/chickpea/fold01/val_merged_pool.parquet"
+    },
+    "test": {
+      "model": "inputs/label_matching/chickpea/fold01/test_model.parquet",
+      "pool": "inputs/label_matching/chickpea/fold01/test_merged_pool.parquet"
+    }
+  }
+}

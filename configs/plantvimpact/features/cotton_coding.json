@@ -1,0 +1,19 @@
+{
+  "model_id": "cotton_v3_strict_coding",
+  "main_feature_set": "strict_lm_redundancy_prot_safe",
+  "features": [
+    "S_esm",
+    "S_dna",
+    "has_homolog",
+    "functional_redundancy",
+    "prot_safe_ref_aa_freq",
+    "prot_safe_alt_aa_freq",
+    "prot_safe_entropy",
+    "prot_safe_delta_log_odds",
+    "prot_safe_conservation_penalty",
+    "prot_safe_abs_delta_log_odds",
+    "prot_safe_alt_absent_flag"
+  ],
+  "allowed_legacy_exceptions": [],
+  "universe_policy": "full_universe_only"
+}

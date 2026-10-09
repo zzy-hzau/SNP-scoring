@@ -1,0 +1,6 @@
+{
+  "chickpea": {
+    "reference_fasta": "examples/data/interpretation/genomic_context_small_real/reference_fragment.fa",
+    "gff_path": "examples/data/interpretation/genomic_context_small_real/gene_fragment.gff3"
+  }
+}

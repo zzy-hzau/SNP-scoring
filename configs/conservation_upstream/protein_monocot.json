@@ -1,0 +1,65 @@
+{
+  "profile": "native_monocot_untrimmed",
+  "preparation": "native_prefixed_standardizer",
+  "proteomes": [
+    {
+      "name": "sbic_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Sorghum_bicolor/annotation/Sbi_protein.fas.gz",
+      "filename": "Sbi_protein.fas.gz"
+    },
+    {
+      "name": "bdist_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Brachypodium_distachyon/annotation/Bdi_protein.fas.gz",
+      "filename": "Bdi_protein.fas.gz"
+    },
+    {
+      "name": "sita_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Setaria_italica/annotation/Sit_protein.fas.gz",
+      "filename": "Sit_protein.fas.gz"
+    },
+    {
+      "name": "svir_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Setaria_viridis/annotation/Svi_protein.fas.gz",
+      "filename": "Svi_protein.fas.gz"
+    },
+    {
+      "name": "hvul_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Hordeum_vulgare/annotation/Hvu_protein.fas.gz",
+      "filename": "Hvu_protein.fas.gz"
+    },
+    {
+      "name": "ogla_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Oryza_glaberrima/annotation/Ogl_protein.fas.gz",
+      "filename": "Ogl_protein.fas.gz"
+    },
+    {
+      "name": "obra_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Oryza_brachyantha/annotation/Obr_protein.fas.gz",
+      "filename": "Obr_protein.fas.gz"
+    }
+  ],
+  "targets": [
+    {
+      "name": "osat_irgsp1",
+      "reference": "${PHENO_REFERENCE_ROOT}/rice/IRGSP-1.0_genome.fasta.gz",
+      "gff": "${PHENO_REFERENCE_ROOT}/rice/IRGSP-1.0_representative.all.gff.gz"
+    },
+    {
+      "name": "zmay_agpv3_25",
+      "reference": "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.dna.toplevel.fa.gz",
+      "gff": "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.gff3.gz"
+    }
+  ],
+  "threads": 32,
+  "analysis_threads": 32,
+  "orthofinder_aligner": null,
+  "msa_aligner": "source_preferred",
+  "mafft_anysymbol": true,
+  "msa_threads": 1,
+  "target_groups_only": true,
+  "recorded_tools": {
+    "orthofinder": "3.1.4",
+    "preferred_realigner": "FAMSA 2.4.1; MAFFT fallback"
+  },
+  "panel_species_count": 9
+}

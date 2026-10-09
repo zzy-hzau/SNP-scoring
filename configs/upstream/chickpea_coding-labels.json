@@ -1,0 +1,22 @@
+{
+  "species": "chickpea",
+  "step": "coding-labels",
+  "working_directory": "../..",
+  "arguments": [
+    "--input",
+    "results/chickpea/preLM/coding_preLM_universe.parquet",
+    "--out-dir",
+    "results/chickpea/coding_labels",
+    "--rate-cache",
+    "results/chickpea/rate_cache.pkl",
+    "--folds",
+    "1-8",
+    "--n-chr",
+    "8",
+    "--max-callable-n",
+    "37"
+  ],
+  "input_note": "Place the matching original resources at these caller-editable paths; PHENO_REFERENCE_ROOT selects references.",
+  "parameter_scope": "Chromosome/sample counts follow preserved manifests; unlisted switches retain the original source defaults.",
+  "calibration": "train chromosomes only; train/validation mutation counts exclude test and validation, test excludes test"
+}

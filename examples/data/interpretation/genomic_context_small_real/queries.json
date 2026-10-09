@@ -1,0 +1,8 @@
+[
+  {
+    "chrom": "Ca5",
+    "pos": 3001,
+    "source_locus": "Ca5:33198529",
+    "coordinate_note": "Rebased to supplied actual reference fragment; original position in provenance"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "species": "cotton",
+  "step": "candidates",
+  "working_directory": "../..",
+  "arguments": [
+    "--genome",
+    "${PHENO_REFERENCE_ROOT}/cotton/genomes/TM-1_CRI.fa",
+    "--gff",
+    "${PHENO_REFERENCE_ROOT}/cotton/GFF/TM-1.final.gene.gff3",
+    "--wild-vcf",
+    "data/cotton/wild.norm.vcf.gz",
+    "--callrate",
+    "data/cotton/candidate_callrate.parquet",
+    "--out-dir",
+    "results/cotton/preLM",
+    "--mode",
+    "both",
+    "--n-chr",
+    "13",
+    "--max-callable-n",
+    "161"
+  ],
+  "input_note": "Place the matching original resources at these caller-editable paths; PHENO_REFERENCE_ROOT selects references.",
+  "parameter_scope": "Chromosome/sample counts follow preserved manifests; unlisted switches retain the original source defaults.",
+  "calibration": "train chromosomes only; train/validation mutation counts exclude test and validation, test excludes test"
+}

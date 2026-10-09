@@ -1,0 +1,14 @@
+##gff-version 3
+# Toy GFF3 for rice test data
+chr01	toy	gene	1	66	.	+	.	ID=Os01g0100100;Name=Os01g0100100
+chr01	toy	mRNA	1	66	.	+	.	ID=Os01g0100100.1;Parent=Os01g0100100
+chr01	toy	exon	1	66	.	+	.	ID=Os01g0100100.1.exon1;Parent=Os01g0100100.1
+chr01	toy	CDS	1	66	.	+	0	ID=Os01g0100100.1.CDS;Parent=Os01g0100100.1
+chr01	toy	gene	68	133	.	+	.	ID=Os01g0100200;Name=Os01g0100200
+chr01	toy	mRNA	68	133	.	+	.	ID=Os01g0100200.1;Parent=Os01g0100200
+chr01	toy	exon	68	133	.	+	.	ID=Os01g0100200.1.exon1;Parent=Os01g0100200.1
+chr01	toy	CDS	68	133	.	+	0	ID=Os01g0100200.1.CDS;Parent=Os01g0100200.1
+chr02	toy	gene	1	66	.	+	.	ID=Os02g0100100;Name=Os02g0100100
+chr02	toy	mRNA	1	66	.	+	.	ID=Os02g0100100.1;Parent=Os02g0100100
+chr02	toy	exon	1	66	.	+	.	ID=Os02g0100100.1.exon1;Parent=Os02g0100100.1
+chr02	toy	CDS	1	66	.	+	0	ID=Os02g0100100.1.CDS;Parent=Os02g0100100.1

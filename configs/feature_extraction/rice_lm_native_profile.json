@@ -1,0 +1,84 @@
+{
+  "profile": "rice_coding_native_targets_only_20260604",
+  "resources": {
+    "DNA": {
+      "repository": "kuleshov-group/PlantCaduceus_l32",
+      "revision": "e624c13c3d35415348b854c87a218893b23564f7",
+      "local_directory": "resources/PlantCaduceus_l32",
+      "model_file": "pytorch_model.bin",
+      "observed_file_bytes": 901671450,
+      "model_card_license": "Apache-2.0",
+      "model_card": "https://huggingface.co/kuleshov-group/PlantCaduceus_l32/blob/e624c13c3d35415348b854c87a218893b23564f7/README.md"
+    },
+    "protein": {
+      "name": "esm1b_t33_650M_UR50S",
+      "weights": "resources/esm1b_t33_650M_UR50S.pt",
+      "observed_file_bytes": 7828576466,
+      "download": "https://dl.fbaipublicfiles.com/fair-esm/models/esm1b_t33_650M_UR50S.pt",
+      "contact_regression_companion": "esm1b_t33_650M_UR50S-contact-regression.pt",
+      "companion_download": "https://dl.fbaipublicfiles.com/fair-esm/regression/esm1b_t33_650M_UR50S-contact-regression.pt",
+      "source_version": "fair-esm==2.0.0",
+      "code_license": "MIT",
+      "official_code": "https://github.com/facebookresearch/esm/tree/v2.0.0"
+    },
+    "reference": {
+      "assembly": "IRGSP-1.0",
+      "FASTA": "resources/IRGSP-1.0_genome.fasta.gz",
+      "GFF": "resources/IRGSP-1.0_representative.all.gff.gz"
+    }
+  },
+  "coding": {
+    "dna_max_length": 512,
+    "protein_window_aa": 1020,
+    "chunk_size": 2000,
+    "dna_batch_size": 64,
+    "esm_batch_size": 16,
+    "num_shards": 3,
+    "shard_assignment": "crc32(UTF8(snp_id)) modulo num_shards",
+    "overwrite": true,
+    "device": "cuda",
+    "OMP_NUM_THREADS": 4,
+    "MKL_NUM_THREADS": 4,
+    "OPENBLAS_NUM_THREADS": 4,
+    "NUMEXPR_NUM_THREADS": 4
+  },
+  "noncoding": {
+    "dna_max_length_default": 512,
+    "chunk_size_default": 100000,
+    "dna_batch_size_default": 128,
+    "rice_resume_behavior": "skip existing nonempty chunk; generic released scorer recomputes instead"
+  },
+  "score": {
+    "S_dna": "abs(logP(ALT at masked genomic SNV) - logP(REF at masked genomic SNV))",
+    "S_esm": "abs(logP(ALT amino acid at masked protein position) - logP(REF amino acid at masked protein position))",
+    "genomic_Pos": "1-based forward-strand position",
+    "aa_pos": "0-based transcript protein index",
+    "aa_mut": "1-based display notation",
+    "output_dtype": "float32; actual source log_softmax is performed in model-output dtype",
+    "DNA_add_special_tokens": false,
+    "DNA_right_padding": "N",
+    "ESM_BOS_mask_offset": 1,
+    "tf32_matmul": true,
+    "tf32_cudnn": true,
+    "cudnn_benchmark": true,
+    "CUDA_autocast": true
+  },
+  "observed_validation_environment": {
+    "python_environment": "existing scientific runtime, not modified",
+    "torch": "2.6.0+cu124",
+    "transformers": "5.5.3",
+    "fair_esm": "2.0.0",
+    "mamba_ssm": "2.3.1",
+    "causal_conv1d": "1.6.1",
+    "biopython": "1.87",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  },
+  "code": {
+    "coding_sha256": "68f71f7a617c2ee7efb69bea635fce50f53b22e51b09e7ec2357bf81ab6e3489",
+    "coding_matches_native": true,
+    "noncoding_generic_sha256": "0e86ae70d5f479fb55fa39413fe21e75c6254a8a62ca742a9884fa2f3a4ad323",
+    "noncoding_rice_sha256": "346877d9ab94e3ec7f347da927afd0e8da89777c38da793fe85551d3dda12322"
+  }
+}

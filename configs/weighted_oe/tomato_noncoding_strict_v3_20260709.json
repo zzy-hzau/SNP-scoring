@@ -1,0 +1,40 @@
+{
+  "score_specs": [
+    {
+      "method": "strict_v3",
+      "score_col": "strict_v3_prob",
+      "direction": "high"
+    },
+    {
+      "method": "raw_dna",
+      "score_col": "S_dna",
+      "direction": "high"
+    }
+  ],
+  "top_fracs": [
+    0.001,
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.5
+  ],
+  "observed_col": "Y_Label",
+  "strata_cols": [
+    "chr_num",
+    "subgenome_code",
+    "Ctx_code",
+    "Alt_code",
+    "callable_bin"
+  ],
+  "region_col": "region_type",
+  "sample_weight_col": null,
+  "allow_missing_observed": true,
+  "skip_distribution_qc": false,
+  "profile_id": "tomato_noncoding_strict_v3_20260709",
+  "source_manifest_sha256": "adc82b5f2762da881603a289a93e951e6aa5dd079c797ec28fb43ecaf0c4ea2f",
+  "validation_scope": "Full real evaluated scored-table weighted O/E, stratum/sampling plan, region thresholds and distribution QC. Universe/scored-input generation and genome-wide denominator coverage require separate validation.",
+  "universe_relationship": "distinct cheap universe and scored subsample"
+}

@@ -1,0 +1,9 @@
+{"task_id": "B019", "task_type": "claim_verification", "gold": {"gold_label": "SUPPORT"}}
+{"task_id": "B025", "task_type": "claim_verification", "gold": {"gold_label": "NEI"}}
+{"task_id": "B022", "task_type": "claim_verification", "gold": {"gold_label": "REFUTE"}}
+{"task_id": "B016", "task_type": "claim_verification", "gold": {"gold_label": "SUPPORT"}}
+{"task_id": "B007", "task_type": "variant_evidence", "gold": {"gold_label": null}}
+{"task_id": "B010", "task_type": "variant_evidence", "gold": {"gold_label": null}}
+{"task_id": "B026", "task_type": "negative_control", "gold": {"gold_label": null}}
+{"task_id": "B030", "task_type": "negative_control", "gold": {"gold_label": null}}
+{"task_id": "B018", "task_type": "claim_verification", "gold": {"gold_label": "SUPPORT"}}

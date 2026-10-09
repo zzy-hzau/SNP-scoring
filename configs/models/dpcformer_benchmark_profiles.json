@@ -1,0 +1,1154 @@
+{
+  "profiles": [
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 2,
+      "missing_phenotype_values": [
+        -9.0
+      ],
+      "min_available_mem_gb": 80.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "rice",
+      "registry_trait": "Plant_height",
+      "scientific_trait_prefix": "Plant_height",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 40.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "PH",
+      "scientific_trait_prefix": "PH",
+      "environment": "BJ",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "PH_JL",
+      "scientific_trait_prefix": "PH",
+      "environment": "JL",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "PH_LN",
+      "scientific_trait_prefix": "PH",
+      "environment": "LN",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "PH_HeB",
+      "scientific_trait_prefix": "PH",
+      "environment": "HeB",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "PH_HN",
+      "scientific_trait_prefix": "PH",
+      "environment": "HN",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "DTT",
+      "scientific_trait_prefix": "DTT",
+      "environment": "BJ",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "DTT_JL",
+      "scientific_trait_prefix": "DTT",
+      "environment": "JL",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "DTT_LN",
+      "scientific_trait_prefix": "DTT",
+      "environment": "LN",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "DTT_HeB",
+      "scientific_trait_prefix": "DTT",
+      "environment": "HeB",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "DTT_HN",
+      "scientific_trait_prefix": "DTT",
+      "environment": "HN",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "EW",
+      "scientific_trait_prefix": "EW",
+      "environment": "BJ",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "EW_JL",
+      "scientific_trait_prefix": "EW",
+      "environment": "JL",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "EW_LN",
+      "scientific_trait_prefix": "EW",
+      "environment": "LN",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "EW_HeB",
+      "scientific_trait_prefix": "EW",
+      "environment": "HeB",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "maize",
+      "registry_trait": "EW_HN",
+      "scientific_trait_prefix": "EW",
+      "environment": "HN",
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "two-stage cotton A/D hierarchical selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 8,
+      "min_available_mem_gb": 80.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "cotton",
+      "registry_trait": "FL",
+      "scientific_trait_prefix": "FL",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "two-stage cotton A/D hierarchical selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 8,
+      "min_available_mem_gb": 80.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "cotton",
+      "registry_trait": "FS",
+      "scientific_trait_prefix": "FS",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "two-stage cotton A/D hierarchical selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 16,
+      "min_available_mem_gb": 80.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "cotton",
+      "registry_trait": "FM",
+      "scientific_trait_prefix": "FM",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "two-stage cotton A/D hierarchical selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 16,
+      "min_available_mem_gb": 80.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "cotton",
+      "registry_trait": "FE",
+      "scientific_trait_prefix": "FE",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "tomato",
+      "registry_trait": "Sopim_BGV006775_12T001232.1",
+      "scientific_trait_prefix": "Sopim_BGV006775_12T001232.1",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "chickpea",
+      "registry_trait": "Plant_height",
+      "scientific_trait_prefix": "Plant_height",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "chickpea",
+      "registry_trait": "Plant_width",
+      "scientific_trait_prefix": "Plant_width",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 4,
+      "missing_phenotype_values": [],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "chickpea",
+      "registry_trait": "Hundred_seed_weight",
+      "scientific_trait_prefix": "Hundred_seed_weight",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    },
+    {
+      "paper_interpretation": "fixed 90/10 train-validation/test; 10-fold CV inside train-validation",
+      "test_ratio": 0.1,
+      "folds": 10,
+      "feature_selection_scope": "fold training only",
+      "feature_selection": "diploid per-chromosome MIC selection",
+      "selector_backend": "minepy_mic",
+      "selection_workers": 2,
+      "missing_phenotype_values": [
+        -9.0
+      ],
+      "min_available_mem_gb": 0.0,
+      "physical_sort": true,
+      "genotype_code_mapping": {
+        "0": "missing_or_unusable",
+        "1": "REF/REF",
+        "2": "REF/ALT",
+        "3": "ALT/ALT"
+      },
+      "missing_genotype_tensor": "all_zero_8d_vector",
+      "scheduler": {
+        "name": "ReduceLROnPlateau",
+        "factor": 0.1,
+        "patience": 10
+      },
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.001
+      },
+      "early_stopping_patience": 20,
+      "model_selection": "validation loss only",
+      "test_used_for_model_selection": false,
+      "species": "chickpea",
+      "registry_trait": "Yield_per_plant",
+      "scientific_trait_prefix": "Yield_per_plant",
+      "environment": null,
+      "effective_validation_split": "KFold inside fixed 90% train-validation subset",
+      "effective_validation_fraction_within_train_val": 0.1,
+      "fold_seed_formula": "base_seed + fold * 1009",
+      "verified_inference_precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "cuda_matmul_allow_tf32": false,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "verified_torch": "2.6.0+cu124"
+      }
+    }
+  ]
+}

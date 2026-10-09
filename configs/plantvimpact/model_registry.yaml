@@ -1,0 +1,610 @@
+schema_version: 3
+release:
+  as_of: '2026-07-28'
+  selected_artifact_family: outputs/models/<species>/<mode>/folds/foldXX/
+external_validation:
+  semantics: external_functional_effect_positives
+  maize_3dm:
+    expected_rows: 45
+    expected_selected_hits_at_0_5: 44
+    expected_raw_any_hits: 36
+    raw_thresholds:
+      S_esm: 7.5
+      S_dna: 6.0
+  rice_gwas_atlas:
+    expected_usable_rows: 211
+    expected_primary_rows: 157
+    expected_removed_oof_rows: 66
+    expected_rows: 91
+    expected_unique_variant_keys: 90
+    expected_selected_hits_at_0_5: 66
+    expected_raw_hits: 29
+xgboost:
+  strict:
+    imputation: model_specific_selected_artifact
+    features_json_control: true
+    forbidden_exact:
+    - label
+    - new_label
+    - Y_Label
+    - P_mut
+    - p_base_eff
+    - callable_n
+    - AN_obs
+    - callrate
+    - match_group
+    - opp_bin
+    - call_bin
+    - fold
+    - split
+    - Chr
+    - Pos
+    - Ref
+    - Alt
+    - snp_id
+    - variant_id
+    forbidden_patterns:
+    - missing
+    - coverage
+    - status
+    - reason
+    - provenance
+  scoring:
+    default_value: registered_selected_score
+    transform: none
+    direction: high
+  oe_validation:
+    weighted_script: scripts/scoring_oe/weighted_stratified_oe.py
+    sampled_wrapper: scripts/scoring_oe/run_oe_validation.py
+    exhaustive_validator: scripts/scoring_oe/exact_oe_validation.py
+    top_fractions: 0.001,0.005,0.01,0.02,0.05,0.10,0.20,0.50
+    lower_is_better: true
+    allow_missing_observed: true
+    skip_distribution_qc: false
+    promotion_gate_top_fractions:
+    - 0.01
+    - 0.05
+    - 0.1
+    concordance_max_abs_error: 0.06
+standard_parameters:
+  objective: binary:logistic
+  eval_metric:
+  - logloss
+  - auc
+  - aucpr
+  tree_method: hist
+  max_depth: 4
+  eta: 0.03
+  min_child_weight: 20.0
+  subsample: 0.9
+  colsample_bytree: 0.9
+  lambda: 1.0
+  alpha: 0.0
+  max_bin: 64
+  nthread: 8
+  seed: 42
+  num_boost_round: 3000
+  early_stopping_rounds: 100
+models:
+  rice:
+    coding:
+      folds: 1-12
+      features_file: configs/plantvimpact/features/rice_coding.json
+      feature_set: strict_lm_dna_cons_redundancy_prot_safe
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.rice.coding.split_root}'
+      selected_model_root: '{model_inputs.rice.coding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      - name: raw_esm
+        column: S_esm
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: null
+        qc_columns: null
+        bin_policy: rank_if_missing
+        reference_experiment: strict_v3_20260709
+      oe:
+        exact_required: false
+        sampled_required: true
+    noncoding:
+      folds: 1-12
+      features_file: configs/plantvimpact/features/rice_noncoding.json
+      feature_set: strict_dna_cons_redundancy_context_predmoter
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.rice.noncoding.split_root}'
+      selected_model_root: '{model_inputs.rice.noncoding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,Ctx_code,Alt_code,callable_bin
+        region_column: region_type
+        qc_columns: null
+        bin_policy: require_existing
+        reference_experiment: strict_v3_20260709
+      oe:
+        exact_required: false
+        sampled_required: true
+  maize:
+    coding:
+      folds: 1-10
+      features_file: configs/plantvimpact/features/maize_coding.json
+      feature_set: strict_lm_dna_cons_redundancy_prot_safe_rawbase91
+      trainer_profile: maize_coding_rawbase91
+      imputation_policy: runtime_fold_train_median
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.maize.coding.split_root}'
+      selected_model_root: '{model_inputs.maize.coding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 1
+        eta: 0.001
+        min_child_weight: 5000.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 5000.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 16
+        seed: 42
+        num_boost_round: 500
+        early_stopping_rounds: 500
+      raw_base:
+        formula: 0.91*S_dna + 0.09*S_esm
+        source: blend
+        dna_weight: 0.91
+        training_mean: 2.46
+        training_std: 2.4
+        coefficient: 0.37
+      selected_score:
+        column: full_strict_rawbase91_bgz_c037_resid050_margin
+        probability_column: full_strict_rawbase91_bgz_c037_resid050_prob
+        value_type: margin
+        direction: high
+        formula: 0.37*z_background(raw91) + 0.50*(xgb_margin - 0.37*z_training(raw91))
+        background_mean: 3.6814627647399902
+        background_std: 2.948157548904419
+        residual_shrinkage: 0.5
+      raw_scores:
+      - name: raw91
+        column: raw91
+        direction: high
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      - name: raw_esm
+        column: S_esm
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: null
+        qc_columns: null
+        bin_policy: rank_if_missing
+        reference_experiment: maize_rawbase91_strict_20260709/weighted_oe_resid_sweep_selected
+      oe:
+        exact_required: false
+        sampled_required: true
+        universe_source: sample_score_table
+        must_beat: raw91
+        gate_top_fractions:
+        - 0.01
+        - 0.05
+        - 0.1
+    noncoding:
+      folds: 1-10
+      features_file: configs/plantvimpact/features/maize_noncoding.json
+      feature_set: strict_dna_cons_redundancy_pcsd_context
+      trainer_profile: maize_noncoding_raw_residual
+      imputation_policy: zero_no_homolog_for_redundancy_else_fold_train_median
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.maize.noncoding.split_root}'
+      selected_model_root: '{model_inputs.maize.noncoding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 3
+        eta: 0.02
+        min_child_weight: 50.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 100.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 16
+        seed: 20260709
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      raw_base:
+        formula: S_dna
+        source: s_dna
+        training_mean: 1.217034
+        training_std: 1.14099
+        coefficient: 0.057716
+      selected_score:
+        column: maize_noncoding_final_margin_loco
+        probability_column: maize_noncoding_final_prob_loco
+        value_type: margin
+        direction: high
+        source_selected_margin_column: raw_resid_alpha_m0p05_margin
+        formula: raw_margin_from_S_dna - 0.05*rawbase_residual_margin
+        alpha: -0.05
+      rejected_scores:
+      - ordinary_median_full
+      - raw_resid_alpha_p1_margin
+      - alpha_1
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: region_type
+        qc_columns: null
+        bin_policy: maize_lookup_edges
+        reference_experiment: maize_noncoding_medium_rawbase_20260709/weighted_oe_alpha_sweep
+      oe:
+        exact_required: false
+        sampled_required: true
+        must_beat: raw_dna
+        gate_top_fractions:
+        - 0.01
+        - 0.05
+        - 0.1
+  tomato:
+    coding:
+      folds: 1-12
+      features_file: configs/plantvimpact/features/tomato_coding.json
+      feature_set: strict_lm_dna_cons_redundancy_prot_safe
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.tomato.coding.split_root}'
+      selected_model_root: '{model_inputs.tomato.coding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      - name: raw_esm
+        column: S_esm
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: null
+        qc_columns: null
+        bin_policy: rank_if_missing
+        reference_experiment: strict_v3_20260709
+      oe:
+        exact_required: false
+        sampled_required: true
+    noncoding:
+      folds: 1-12
+      features_file: configs/plantvimpact/features/tomato_noncoding.json
+      feature_set: strict_dna_cons_redundancy_context
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.tomato.noncoding.split_root}'
+      selected_model_root: '{model_inputs.tomato.noncoding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,Ctx_code,Alt_code,callable_bin
+        region_column: region_type
+        qc_columns: null
+        bin_policy: require_existing
+        reference_experiment: strict_v3_20260709
+      oe:
+        exact_required: false
+        sampled_required: true
+  chickpea:
+    coding:
+      folds: 1-8
+      features_file: configs/plantvimpact/features/chickpea_coding.json
+      feature_set: strict_lm_dna_cons_prot_safe
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.chickpea.coding.split_root}'
+      selected_model_root: '{model_inputs.chickpea.coding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      - name: raw_esm
+        column: S_esm
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: null
+        qc_columns: null
+        bin_policy: rank_if_missing
+        reference_experiment: strict_v3_20260709
+      oe:
+        exact_required: false
+        sampled_required: true
+    noncoding:
+      folds: 1-8
+      features_file: configs/plantvimpact/features/chickpea_noncoding.json
+      feature_set: strict_dna_cons_regionfix_context
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.chickpea.noncoding.split_root}'
+      selected_model_root: '{model_inputs.chickpea.noncoding.model_root}'
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,subgenome_code,Ctx_code,Alt_code,callable_bin
+        region_column: region_type
+        qc_columns: null
+        bin_policy: require_existing
+        reference_experiment: chickpea_regionfix_20260715_training_artifact
+      oe:
+        exact_required: false
+        sampled_required: false
+  cotton:
+    coding:
+      folds: 1-13
+      paired_subgenome_folds: true
+      features_file: configs/plantvimpact/features/cotton_coding.json
+      feature_set: strict_lm_redundancy_prot_safe
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.cotton.coding.split_root}'
+      selected_model_root: '{model_inputs.cotton.coding.model_root}'
+      universe_policy: full_universe_only
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,Sg_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: null
+        qc_columns: null
+        bin_policy: rank_if_missing
+        reference_experiment: strict_v3_20260709
+      oe:
+        exact_required: true
+        sampled_required: true
+        require_concordance: true
+        top_fractions: 0.001,0.01,0.05,0.10
+    noncoding:
+      folds: 1-13
+      paired_subgenome_folds: true
+      features_file: configs/plantvimpact/features/cotton_noncoding.json
+      feature_set: strict_dna_redundancy_context_regulatory
+      trainer_profile: strict_common
+      imputation_policy: fold_train_median_runtime
+      trainer_script: scripts/model_training/strict_xgb_retrain.py
+      split_root: '{model_inputs.cotton.noncoding.split_root}'
+      selected_model_root: '{model_inputs.cotton.noncoding.model_root}'
+      universe_policy: full_universe_only
+      parameters:
+        objective: binary:logistic
+        eval_metric:
+        - logloss
+        - auc
+        - aucpr
+        tree_method: hist
+        max_depth: 4
+        eta: 0.03
+        min_child_weight: 20.0
+        subsample: 0.9
+        colsample_bytree: 0.9
+        lambda: 1.0
+        alpha: 0.0
+        max_bin: 64
+        nthread: 8
+        seed: 42
+        num_boost_round: 3000
+        early_stopping_rounds: 100
+      selected_score:
+        column: strict_v3_prob
+        margin_column: strict_v3_margin
+        value_type: probability
+        direction: high
+      raw_scores:
+      - name: raw_dna
+        column: S_dna
+        direction: high
+      oe_inputs:
+        strata_columns: chr_num,Sg_code,opportunity_bin,callable_bin,Ctx_code,Alt_code
+        region_column: region_type
+        qc_columns: null
+        bin_policy: require_existing
+        reference_experiment: strict_v3_20260709/cotton_noncoding_full
+      oe:
+        exact_required: true
+        sampled_required: true
+        require_concordance: true

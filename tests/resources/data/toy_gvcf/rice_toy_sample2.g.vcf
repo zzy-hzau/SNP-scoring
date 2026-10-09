@@ -1,0 +1,12 @@
+##fileformat=VCFv4.2
+##contig=<ID=chr01,length=100000>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the reference block">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	sample2
+chr01	1	.	A	<NON_REF>	.	.	END=35	GT	0/0
+chr01	36	.	C	T	30	.	.	GT	0/1
+chr01	37	.	T	<NON_REF>	.	.	END=55	GT	0/0
+chr01	56	.	A	G	30	.	.	GT	1/1
+chr01	57	.	G	<NON_REF>	.	.	END=80	GT	0/0
+chr01	81	.	T	C	30	.	.	GT	0/1
+chr01	82	.	C	<NON_REF>	.	.	END=100	GT	0/0

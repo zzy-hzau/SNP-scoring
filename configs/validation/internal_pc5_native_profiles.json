@@ -1,0 +1,41 @@
+{
+  "source_provenance": {
+    "ported_sha256": "7b994b8a229cda1522ad18558cc654807df529dd67785cf2f037bd5d625e45b3",
+    "changes": [
+      "Explicit input CLI",
+      "Exact chromosome,position,REF/ALT pair lookup replaces position-only fallback",
+      "All-missing catalogs return NA statistics rather than missing-column failure"
+    ],
+    "source_filename_says_top3_actual_code_uses_top20": true,
+    "source_MAF_MIN_defined_but_not_applied": true
+  },
+  "phenotype_columns": {
+    "cotton_fe": "FibElo_17_18",
+    "chickpea_plant_width": "Plant_width",
+    "chickpea_hundred_seed_weight": "Hundred_seed_weight"
+  },
+  "sample_alignment": "LINE to original genotype sample list",
+  "genotype_codes": {
+    "0": "missing",
+    "1": "homo_REF",
+    "2": "heterozygous",
+    "3": "homo_ALT"
+  },
+  "PC_count": 5,
+  "PCs_refit_on_locus_fragment": false,
+  "minimum_calls": 10,
+  "source_MAF_MIN_defined": 0.01,
+  "MAF_MIN_applied_in_run_trait": false,
+  "nominal_thresholds": [
+    0.05,
+    0.001
+  ],
+  "Bonferroni_family_each_frozen_catalog": 20,
+  "default_top_n": 20,
+  "source_file_title_top3_not_used_as_actual_parameter": true,
+  "genotype_mapping": "exact canonical chromosome + position + REFALT pair;exact reversal dosage2-d",
+  "ambiguous_variant_rows": "explicit error, not arbitrary first row",
+  "all_cached_fields_exact_on60_locus_tests": true,
+  "raw_full_genome_or_DPC_model_job": false,
+  "whole_release_ready": false
+}

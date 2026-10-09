@@ -1,0 +1,53 @@
+{
+  "catalogue": "../../data/validation/qtl_catalogue.json",
+  "traits": [
+    {
+      "trait": "Rice_PH",
+      "assembly": "IRGSP-1.0",
+      "reference": "../../data/rice/analysis_reference.fa",
+      "codes": "../../data/Rice_PH/panel_codes.npy",
+      "variants": "../../data/Rice_PH/panel_variants.tsv",
+      "ranked": "../../data/Rice_PH/ranked.tsv",
+      "association": "../../data/Rice_PH/full_GWAS.tsv",
+      "chromosome_aliases": {},
+      "reference_chromosome_aliases": {},
+      "gwas_model": "original full association table"
+    },
+    {
+      "trait": "Cotton_FS",
+      "assembly": "TM-1_CRI",
+      "reference": "../../data/cotton/analysis_reference.fa",
+      "codes": "../../data/Cotton_FS/panel_codes.npy",
+      "variants": "../../data/Cotton_FS/panel_variants.tsv",
+      "ranked": "../../data/Cotton_FS/ranked.tsv",
+      "association": "../../data/Cotton_FS/full_GWAS.tsv",
+      "chromosome_aliases": {},
+      "reference_chromosome_aliases": {},
+      "gwas_model": "original full association table"
+    },
+    {
+      "trait": "Chickpea_HSW",
+      "assembly": "CDC_Frontier",
+      "reference": "../../data/chickpea/analysis_reference.fa",
+      "codes": "../../data/Chickpea_HSW/panel_codes.npy",
+      "variants": "../../data/Chickpea_HSW/panel_variants.tsv",
+      "ranked": "../../data/Chickpea_HSW/ranked.tsv",
+      "association": "../../data/Chickpea_HSW/full_GWAS.tsv",
+      "chromosome_aliases": {},
+      "reference_chromosome_aliases": {},
+      "gwas_model": "additive GEMMA intercept and PC1-PC5; no kinship"
+    },
+    {
+      "trait": "Chickpea_PW",
+      "assembly": "CDC_Frontier",
+      "reference": "../../data/chickpea/analysis_reference.fa",
+      "codes": "../../data/Chickpea_PW/panel_codes.npy",
+      "variants": "../../data/Chickpea_PW/panel_variants.tsv",
+      "ranked": "../../data/Chickpea_PW/ranked.tsv",
+      "association": "../../data/Chickpea_PW/full_GWAS.tsv",
+      "chromosome_aliases": {},
+      "reference_chromosome_aliases": {},
+      "gwas_model": "additive GEMMA intercept and PC1-PC5; no kinship"
+    }
+  ]
+}

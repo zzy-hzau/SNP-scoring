@@ -1,0 +1,91 @@
+{
+  "profile": "native_cotton_15_untrimmed",
+  "preparation": "cotton_longest_gene",
+  "proteomes": [
+    {
+      "name": "garb_hau",
+      "filename": "Garboreum_gene.gff3.pep.gz",
+      "url": "https://www.cottongen.org/cottongen_downloads/Gossypium_arboreum/HAU_G.arboreum_A2/genes/Garboreum_gene.gff3.pep.gz"
+    },
+    {
+      "name": "grai_jgi",
+      "filename": "G.raimondii_JGI_221_v2.1.proteins.fasta.gz",
+      "url": "https://www.cottongen.org/cottongen_downloads/Gossypium_raimondii/JGI_221_G.raimondii_Dgenome/genes/G.raimondii_JGI_221_v2.1.proteins.fasta.gz"
+    },
+    {
+      "name": "dzib_plaza",
+      "filename": "proteome.selected_transcript.dzi.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Fasta/proteome.selected_transcript.dzi.fasta.gz"
+    },
+    {
+      "name": "tcac_ensembl",
+      "filename": "Theobroma_cacao.Theobroma_cacao_20110822.pep.all.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/theobroma_cacao/pep/Theobroma_cacao.Theobroma_cacao_20110822.pep.all.fa.gz"
+    },
+    {
+      "name": "atha_plaza",
+      "filename": "proteome.selected_transcript.ath.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Fasta/proteome.selected_transcript.ath.fasta.gz"
+    },
+    {
+      "name": "gmax_plaza",
+      "filename": "proteome.selected_transcript.gma.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Fasta/proteome.selected_transcript.gma.fasta.gz"
+    },
+    {
+      "name": "slyc_plaza",
+      "filename": "proteome.selected_transcript.sly.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Fasta/proteome.selected_transcript.sly.fasta.gz"
+    },
+    {
+      "name": "vvin_plaza",
+      "filename": "proteome.selected_transcript.vvi.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Fasta/proteome.selected_transcript.vvi.fasta.gz"
+    },
+    {
+      "name": "ptri_plaza",
+      "filename": "proteome.selected_transcript.ptr.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_dicots_05/Fasta/proteome.selected_transcript.ptr.fasta.gz"
+    },
+    {
+      "name": "osat_plaza",
+      "filename": "proteome.selected_transcript.osa.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_monocots_05/Fasta/proteome.selected_transcript.osa.fasta.gz"
+    },
+    {
+      "name": "zmay_plaza",
+      "filename": "proteome.selected_transcript.zma.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_monocots_05/Fasta/proteome.selected_transcript.zma.fasta.gz"
+    },
+    {
+      "name": "sbic_plaza",
+      "filename": "proteome.selected_transcript.sbi.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_monocots_05/Fasta/proteome.selected_transcript.sbi.fasta.gz"
+    },
+    {
+      "name": "bdist_plaza",
+      "filename": "proteome.selected_transcript.bdi.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_monocots_05/Fasta/proteome.selected_transcript.bdi.fasta.gz"
+    },
+    {
+      "name": "macu_plaza",
+      "filename": "proteome.selected_transcript.mac.fasta.gz",
+      "url": "https://ftp.psb.ugent.be/pub/plaza/plaza_public_monocots_05/Fasta/proteome.selected_transcript.mac.fasta.gz"
+    }
+  ],
+  "targets": [
+    {
+      "name": "ghir_tm1_gff",
+      "reference": "${PHENO_REFERENCE_ROOT}/cotton/genomes/TM-1_CRI.fa",
+      "gff": "${PHENO_REFERENCE_ROOT}/cotton/GFF/TM-1.final.gene.gff3"
+    }
+  ],
+  "threads": 32,
+  "analysis_threads": 32,
+  "orthofinder_aligner": "mafft",
+  "msa_aligner": "mafft",
+  "mafft_anysymbol": false,
+  "msa_threads": 1,
+  "target_groups_only": true,
+  "panel_species_count": 15
+}

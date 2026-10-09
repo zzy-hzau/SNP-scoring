@@ -1,0 +1,152 @@
+{
+  "status": "SOURCE_EXTRACTED_NOT_STANDALONE_AGENT",
+  "scope": "Exact source expressions and positional/keyword call bindings; no prompt rewriting or source execution. Dynamic payload construction and full role/tool execution remain separate source dependencies.",
+  "modules": [
+    {
+      "source_module": "agents/supervisor.py",
+      "source_sha256": "a563eefc452c8654d4d563391917423bbf1b9c5c26942058ecf3e5d27d47df3a",
+      "prompt_bindings": [
+        {
+          "scope": "module.Supervisor.llm_plan",
+          "line": 314,
+          "binding": "system_prompt",
+          "kind": "Constant",
+          "expression": "\"你是一个作物育种分析系统的调度器(Supervisor Agent)。\"\n            \"你的任务是根据用户的分析请求，验证其合理性，并返回JSON格式的分析计划决策。\\n\\n\"\n            \"支持的物种: rice(水稻), maize(玉米), cotton(棉花), tomato(番茄), chickpea(鹰嘴豆)\\n\"\n            \"支持的性状: Plant_height(株高), yield(产量), flowering_time(开花时间) 等\\n\"\n            \"支持的分析步骤: allele_swap(DPC效应), phenotype_prediction(表型预测), \"\n            \"plant_vimpact(PlantVImpact功能评分), ld_expansion(LD扩展), cultivar_he(群体遗传), \"\n            \"functional_annotation(功能注释), knowledge_retrieval(知识检索), \"\n            \"literature_retrieval(文献检索), \"\n            \"biological_integration(证据整合)\\n\\n\"\n            \"返回严格JSON，格式如下，不要包含其他文字:\\n\"\n            '{\"valid\": true, \"species\": \"rice\", \"trait\": \"Plant_height\", '\n            '\"analyses\": [\"allele_swap\",\"plant_vimpact\",\"ld_expansion\",\"cultivar_he\"], '\n            '\"reasoning\": \"简要说明\", \"warnings\": []}'"
+        },
+        {
+          "scope": "module.Supervisor.llm_plan",
+          "line": 330,
+          "binding": "user_prompt",
+          "kind": "JoinedStr",
+          "expression": "f\"用户请求分析:\\n\"\n            f\"- 物种: {species}\\n\"\n            f\"- 性状: {trait}\\n\"\n            f\"- 育种目标: {goal or '未指定'}\\n\"\n            f\"- 分析类型: {analysis_type}\\n\"\n            f\"- 请求分析项: {analyses}\\n\"\n            f\"- VCF已标准化: {'是' if vcf_result else '否'}\\n\"\n            f\"- 模型已运行: {'是' if model_result else '否'}\\n\\n\"\n            f\"请验证此请求是否合理，并返回分析计划JSON。\""
+        },
+        {
+          "scope": "module.Supervisor.llm_plan",
+          "line": 345,
+          "binding": "complete_json arguments",
+          "kind": "LLM call bindings",
+          "positional_arguments": [
+            "system_prompt",
+            "{\"request\": user_prompt}"
+          ],
+          "keyword_arguments": {
+            "max_tokens": "settings.llm_synthesis_max_tokens"
+          }
+        }
+      ]
+    },
+    {
+      "source_module": "agents/evidence_retrieval.py",
+      "source_sha256": "67d47bca14a1f13c988e31b46153d758d3b958a042eb408804b73ecc020b0a87",
+      "prompt_bindings": [
+        {
+          "scope": "module",
+          "line": 109,
+          "binding": "_REACT_SYSTEM_PROMPT",
+          "kind": "Constant",
+          "expression": "\"你是作物证据检索智能体（受限 ReAct）。根据观察到的证据状态，从可用工具中\"\n    \"选择下一步最值得执行的一个工具，或决定停止。\\n\"\n    \"规则：\\n\"\n    \"1. 只能选择 available_tools 中列出的工具；\\n\"\n    \"2. 已用于该候选的工具不得重复选择；\\n\"\n    \"3. 证据已足够（有基因上下文、文献或结构域证据且无关键缺口）时应停止；\\n\"\n    \"4. 检索失败或工具不可用时应停止并说明原因，不要盲目重试；\\n\"\n    \"5. 编码区候选禁止选择调控类工具（fimo/jaspar/plantregmap/planttfdb/rnafold）。\\n\"\n    \"严格返回 JSON: {\\\"next_tool\\\": \\\"工具名或null\\\", \\\"rationale\\\": \\\"理由\\\", \"\n    \"\\\"stop\\\": true/false, \\\"stop_reason\\\": \\\"停止原因\\\"}。\""
+        },
+        {
+          "scope": "module.EvidenceRetrievalAgent._react_choose_tool",
+          "line": 1141,
+          "binding": "complete_json arguments",
+          "kind": "LLM call bindings",
+          "positional_arguments": [
+            "_REACT_SYSTEM_PROMPT",
+            "{\"observation\": observation}"
+          ],
+          "keyword_arguments": {
+            "max_tokens": "settings.llm_synthesis_max_tokens"
+          }
+        },
+        {
+          "scope": "module.EvidenceRetrievalAgent._summarize_evidence",
+          "line": 4045,
+          "binding": "complete_json arguments",
+          "kind": "LLM call bindings",
+          "positional_arguments": [
+            "\"你是植物知识证据整理助手。只能总结输入 evidence_records，且每条 summary 必须\"\n            \"引用输入中存在的 evidence_id。不得新增文献、基因、SNP、数据库事实或因果结论。\"\n            \"严格返回 JSON: {\\\"summary\\\":[{\\\"evidence_id\\\":\\\"...\\\",\\\"summary\\\":\\\"...\\\"}],\\\"gaps\\\":[\\\"...\\\"]}。\"",
+            "llm_payload"
+          ],
+          "keyword_arguments": {
+            "max_tokens": "settings.llm_synthesis_max_tokens"
+          }
+        }
+      ]
+    },
+    {
+      "source_module": "agents/hypothesis_reasoning.py",
+      "source_sha256": "d75924e4852597506b5fd0301ae6c1af596db2c4bf4f48fd11c814fde94a0ddc",
+      "prompt_bindings": [
+        {
+          "scope": "module.HypothesisReasoningAgent._apply_llm_mechanism_drafts",
+          "line": 1032,
+          "binding": "complete_json arguments",
+          "kind": "LLM call bindings",
+          "positional_arguments": [
+            "\"你是植物遗传机制整合助手。只能改写已提供的 atomic claim 槽位，\"\n            \"不能创建新的关系、证据 ID、基因、性状、数值或因果结论。\"\n            \"supported_claims 只能改写原有 supported claim，不能把 hypothesis 放入其中；\"\n            \"mechanistic_hypotheses 必须保持 hypothesis_only，并明确缺失链接。\"\n            \"如果存在 revision_feedback，只修改其中列出的 claim_id；\"\n            \"禁止因为反馈而新增关系、证据 ID、基因、性状或证据等级。\"\n            \"EvidenceState 的 supported_edges 是事实边界，predicted/missing edges 不能写成已支持事实。\"\n            \"不要把多个关系合并成一个长句。严格返回 JSON：\"\n            \"{\\\"variants\\\":[{\\\"variant_id\\\":\\\"...\\\",\"\n            \"\\\"supported_claims\\\":[{\\\"claim_id\\\":\\\"...\\\",\\\"relation\\\":\\\"...\\\",\\\"text\\\":\\\"...\\\"}],\"\n            \"\\\"mechanistic_hypotheses\\\":[{\\\"claim_id\\\":\\\"...\\\",\\\"relation\\\":\\\"...\\\",\\\"text\\\":\\\"...\\\",\\\"missing_links\\\":[\\\"...\\\"]}]}]}。\"",
+            "llm_payload"
+          ],
+          "keyword_arguments": {
+            "max_tokens": "settings.llm_synthesis_max_tokens"
+          }
+        }
+      ]
+    },
+    {
+      "source_module": "agents/evidence_critic.py",
+      "source_sha256": "c4ca839d5defcd9b59405cc1856b05a822f972b9d9c9da5cd2c376304d96cef0",
+      "prompt_bindings": [
+        {
+          "scope": "module",
+          "line": 59,
+          "binding": "_SEMANTIC_CRITIC_SYSTEM",
+          "kind": "Constant",
+          "expression": "\"\"\"You are the semantic layer of a scientific evidence critic.\nReview only the supplied atomic claims against the supplied trusted EvidenceState\nand trusted EvidenceItems. Do not retrieve, invent, or assume evidence. Gate 1\nand Gate 2 results are authoritative: never turn a BLOCK into ACCEPT and never\nadd a new claim or evidence ID. Detect semantic mismatches that typed rules can\nmiss: direction, trait scope, variant/allele identity, ortholog species,\nmechanism over-specificity or unverified mediation, tissue/stage scope,\nassociation-to-mechanism, contradiction, and misuse of indirect evidence.\n\nReturn exactly one JSON object with this shape:\n{\"claim_reviews\":[{\"claim_id\":\"existing id\",\"support_state\":\"SUPPORTED|PARTIALLY_SUPPORTED|UNSUPPORTED|CONTRADICTED\",\"semantic_issues\":[\"known issue id\"],\"decision\":\"ACCEPT|REVISE|RETRIEVE_MORE_EVIDENCE|HUMAN_REVIEW\",\"allowed_rewrite_level\":\"fact|mechanistic_hypothesis|remove_claim|none\",\"evidence_ids_checked\":[\"existing evidence id\"],\"rationale\":\"short\"}],\"gap_intents\":[{\"gap_relation\":\"canonical relation id\",\"gap_reason\":\"atomic missing relation\",\"required_evidence_level\":\"L1|L2|L3|L4\",\"preferred_evidence_types\":[\"type hints only\"],\"target_variant\":\"existing variant id\",\"target_gene\":\"existing gene id\",\"target_trait\":\"active trait\",\"priority\":\"high|medium|low\"}],\"resolution_mode\":\"REWRITE_ONLY|RETRIEVE_EVIDENCE|HUMAN_REVIEW|NO_ACTION\"}\nUse an empty list when there is no issue. Gap intents must use one of:\nvariant_functional_effect, variant_trait, variant_expression,\nvariant_mechanism, variant_protein_function, gene_trait, gene_mechanism,\ncontradiction_resolution. Do not output PubMed queries or tool choices.\nThe word 'may' does not make an unsupported relation evidence-grounded: mark it\nas hypothesis-level or revise it. A supported gene-level fact must not be rejected\njust because a separate SNP-level link is missing.\nWhen EvidenceState.missing_edges contains an exact canonical relation, use that\nrelation verbatim for a retrieval gap; do not replace variant_expression with\nthe broader variant_functional_effect, and do not invent a neighboring relation.\nUse RETRIEVE_EVIDENCE only when the absent relation is plausibly obtainable by\nnew evidence. Use REWRITE_ONLY for identity, direction, trait, species, or scope\nmismatches that require changing the claim. If contradictory evidence is marked\nunresolved, use HUMAN_REVIEW or contradiction_resolution rather than treating a\nnew search as an automatic repair. For a retrieval mode, emit at least one\ngap_intent; for rewrite-only mode, emit no gap_intent.\"\"\""
+        },
+        {
+          "scope": "module.EvidenceCriticAgent._semantic_feedback",
+          "line": 315,
+          "binding": "complete_json arguments",
+          "kind": "LLM call bindings",
+          "positional_arguments": [
+            "_SEMANTIC_CRITIC_SYSTEM",
+            "request"
+          ],
+          "keyword_arguments": {
+            "max_tokens": "settings.hybrid_a4_max_tokens",
+            "model": "settings.hybrid_a4_model",
+            "base_url": "settings.hybrid_a4_base_url"
+          }
+        }
+      ]
+    },
+    {
+      "source_module": "evidence_extractor.py",
+      "source_sha256": "77e41b98111984f59b575850607a0c53566bb35e858434918b2560259040aed2",
+      "prompt_bindings": [
+        {
+          "scope": "module",
+          "line": 44,
+          "binding": "EXTRACT_SYSTEM",
+          "kind": "Constant",
+          "expression": "\"You are an evidence extractor for plant variant interpretation. Given \"\n    \"one evidence gap and text chunks from papers, extract evidence proposals \"\n    \"that DIRECTLY support the gap. Rules: (1) each proposal must be a single \"\n    \"claim faithfully paraphrasing ONE chunk; (2) you must include the exact \"\n    \"supporting quote from that chunk (<=300 chars); (3) never combine \"\n    \"information across chunks; (4) evidence_type must be one of the allowed \"\n    \"types; (5) do not infer causal relationships the paper does not state; \"\n    \"(6) if a chunk has no usable evidence, skip it; (7) supported_relation \"\n    \"must be exactly one canonical relation ID from the supplied gap ontology \"\n    \"(for example variant_expression, variant_trait, gene_trait, or \"\n    \"gene_mechanism), never a free-form claim; (8) for a variant_* relation, \"\n    \"variant_or_allele must identify the tested allele/variant specifically, \"\n    \"not merely repeat the gene name or the generic word allele. \"\n    'Return JSON only: {\"proposals\":[{\"supported_relation\":\"...\",'\n    '\"relation_match\":\"exact|partial|none\",\"claim\":\"concise claim <=300 chars\",'\n    '\"evidence_type\":\"...\",\"support\":\"direct|partial|indirect\",'\n    '\"directness\":\"direct|partial|indirect|unknown\",'\n    '\"confidence\":0.0-1.0,\"direction\":\"up|down|neutral|unknown\",'\n    '\"species_match\":\"same|ortholog|other|unknown\", \"species\":\"...\",'\n    '\"gene\":\"...\",\"variant_or_allele\":\"...\",'\n    '\"variant_mention\":{\"exact_coordinate\":\"\",\"ref_alt\":\"\",'\n    '\"rs_id\":\"\",\"vg_id\":\"\",\"snp_id\":\"\",'\n    '\"amino_acid_change\":\"\",\"named_allele\":\"\",\"haplotype\":\"\",'\n    '\"mutant_line\":\"\",\"structural_variant\":\"\",'\n    '\"identity_basis\":[]},\"trait\":\"...\",'\n    '\"quote\":\"...\",\"chunk_id\":\"...\"}]}.'"
+        },
+        {
+          "scope": "module.extract_proposals",
+          "line": 594,
+          "binding": "complete_json arguments",
+          "kind": "LLM call bindings",
+          "positional_arguments": [
+            "EXTRACT_SYSTEM",
+            "{\n            \"gap\": {\n                \"layer\": gap.layer,\n                \"missing_link\": gap.missing_link,\n                \"query_intent\": gap.query_intent,\n                \"allowed_evidence_types\": sorted(gap.required_evidence_types),\n            },\n            \"candidate\": {\n                \"species\": candidate.species,\n                \"trait\": candidate.trait,\n                \"gene\": candidate.gene,\n                \"snp_id\": candidate.snp_id,\n                # Named natural alleles, haplotypes, insertions, and editing\n                # targets are often not recoverable from a generic SNP id.\n                # The deterministic validator already uses these fields; the\n                # extractor must see the same identity contract or it cannot\n                # faithfully identify an exact variant-level passage.\n                \"variant_description\": candidate.variant_description,\n                \"chrom\": candidate.chrom,\n                \"pos\": candidate.pos,\n                \"ref\": candidate.ref,\n                \"alt\": candidate.alt,\n            },\n            \"chunks\": chunks,\n        }"
+          ],
+          "keyword_arguments": {
+            "max_tokens": "1500",
+            "extra_body": "{\"reasoning_effort\": \"low\"}"
+          }
+        }
+      ]
+    }
+  ]
+}

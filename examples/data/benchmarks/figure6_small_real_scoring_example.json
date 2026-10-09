@@ -1,0 +1,3494 @@
+{
+  "schema": "published_figure6_scoring_v1",
+  "scope": "Resource configuration and example inputs.",
+  "critic_definitions": [
+    {
+      "case_id": "C001",
+      "analysis_subset": "Excluded from summary",
+      "category": "direction mismatch"
+    },
+    {
+      "case_id": "C002",
+      "analysis_subset": "Constructed challenge",
+      "category": "direction mismatch"
+    },
+    {
+      "case_id": "C003",
+      "analysis_subset": "Constructed challenge",
+      "category": "Trait scope mismatch"
+    },
+    {
+      "case_id": "C011",
+      "analysis_subset": "Constructed challenge",
+      "category": "trait scope mismatch"
+    },
+    {
+      "case_id": "C041",
+      "analysis_subset": "Constructed challenge",
+      "category": "Evidence provenance mismatch"
+    },
+    {
+      "case_id": "C061",
+      "analysis_subset": "Constructed challenge",
+      "category": "tissue stage mismatch"
+    },
+    {
+      "case_id": "C082",
+      "analysis_subset": "Constructed challenge",
+      "category": "contradiction unresolved"
+    },
+    {
+      "case_id": "C088",
+      "analysis_subset": "Constructed challenge",
+      "category": "contradiction unresolved"
+    },
+    {
+      "case_id": "C101",
+      "analysis_subset": "Supported control",
+      "category": "none supported claim"
+    },
+    {
+      "case_id": "C111",
+      "analysis_subset": "Supported control",
+      "category": "none supported claim"
+    },
+    {
+      "case_id": "C119",
+      "analysis_subset": "Supported control",
+      "category": "none supported claim"
+    },
+    {
+      "case_id": "C120",
+      "analysis_subset": "Supported control",
+      "category": "none supported claim"
+    }
+  ],
+  "reasoning_consensus": [
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 472,
+      "generation": 1,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 473,
+      "generation": 1,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 522,
+      "generation": 1,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 523,
+      "generation": 1,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 534,
+      "generation": 1,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "No two-of-three consensus for conclusion_calibration"
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "NEEDS_HUMAN_REVIEW",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 535,
+      "generation": 1,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "No two-of-three consensus for conclusion_calibration"
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 544,
+      "generation": 1,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "Cited study does not establish plant-width effects."
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 545,
+      "generation": 1,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "Cited study does not establish plant-width effects."
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 592,
+      "generation": 2,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 593,
+      "generation": 2,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 642,
+      "generation": 2,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 643,
+      "generation": 2,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 654,
+      "generation": 2,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 655,
+      "generation": 2,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 664,
+      "generation": 2,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "Cited study does not establish plant-width effects."
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 665,
+      "generation": 2,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "Cited study does not establish plant-width effects."
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 712,
+      "generation": 3,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 713,
+      "generation": 3,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 762,
+      "generation": 3,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "No two-of-three consensus for conclusion_calibration"
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "NEEDS_HUMAN_REVIEW",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 763,
+      "generation": 3,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "No two-of-three consensus for conclusion_calibration"
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 774,
+      "generation": 3,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 775,
+      "generation": 3,
+      "included_in_paired_analysis": true,
+      "exclusion_reason": null
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 784,
+      "generation": 3,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "Cited study does not establish plant-width effects."
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 785,
+      "generation": 3,
+      "included_in_paired_analysis": false,
+      "exclusion_reason": "Cited study does not establish plant-width effects."
+    }
+  ],
+  "reasoning_judges": [
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 840,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 841,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 842,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 843,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 844,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 845,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 990,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 991,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 992,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 993,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 994,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 995,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1026,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1027,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1028,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "no",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1029,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1030,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1031,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1056,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1057,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1058,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1059,
+      "generation": 1,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1060,
+      "generation": 1,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1061,
+      "generation": 1,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1200,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1201,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1202,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1203,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1204,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1205,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1350,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1351,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1352,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1353,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1354,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1355,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1386,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1387,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1388,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1389,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1390,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1391,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1416,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1417,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1418,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1419,
+      "generation": 2,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1420,
+      "generation": 2,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1421,
+      "generation": 2,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1560,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1561,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R021",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1562,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1563,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1564,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R021",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1565,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1710,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1711,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R014",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1712,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1713,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1714,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R014",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "no",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1715,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1746,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1747,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R020",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1748,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1749,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1750,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R020",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1751,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1776,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1777,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R003",
+      "condition": "vanilla",
+      "scores": {
+        "grounding": "partial",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "partial",
+        "evidence_leap": "yes",
+        "unsupported_causal_upgrade": "yes",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1778,
+      "generation": 3,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "yes",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1779,
+      "generation": 3,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1780,
+      "generation": 3,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "R003",
+      "condition": "full",
+      "scores": {
+        "grounding": "yes",
+        "missing_link_detection": "partial",
+        "conclusion_calibration": "yes",
+        "evidence_leap": "no",
+        "unsupported_causal_upgrade": "no",
+        "evidence_id_error": "no"
+      },
+      "_source_row": 1781,
+      "generation": 3,
+      "judge_pass": 3
+    }
+  ],
+  "critic_consensus": [
+    {
+      "case_id": "C001",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 1929
+    },
+    {
+      "case_id": "C002",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 1930
+    },
+    {
+      "case_id": "C003",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "not_applicable",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 1931
+    },
+    {
+      "case_id": "C011",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 1939
+    },
+    {
+      "case_id": "C041",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 1969
+    },
+    {
+      "case_id": "C061",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "NEEDS_HUMAN_REVIEW",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 1988
+    },
+    {
+      "case_id": "C082",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "HUMAN_REVIEW",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2009
+    },
+    {
+      "case_id": "C088",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2015
+    },
+    {
+      "case_id": "C101",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2028
+    },
+    {
+      "case_id": "C111",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2037
+    },
+    {
+      "case_id": "C119",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2045
+    },
+    {
+      "case_id": "C120",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2046
+    },
+    {
+      "case_id": "C001",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2047
+    },
+    {
+      "case_id": "C002",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2048
+    },
+    {
+      "case_id": "C003",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "not_applicable",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2049
+    },
+    {
+      "case_id": "C011",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2057
+    },
+    {
+      "case_id": "C041",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "yes",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2087
+    },
+    {
+      "case_id": "C061",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "NEEDS_HUMAN_REVIEW",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2106
+    },
+    {
+      "case_id": "C082",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "HUMAN_REVIEW",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "yes",
+        "gap_useful": "NEEDS_HUMAN_REVIEW"
+      },
+      "_source_row": 2127
+    },
+    {
+      "case_id": "C088",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "NEEDS_HUMAN_REVIEW"
+      },
+      "_source_row": 2133
+    },
+    {
+      "case_id": "C101",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2146
+    },
+    {
+      "case_id": "C111",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2155
+    },
+    {
+      "case_id": "C119",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2163
+    },
+    {
+      "case_id": "C120",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2164
+    }
+  ],
+  "critic_judges": [
+    {
+      "case_id": "C001",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2173,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C001",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2174,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C001",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2175,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C001",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2176,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C001",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2177,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C001",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2178,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C002",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2179,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C002",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2180,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C002",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2181,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C002",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2182,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C002",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2183,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C002",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2184,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C003",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "not_applicable",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2185,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C003",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "not_applicable",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2186,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C003",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2187,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C003",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2188,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C003",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "not_applicable",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2189,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C003",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "not_applicable",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2190,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C011",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2233,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C011",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2234,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C011",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2235,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C011",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2236,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C011",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2237,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C011",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2238,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C041",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2413,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C041",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "yes",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2414,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C041",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2415,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C041",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "yes",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2416,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C041",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2417,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C041",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "yes",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2418,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C061",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2527,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C061",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2528,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C061",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2529,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C061",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "PARTIALLY_SUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "yes",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2530,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C061",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2531,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C061",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "UNSUPPORTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2532,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C082",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "HUMAN_REVIEW",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2653,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C082",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "HUMAN_REVIEW",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2654,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C082",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "HUMAN_REVIEW",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "no",
+        "gap_useful": "no"
+      },
+      "_source_row": 2655,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C082",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "HUMAN_REVIEW",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "no",
+        "contradiction_detected": "yes",
+        "gap_useful": "no"
+      },
+      "_source_row": 2656,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C082",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2657,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C082",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "yes"
+      },
+      "_source_row": 2658,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C088",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2689,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C088",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "no"
+      },
+      "_source_row": 2690,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C088",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2691,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C088",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "yes"
+      },
+      "_source_row": 2692,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C088",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "no",
+        "semantic_error_detected": "no",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2693,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C088",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "CONTRADICTED",
+        "reference_action": "REVISE",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "yes",
+        "supported_retained": "no",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "yes",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2694,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C101",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2767,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C101",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2768,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C101",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2769,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C101",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2770,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C101",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2771,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C101",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2772,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C111",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2821,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C111",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2822,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C111",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2823,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C111",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2824,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C111",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2825,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C111",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2826,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C119",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2869,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C119",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2870,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C119",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2871,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C119",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2872,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C119",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2873,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C119",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2874,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C120",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2875,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C120",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2876,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "C120",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2877,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C120",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2878,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "C120",
+      "condition": "M1",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2879,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "C120",
+      "condition": "M2",
+      "scores": {
+        "reference_state": "SUPPORTED",
+        "reference_action": "ACCEPT",
+        "action_appropriate": "yes",
+        "semantic_error_detected": "no",
+        "supported_retained": "yes",
+        "partial_calibrated": "not_applicable",
+        "contradiction_detected": "no",
+        "gap_useful": "not_applicable"
+      },
+      "_source_row": 2880,
+      "judge_pass": 3
+    }
+  ],
+  "refinement_consensus": [
+    {
+      "case_id": "E001",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2888
+    },
+    {
+      "case_id": "E001",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2889
+    },
+    {
+      "case_id": "E005",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2896
+    },
+    {
+      "case_id": "E005",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2897
+    },
+    {
+      "case_id": "E010",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2906
+    },
+    {
+      "case_id": "E010",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2907
+    },
+    {
+      "case_id": "E020",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2926
+    },
+    {
+      "case_id": "E020",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "partial",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2927
+    }
+  ],
+  "refinement_judges": [
+    {
+      "case_id": "E001",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2935,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E001",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2936,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E001",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2937,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E001",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2938,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E001",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2939,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E001",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2940,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E005",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2959,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E005",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2960,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E005",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2961,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E005",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2962,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E005",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2963,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E005",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2964,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E010",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2989,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E010",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2990,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E010",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2991,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E010",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2992,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E010",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2993,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E010",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 2994,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E020",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 3049,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E020",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 3050,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E020",
+      "condition": "t1",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "yes",
+        "missing_link_handling": "yes",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 3051,
+      "judge_pass": 3
+    },
+    {
+      "case_id": "E020",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "partial",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 3052,
+      "judge_pass": 1
+    },
+    {
+      "case_id": "E020",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "partial",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 3053,
+      "judge_pass": 2
+    },
+    {
+      "case_id": "E020",
+      "condition": "t0",
+      "scores": {
+        "conclusion_correct": "yes",
+        "causal_calibration": "yes",
+        "evidence_grounding": "partial",
+        "missing_link_handling": "partial",
+        "max_defensible_conclusion": "yes",
+        "unsupported_causal_upgrade": "no"
+      },
+      "_source_row": 3054,
+      "judge_pass": 3
+    }
+  ]
+}

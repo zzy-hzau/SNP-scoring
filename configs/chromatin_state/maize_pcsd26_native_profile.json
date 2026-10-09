@@ -1,0 +1,62 @@
+{
+  "source_provenance": {
+    "ported_sha256": "4486ea2abeebecea2c64b2b219c5a957609b760ac45dce73bc9e8b784e39a2de",
+    "changes": [
+      "CLI file paths instead of host constants",
+      "Structured subprocess arguments/redirected output instead of shell commands",
+      "Fresh private temporary child for inherited cleanup"
+    ],
+    "state_count": 26,
+    "first_overlap_policy_retained": true,
+    "missing_indicator_and_onehot_policy_retained": true
+  },
+  "state_vocabulary": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "E8",
+    "E9",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26"
+  ],
+  "SNP_Pos_base": 1,
+  "BED_interval_convention": "0based_halfopen",
+  "intersect_options": [
+    "-loj"
+  ],
+  "multiple_overlaps": "first sorted overlap",
+  "missing_state_markers": [
+    ".",
+    "-1"
+  ],
+  "missing_indicator": "int8 pcsd26_missing",
+  "onehot_dtype": "int8",
+  "left_join_preserves_sampled_row_order": true,
+  "parse_intersect_chunk_rows": 2000000,
+  "reference_bed": "resources/PCSD_Zm_AGPv3.27_26states.all.bed",
+  "sampled_input": "resources/maize_sampled_SNPs.parquet",
+  "output": "results/maize_pcsd26.parquet",
+  "bedtools_observed_version": "2.31.1",
+  "assembly_and_acquisition_status": "Local64locus parity only; AGPv3.25/AGPv3.27 names do not prove whole resource compatibility or licensing.",
+  "models_or_full_SNPs_rerun": false,
+  "whole_release_ready": false
+}

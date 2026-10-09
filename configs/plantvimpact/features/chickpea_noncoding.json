@@ -1,0 +1,27 @@
+{
+  "model_id": "chickpea_v3_strict_regionfix_noncoding_20260715",
+  "main_feature_set": "strict_dna_cons_regionfix_context",
+  "features": [
+    "S_dna",
+    "dna_cons__phastCons",
+    "dna_cons__phyloP",
+    "dist_to_TSS",
+    "dist_to_gene",
+    "promoter_core_flag",
+    "promoter_proximal_flag",
+    "promoter_distal_flag",
+    "canonical_splice_core_flag",
+    "donor_offset",
+    "acceptor_offset",
+    "region_type_intron",
+    "region_type_promoter",
+    "region_type_splice_near",
+    "region_subtype_intron",
+    "region_subtype_promoter_core",
+    "region_subtype_promoter_distal",
+    "region_subtype_promoter_proximal",
+    "region_subtype_splice_core",
+    "region_subtype_splice_near_other"
+  ],
+  "allowed_legacy_exceptions": []
+}

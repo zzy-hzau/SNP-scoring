@@ -1,0 +1,56 @@
+{
+  "candidate_context": {
+    "species": "rice",
+    "trait": "Seed_shattering",
+    "gene": "qSH1",
+    "snp_id": "qSH1_promoter_domestication_SNP",
+    "assembly": "paper-defined_or_reference_pending",
+    "region": "",
+    "consequence": "promoter_SNP",
+    "variant_description": "An SNP in the 5' regulatory region of qSH1 is associated with loss of seed shattering."
+  },
+  "gap_intent": {
+    "gap_id": "veib3_051_variant_support",
+    "candidate_id": "qSH1_promoter_domestication_SNP",
+    "layer": "variant",
+    "missing_link": "variant_trait",
+    "priority": "important",
+    "query_intent": "An SNP in the 5' regulatory region of qSH1 is associated with loss of seed shattering.",
+    "required_evidence_types": [
+      "natural_allele"
+    ],
+    "query_templates": []
+  },
+  "retrieval_hits": [
+    {
+      "hit_id": "qsh1_short_source",
+      "candidate": {
+        "article_id": "PMID:16614172",
+        "pmid": "16614172",
+        "title": "An SNP caused loss of seed shattering during rice domestication.",
+        "abstract_snippet": "Loss of seed shattering was a key event in the domestication of major cereals. We revealed that the qSH1 gene, a major quantitative trait locus",
+        "source": "europepmc",
+        "text_status": "abstract_available",
+        "abstract_source": "archived_evidence_pack",
+        "abstract_char_count": 143
+      },
+      "chunk_id": "qsh1_short_source",
+      "article_id": "PMID:16614172",
+      "section": "abstract",
+      "span": [
+        0,
+        143
+      ],
+      "content": "Loss of seed shattering was a key event in the domestication of major cereals. We revealed that the qSH1 gene, a major quantitative trait locus",
+      "rerank_score": 1.0
+    }
+  ],
+  "model_response": {
+    "proposals": []
+  },
+  "_example": {
+    "source": "Existing exact25-word excerpt of PMID16614172",
+    "model_response": "Illustrative empty response, not an archived model output",
+    "purpose": "Show original fallback on an incomplete excerpt; absence of verified evidence is a valid result"
+  }
+}

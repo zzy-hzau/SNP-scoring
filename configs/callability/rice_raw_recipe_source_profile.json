@@ -1,0 +1,23 @@
+{
+  "source_panel": "Rice panel: 50 indexed gVCFs",
+  "source_sample_count": 50,
+  "tool_sequence": [
+    "fastp",
+    "bwa-mem2",
+    "samtools",
+    "GATK HaplotypeCaller"
+  ],
+  "source_defaults": {
+    "threads": 8,
+    "samtools_sort_memory_per_thread": "2G",
+    "Java_heap": "48g",
+    "ploidy": 2,
+    "emit_reference_confidence": "GVCF"
+  },
+  "observed_gVCF_default_quality_values": {
+    "min_base_quality": 10,
+    "mapping_quality": 20,
+    "calling_confidence": 30
+  },
+  "additional_DP_BQ_GQ_filters_inferred_or_added": false
+}

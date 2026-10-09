@@ -1,0 +1,26 @@
+{
+  "species": "maize",
+  "step": "candidates",
+  "working_directory": "../..",
+  "arguments": [
+    "--genome",
+    "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.dna.toplevel.fa",
+    "--gff",
+    "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.gff3.gz",
+    "--wild-vcf",
+    "data/maize/wild.norm.vcf.gz",
+    "--callrate",
+    "data/maize/candidate_callrate.parquet",
+    "--out-dir",
+    "results/maize/preLM",
+    "--mode",
+    "both",
+    "--n-chr",
+    "10",
+    "--max-callable-n",
+    "55"
+  ],
+  "input_note": "Place the matching original resources at these caller-editable paths; PHENO_REFERENCE_ROOT selects references.",
+  "parameter_scope": "Chromosome/sample counts follow preserved manifests; unlisted switches retain the original source defaults.",
+  "calibration": "train chromosomes only; train/validation mutation counts exclude test and validation, test excludes test"
+}

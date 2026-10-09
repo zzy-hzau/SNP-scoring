@@ -1,0 +1,42 @@
+{
+  "profile": "rice_candidate_gvcf",
+  "panel_size": 50,
+  "position_cache": {
+    "coding_sites": 29365120,
+    "noncoding_sites": 124489036,
+    "noncoding_definition": "gene body plus2000bp promoter excluding CDS; A/C/G/T bases",
+    "coordinate_base": 1
+  },
+  "count_definition": {
+    "callable_n": "number of sample gVCFs with at least one nonmissing GT allele at a candidate",
+    "AN_obs": "number of nonmissing GT alleles summed over samples"
+  },
+  "actual_two_gvcf_header_defaults": {
+    "min-base-quality-score": "10",
+    "minimum-mapping-quality": "20",
+    "standard-min-confidence-threshold-for-calling": "30.0",
+    "sample-ploidy": "2"
+  },
+  "runtime": {
+    "source_pysam": "0.23.0",
+    "bounded_validation_pysam": "0.23.3"
+  },
+  "scan_resources": {
+    "sample_files_per_part": 1,
+    "allocated_CPUs": 4,
+    "library_threads": 1,
+    "MALLOC_ARENA_MAX": 2
+  },
+  "merge": {
+    "allocated_CPUs": 8,
+    "library_threads": 2,
+    "subgenome_code": 0,
+    "chunk_rows": 1000000,
+    "dtype_counts": "int64; per-part int32"
+  },
+  "resources": {
+    "candidate_cache": "resources/candidate_cache",
+    "gvcf_list": "resources/panel.gvcf.list",
+    "parts_directory": "results/callrate_parts"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "profile": "Original24 rice phastCons/phyloP tracks",
+  "coordinate_convention": "WIG start/position1-based to dense index0-based; step/span retained",
+  "missing_value": "float32 NaN",
+  "tracks": [
+    {
+      "chrom": 1,
+      "track": "phastCons",
+      "length": 43270923,
+      "source_relative": "rice/by_seq/chr01/rice.chr01.phastCons.wig",
+      "output_filename": "chr01.phastCons.f32"
+    },
+    {
+      "chrom": 1,
+      "track": "phyloP",
+      "length": 43270923,
+      "source_relative": "rice/by_seq/chr01/rice.chr01.phyloP.wig",
+      "output_filename": "chr01.phyloP.f32"
+    },
+    {
+      "chrom": 2,
+      "track": "phastCons",
+      "length": 35937250,
+      "source_relative": "rice/by_seq/chr02/rice.chr02.phastCons.wig",
+      "output_filename": "chr02.phastCons.f32"
+    },
+    {
+      "chrom": 2,
+      "track": "phyloP",
+      "length": 35937250,
+      "source_relative": "rice/by_seq/chr02/rice.chr02.phyloP.wig",
+      "output_filename": "chr02.phyloP.f32"
+    },
+    {
+      "chrom": 3,
+      "track": "phastCons",
+      "length": 36413819,
+      "source_relative": "rice/by_seq/chr03/rice.chr03.phastCons.wig",
+      "output_filename": "chr03.phastCons.f32"
+    },
+    {
+      "chrom": 3,
+      "track": "phyloP",
+      "length": 36413819,
+      "source_relative": "rice/by_seq/chr03/rice.chr03.phyloP.wig",
+      "output_filename": "chr03.phyloP.f32"
+    },
+    {
+      "chrom": 4,
+      "track": "phastCons",
+      "length": 35502694,
+      "source_relative": "rice/by_seq/chr04/rice.chr04.phastCons.wig",
+      "output_filename": "chr04.phastCons.f32"
+    },
+    {
+      "chrom": 4,
+      "track": "phyloP",
+      "length": 35502694,
+      "source_relative": "rice/by_seq/chr04/rice.chr04.phyloP.wig",
+      "output_filename": "chr04.phyloP.f32"
+    },
+    {
+      "chrom": 5,
+      "track": "phastCons",
+      "length": 29958434,
+      "source_relative": "rice/by_seq/chr05/rice.chr05.phastCons.wig",
+      "output_filename": "chr05.phastCons.f32"
+    },
+    {
+      "chrom": 5,
+      "track": "phyloP",
+      "length": 29958434,
+      "source_relative": "rice/by_seq/chr05/rice.chr05.phyloP.wig",
+      "output_filename": "chr05.phyloP.f32"
+    },
+    {
+      "chrom": 6,
+      "track": "phastCons",
+      "length": 31248787,
+      "source_relative": "rice/by_seq/chr06/rice.chr06.phastCons.wig",
+      "output_filename": "chr06.phastCons.f32"
+    },
+    {
+      "chrom": 6,
+      "track": "phyloP",
+      "length": 31248787,
+      "source_relative": "rice/by_seq/chr06/rice.chr06.phyloP.wig",
+      "output_filename": "chr06.phyloP.f32"
+    },
+    {
+      "chrom": 7,
+      "track": "phastCons",
+      "length": 29697621,
+      "source_relative": "rice/by_seq/chr07/rice.chr07.phastCons.wig",
+      "output_filename": "chr07.phastCons.f32"
+    },
+    {
+      "chrom": 7,
+      "track": "phyloP",
+      "length": 29697621,
+      "source_relative": "rice/by_seq/chr07/rice.chr07.phyloP.wig",
+      "output_filename": "chr07.phyloP.f32"
+    },
+    {
+      "chrom": 8,
+      "track": "phastCons",
+      "length": 28443022,
+      "source_relative": "rice/by_seq/chr08/rice.chr08.phastCons.wig",
+      "output_filename": "chr08.phastCons.f32"
+    },
+    {
+      "chrom": 8,
+      "track": "phyloP",
+      "length": 28443022,
+      "source_relative": "rice/by_seq/chr08/rice.chr08.phyloP.wig",
+      "output_filename": "chr08.phyloP.f32"
+    },
+    {
+      "chrom": 9,
+      "track": "phastCons",
+      "length": 23012720,
+      "source_relative": "rice/by_seq/chr09/rice.chr09.phastCons.wig",
+      "output_filename": "chr09.phastCons.f32"
+    },
+    {
+      "chrom": 9,
+      "track": "phyloP",
+      "length": 23012720,
+      "source_relative": "rice/by_seq/chr09/rice.chr09.phyloP.wig",
+      "output_filename": "chr09.phyloP.f32"
+    },
+    {
+      "chrom": 10,
+      "track": "phastCons",
+      "length": 23207287,
+      "source_relative": "rice/by_seq/chr10/rice.chr10.phastCons.wig",
+      "output_filename": "chr10.phastCons.f32"
+    },
+    {
+      "chrom": 10,
+      "track": "phyloP",
+      "length": 23207287,
+      "source_relative": "rice/by_seq/chr10/rice.chr10.phyloP.wig",
+      "output_filename": "chr10.phyloP.f32"
+    },
+    {
+      "chrom": 11,
+      "track": "phastCons",
+      "length": 29021106,
+      "source_relative": "rice/by_seq/chr11/rice.chr11.phastCons.wig",
+      "output_filename": "chr11.phastCons.f32"
+    },
+    {
+      "chrom": 11,
+      "track": "phyloP",
+      "length": 29021106,
+      "source_relative": "rice/by_seq/chr11/rice.chr11.phyloP.wig",
+      "output_filename": "chr11.phyloP.f32"
+    },
+    {
+      "chrom": 12,
+      "track": "phastCons",
+      "length": 27531856,
+      "source_relative": "rice/by_seq/chr12/rice.chr12.phastCons.wig",
+      "output_filename": "chr12.phastCons.f32"
+    },
+    {
+      "chrom": 12,
+      "track": "phyloP",
+      "length": 27531856,
+      "source_relative": "rice/by_seq/chr12/rice.chr12.phyloP.wig",
+      "output_filename": "chr12.phyloP.f32"
+    }
+  ]
+}

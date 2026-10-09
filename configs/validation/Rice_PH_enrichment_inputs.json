@@ -1,0 +1,9 @@
+{
+  "trait": "Rice_PH",
+  "assembly": "IRGSP-1.0",
+  "publication_root": "../../data/publication_archives",
+  "spec_path": "../../data/validation/enrichment_selection_and_matches.json",
+  "term_catalog_path": "../../data/validation/full_term_genes.tsv.gz",
+  "term_metadata_path": "../../data/validation/tested_term_metadata.json",
+  "historical_coordinates": true
+}

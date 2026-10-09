@@ -1,0 +1,17 @@
+{
+  "rice": {
+    "reference_assembly": "IRGSP-1.0"
+  },
+  "maize": {
+    "reference_assembly": "AGPv3.25"
+  },
+  "cotton": {
+    "reference_assembly": "TM-1_CRI"
+  },
+  "tomato": {
+    "reference_assembly": "SL4.0"
+  },
+  "chickpea": {
+    "reference_assembly": "CDC_Frontier"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "phenotype": "plant_height_cm",
+  "external_original_samples": 2666,
+  "PC_count": 5,
+  "PCA_refit_on_locus_subset": false,
+  "dosage": "diploid ALT0/1/2, normalized biallelic",
+  "REFALT_exact_swap": "2-dosage in ranked profile",
+  "minimum_called_samples": 10,
+  "monomorphic_SD_threshold": 1e-12,
+  "raw_model": "y~intercept+dosage",
+  "adjusted_model": "y~intercept+dosage+PC1..PC5",
+  "covariance": "classical OLS residual variance/(n-k)",
+  "P_test": "two-sided Student t with n-k df",
+  "partial_R2": "reduced PC-only versus full SNP+PC RSS",
+  "core_endpoint": "historical discovery-max-abs-DPC core per frozen LDCC",
+  "core_correction_family": 11,
+  "ranked_endpoint": "supplied frozen historical final-framework table, default top20",
+  "ranked_correction_family": 20,
+  "source_provenance": [
+    {
+      "ported_sha256": "f129a38a756db06c23afda0a56ec20ce51cf88e335c8582f4854e1dc2c71759a",
+      "changes": [
+        "Explicit required paths instead of personal host defaults",
+        "Declare and enforce normalized biallelic input contract"
+      ],
+      "frozen_legacy_selection_endpoint_not_presented_as_latest_ranked_case_panel": true
+    },
+    {
+      "ported_sha256": "fecb76f3943152d5bbad86aa077950946d8da367288398cfe45e8b1ffa2072a0",
+      "changes": [
+        "Explicit ranked table/VCF/phenotype/PC/output CLI",
+        "Default top-n20 preserved",
+        "Apply2-dosage when exact REF/ALT swap is identified",
+        "Declare normalized biallelic contract"
+      ],
+      "source_flip_bug": "Original source marked allele_flipped but did not orient dosage. Actual frozen20 entries have no flip; controlled actual-locus swap is verified separately."
+    }
+  ],
+  "observed_dependencies": {
+    "cyvcf2": "0.34.0",
+    "statsmodels": "0.14.6",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "portable_inputs": {
+    "phenotype": "resources/external_phenotypes.tsv",
+    "PC": "resources/external_pca.eigenvec",
+    "VCF": "resources/external_normalized_biallelic.vcf.gz",
+    "frozen_catalog": "resources/frozen_candidates"
+  },
+  "full_genome_or_DPCformer_model_calls": false,
+  "whole_latest_manuscript_panel_binding": false,
+  "whole_release_ready": false
+}

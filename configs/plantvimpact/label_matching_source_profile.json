@@ -1,0 +1,138 @@
+{
+  "methods": [
+    "M0_Random",
+    "M1_Context",
+    "M2_Opportunity",
+    "M3_Full"
+  ],
+  "base_seed": 42,
+  "split_seed_rule": "base_seed+fold*1000+len(split)",
+  "negative_rng_offsets": {
+    "M0": 101,
+    "M1": 102,
+    "M2": 103,
+    "M3": 104
+  },
+  "within_group_rng_multiplier": 104729,
+  "classifier": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "source_nodes": [
+    {
+      "names": [
+        "METHODS"
+      ],
+      "node_sha256": "2c3d2414892d8f36b6c8d1641b9db355d35a139ee734b8b605037e3b94f8eb70"
+    },
+    {
+      "names": [
+        "METHOD_SALTS"
+      ],
+      "node_sha256": "e21f101b531684d14183a23f03e456dd66fff2ad5cd7cf05d6b6dd3839948412"
+    },
+    {
+      "names": [
+        "TECHNICAL_NUMERIC_FEATURES"
+      ],
+      "node_sha256": "a9a8fd3b6cd0c7c0390efcaa48be4da4824aa1fb3757ef9f588195e66c4b7208"
+    },
+    {
+      "names": [
+        "stable_hash"
+      ],
+      "node_sha256": "6e0cf877aa15d947923a9adc85f8eb1d81680f6171d3bdb867c2390e1339c713"
+    },
+    {
+      "names": [
+        "eligible_mask"
+      ],
+      "node_sha256": "9ca566adc18d1fe3da8c8278db884b0fbda1a9c21fd81a2e5e713c7fbafd298a"
+    },
+    {
+      "names": [
+        "add_hash_order"
+      ],
+      "node_sha256": "23cfe21853ca9c96caf0318b386414535cb781886aab39ce81f95d87ae5a2003"
+    },
+    {
+      "names": [
+        "select_negatives"
+      ],
+      "node_sha256": "4bbf7bd682a1e2681e225988d48f7913d755229d79069846bb2220e929b024b0"
+    },
+    {
+      "names": [
+        "smd_numeric"
+      ],
+      "node_sha256": "18dec25e7bff23781d6b012631dc249799ba6c7765be631a692b4f63a7a9f32c"
+    },
+    {
+      "names": [
+        "smd_categorical"
+      ],
+      "node_sha256": "562709222c805bf9a74854d5403b879516219d2f330ac7924e5b65e9c9c227e5"
+    },
+    {
+      "names": [
+        "select_common_observed_from_source"
+      ],
+      "node_sha256": "a5da0c972fe8638a0566c3ef5b92e184d30e933ba0838e36e71b5303b645de9a"
+    },
+    {
+      "names": [
+        "metric_row"
+      ],
+      "node_sha256": "9840e3f214381d9a4ef0f8bed58fd1df302c66f21a87807f728446c38f0b5c18"
+    },
+    {
+      "names": [
+        "technical_matrix"
+      ],
+      "node_sha256": "d9d431f5fb07c71ff5e6c10896a754d8822b9c59ab13c1072093e70dc7b2c563"
+    },
+    {
+      "names": [
+        "parse_chr_num"
+      ],
+      "node_sha256": "b1ac3907259d8327ece6ae4aaa7b728401d417b415d18bebdc008500d5744aba"
+    },
+    {
+      "names": [
+        "fast_hash_order"
+      ],
+      "node_sha256": "4e7fed12f0d6af33f648f614f09b41be24037b746aa4013993e20bf1893191d0"
+    },
+    {
+      "names": [
+        "fast_select_common_observed"
+      ],
+      "node_sha256": "0766cc197367aad3fd63f44659f6913c30bbd58716273a79ec935a61e5553d2e"
+    },
+    {
+      "names": [
+        "fast_select_all_negatives"
+      ],
+      "node_sha256": "d9cbeae1809bf1d19a515a32e13b755de3b5891e6766523a7d5ff51213128ce1"
+    },
+    {
+      "names": [
+        "normalize_technical"
+      ],
+      "node_sha256": "8c1c6dcb0df34a563c04779e1108cde76201ec0db66cc82cee8f46401d3443cc"
+    },
+    {
+      "names": [
+        "balance_records"
+      ],
+      "node_sha256": "c0c03858e26ed035ba32492e8b9ad38e70ba41a3cc1385487c0304189d0e2b3b"
+    }
+  ],
+  "class_definition": {
+    "observed_label": 0,
+    "unobserved_proxy_depleted_label": 1
+  },
+  "source_chickpea_max_callable_n": 37
+}

@@ -1,0 +1,56 @@
+{
+  "profile": "maize_recovered_Cactus_PHAST",
+  "target": "Zma_AGPv3_25",
+  "tree": "((Zma_AGPv3_25,(Sbi_NCBIv3,(Sit_v2,Svi_v2))),(Bdi_v3,Osa_IRGSP1));",
+  "genomes": [
+    {
+      "name": "Zma_AGPv3_25",
+      "assembly": "Zea_mays.AGPv3.25",
+      "filename": "Zma_AGPv3_25.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-25/fasta/zea_mays/dna/Zea_mays.AGPv3.25.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Sbi_NCBIv3",
+      "assembly": "Sorghum_bicolor_NCBIv3",
+      "filename": "Sbi_NCBIv3.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/sorghum_bicolor/dna/Sorghum_bicolor.Sorghum_bicolor_NCBIv3.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Sit_v2",
+      "assembly": "Setaria_italica_v2.0",
+      "filename": "Sit_v2.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/setaria_italica/dna/Setaria_italica.Setaria_italica_v2.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Svi_v2",
+      "assembly": "Setaria_viridis_v2.0",
+      "filename": "Svi_v2.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/setaria_viridis/dna/Setaria_viridis.Setaria_viridis_v2.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Bdi_v3",
+      "assembly": "Brachypodium_distachyon_v3.0",
+      "filename": "Bdi_v3.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/brachypodium_distachyon/dna/Brachypodium_distachyon.Brachypodium_distachyon_v3.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Osa_IRGSP1",
+      "assembly": "Oryza_sativa_IRGSP-1.0",
+      "filename": "Osa_IRGSP1.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/oryza_sativa/dna/Oryza_sativa.IRGSP-1.0.dna.toplevel.fa.gz"
+    }
+  ],
+  "threads": 32,
+  "maf_threads": 4,
+  "phylofit_model": "REV",
+  "phastcons": {
+    "target_coverage": 0.25,
+    "expected_length": 45
+  },
+  "phylop": {
+    "method": "LRT",
+    "mode": "CONACC"
+  },
+  "score_mode": "direct",
+  "window_bp": 20000
+}

@@ -1,0 +1,36 @@
+{
+  "target_id": "strict_best_test_fold_20261003",
+  "panel": "Figure 5e",
+  "variant": "Ca5:33198529_G_A",
+  "genomic_alleles": [
+    "G",
+    "A"
+  ],
+  "phenotype_unit": "g",
+  "PC_count": 5,
+  "PC_policy": "original corrected GWAS PCs; center and sample-standardize with ddof1; never PCA-refit",
+  "categorical_design": [
+    "intercept",
+    "I(G/A)",
+    "I(A/A)",
+    "PC1",
+    "PC2",
+    "PC3",
+    "PC4",
+    "PC5"
+  ],
+  "covariance": "HC3",
+  "test_distribution": "two-sided Student t, n-rank(X) residual degrees of freedom",
+  "CI_alpha": 0.05,
+  "Holm_family": 3,
+  "contrast_order": [
+    "G/G minus G/A",
+    "G/A minus A/A",
+    "G/G minus A/A"
+  ],
+  "original_subjects": 2917,
+  "residual_df": 2909,
+  "public_fixture_subjects": 72,
+  "fixture_is_full_publication_cohort": false,
+  "original_source_files_modified": false
+}

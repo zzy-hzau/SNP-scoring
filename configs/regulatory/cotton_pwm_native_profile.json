@@ -1,0 +1,65 @@
+{
+  "source_before_sha256": "491b9aa59ed18ef6f6bfa188c236401335e0db5ebb2c121379132c8b067bd77c",
+  "ported_sha256": "d1ebeabf4b80d6ee6eb68357e5f7a62220818195d797e5daf33a7e9486596a0b",
+  "resource": {
+    "release": "JASPAR2024 CORE plants non-redundant MEME",
+    "library_file": "resources/JASPAR2024_CORE_plants_non-redundant_pfms_meme.txt",
+    "library_sha256": "8444ed8c0d266b66f99d9bbe5aaa452599b0f4f5496b303a3effcedd474d2335",
+    "family_map": "resources/jaspar2024_plants_extended_family_map.tsv",
+    "family_map_sha256": "e2d15f3479cd669618b195b8a16bf9afe131e1e4394dd4afc56df9b6d8ebcec0",
+    "family_map_generation_source": "caller-supplied published family map; original generation producer is not bound by this entry",
+    "official_current_site_release_not_substituted_for2024": true,
+    "official_docs": "https://jaspar.elixir.no/docs/",
+    "resource_license_declared_by_site": "CC BY4.0"
+  },
+  "parameters": {
+    "native_chunk_size": 5000,
+    "CLI_default_chunk_size": 20000,
+    "hit_threshold": 0.8,
+    "delta_threshold": 0.1,
+    "probability_pseudocount": 0.0001,
+    "background_base_probability": 0.25,
+    "normalization_denominator_floor": 1e-06,
+    "score_dtype": "float32",
+    "strand_policy": "maximum of both strands at every alignment covering the SNP",
+    "max_kept_motif_length": 21,
+    "reference_window": 43,
+    "original_reference_mode": "chromosome",
+    "optional_reference_mode": "indexed"
+  },
+  "requested_families": [
+    "MYB",
+    "bHLH",
+    "NAC",
+    "HDZIP",
+    "WRKY",
+    "AP2ERF",
+    "bZIP",
+    "TCP",
+    "MADS",
+    "DOF",
+    "ARF",
+    "GATA",
+    "C2H2_ZF"
+  ],
+  "represented_family_counts": {
+    "DOF": 25,
+    "MYB": 65,
+    "bZIP": 27,
+    "AP2ERF": 77,
+    "HDZIP": 25,
+    "GATA": 12,
+    "WRKY": 46,
+    "bHLH": 18,
+    "TCP": 21,
+    "C2H2_ZF": 3,
+    "MADS": 4
+  },
+  "families_without_kept_motifs": [
+    "NAC",
+    "ARF"
+  ],
+  "coverage_zero_is_not_biological_zero": true,
+  "all_model_or_full_candidate_runs": false,
+  "whole_release_ready": false
+}

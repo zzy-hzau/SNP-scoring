@@ -1,0 +1,57 @@
+{
+  "species": "maize",
+  "region": "coding",
+  "features": [
+    "S_esm",
+    "S_dna",
+    "dna_cons__phastCons",
+    "dna_cons__phyloP",
+    "maize_has_homolog",
+    "maize_functional_redundancy",
+    "prot_safe_ref_aa_freq",
+    "prot_safe_alt_aa_freq",
+    "prot_safe_entropy",
+    "prot_safe_delta_log_odds",
+    "prot_safe_conservation_penalty",
+    "prot_safe_abs_delta_log_odds",
+    "prot_safe_alt_absent_flag"
+  ],
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "logloss",
+      "auc",
+      "aucpr"
+    ],
+    "tree_method": "hist",
+    "device": "cuda:1",
+    "eta": 0.001,
+    "max_depth": 1,
+    "min_child_weight": 5000.0,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "lambda": 5000.0,
+    "alpha": 0.0,
+    "gamma": 0.0,
+    "max_bin": 64,
+    "nthread": 16,
+    "seed": 42,
+    "monotone_constraints": "(1,1,1,1,0,0,1,-1,-1,-1,1,1,1)"
+  },
+  "raw_base_margin": {
+    "dna_weight": 0.91,
+    "mean": 2.46,
+    "std": 2.4,
+    "coef": 0.37
+  },
+  "strategy": "M3_Full",
+  "seed": 42,
+  "unique_key": "snp_id",
+  "multi_gene_policy": "lexicographically first nonmissing GeneID in duplicate source rows; fixed before fitting",
+  "unknown_gene_policy": "keep missing; do not recode unknown GeneID as no homolog",
+  "external_labels_used_for_training_or_tuning": false,
+  "version": "maize_coding_20260926",
+  "resource_key": "maize_coding",
+  "training_seed_rule": "base_seed",
+  "conservation_policy": "Canonical feature cache with unique SNP and preserved gene identity"
+}

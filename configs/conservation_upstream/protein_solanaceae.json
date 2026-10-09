@@ -1,0 +1,55 @@
+{
+  "profile": "native_solanaceae_untrimmed",
+  "preparation": "native_prefixed_standardizer",
+  "proteomes": [
+    {
+      "name": "spe_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Solanum_pennellii/annotation/Spe_protein.fas.gz",
+      "filename": "Spe_protein.fas.gz"
+    },
+    {
+      "name": "stu_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Solanum_tuberosum/annotation/Stu_protein.fas.gz",
+      "filename": "Stu_protein.fas.gz"
+    },
+    {
+      "name": "sme_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Solanum_melongena/annotation/Sme_protein.fas.gz",
+      "filename": "Sme_protein.fas.gz"
+    },
+    {
+      "name": "nsy_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Nicotiana_sylvestris/annotation/Nsy_protein.fas.gz",
+      "filename": "Nsy_protein.fas.gz"
+    },
+    {
+      "name": "pax_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Petunia_axillaris/annotation/Pax_protein.fas.gz",
+      "filename": "Pax_protein.fas.gz"
+    },
+    {
+      "name": "pin_prm",
+      "url": "http://ftp.cbi.pku.edu.cn/pub/database/PlantRegMap/08-download/Petunia_inflata/annotation/Pin_protein.fas.gz",
+      "filename": "Pin_protein.fas.gz"
+    }
+  ],
+  "targets": [
+    {
+      "name": "slyc_sl5",
+      "reference": "${PHENO_REFERENCE_ROOT}/tomato/SL5.0.fasta.gz",
+      "gff": "${PHENO_REFERENCE_ROOT}/tomato/SL5.0.gff3.gz"
+    }
+  ],
+  "threads": 32,
+  "analysis_threads": 32,
+  "orthofinder_aligner": null,
+  "msa_aligner": "source_preferred",
+  "mafft_anysymbol": true,
+  "msa_threads": 1,
+  "target_groups_only": true,
+  "recorded_tools": {
+    "orthofinder": "3.1.4",
+    "preferred_realigner": "FAMSA 2.4.1; MAFFT fallback"
+  },
+  "panel_species_count": 7
+}

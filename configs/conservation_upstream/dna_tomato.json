@@ -1,0 +1,44 @@
+{
+  "profile": "tomato_recovered_Cactus_PHAST",
+  "target": "Sly_SL5",
+  "tree": "(((Sly_SL5,Sly_SL3),Stu_SolTub3),Can_ASM51225v2);",
+  "genomes": [
+    {
+      "name": "Sly_SL5",
+      "assembly": "Solomics_SL5.0",
+      "filename": "Sly_SL5.fa.gz",
+      "url": "http://solomics.agis.org.cn/tomato/ftp/genome/SL5.0.fasta.gz"
+    },
+    {
+      "name": "Sly_SL3",
+      "assembly": "Solanum_lycopersicum_SL3.0",
+      "filename": "Sly_SL3.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/solanum_lycopersicum/dna/Solanum_lycopersicum.SL3.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Stu_SolTub3",
+      "assembly": "Solanum_tuberosum_SolTub_3.0",
+      "filename": "Stu_SolTub3.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/solanum_tuberosum/dna/Solanum_tuberosum.SolTub_3.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Can_ASM51225v2",
+      "assembly": "Capsicum_annuum_ASM51225v2",
+      "filename": "Can_ASM51225v2.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/capsicum_annuum/dna/Capsicum_annuum.ASM51225v2.dna.toplevel.fa.gz"
+    }
+  ],
+  "threads": 32,
+  "maf_threads": 4,
+  "phylofit_model": "REV",
+  "phastcons": {
+    "target_coverage": 0.25,
+    "expected_length": 45
+  },
+  "phylop": {
+    "method": "LRT",
+    "mode": "CONACC"
+  },
+  "score_mode": "windowed",
+  "window_bp": 20000
+}

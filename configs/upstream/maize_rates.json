@@ -1,0 +1,22 @@
+{
+  "species": "maize",
+  "step": "rates",
+  "working_directory": "../..",
+  "arguments": [
+    "--fasta",
+    "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.dna.toplevel.fa",
+    "--vcf",
+    "data/maize/wild.norm.vcf.gz",
+    "--sites-4d",
+    "data/maize/4d_sites.bed",
+    "--n-chr",
+    "10",
+    "--out",
+    "results/maize/rate_cache.pkl",
+    "--global-json",
+    "results/maize/global_rates.json"
+  ],
+  "input_note": "Place the matching original resources at these caller-editable paths; PHENO_REFERENCE_ROOT selects references.",
+  "parameter_scope": "Chromosome/sample counts follow preserved manifests; unlisted switches retain the original source defaults.",
+  "calibration": "train chromosomes only; train/validation mutation counts exclude test and validation, test excludes test"
+}

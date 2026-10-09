@@ -1,0 +1,205 @@
+{
+  "results": [
+    {
+      "primaryAccession": "A0A1S2Y8P2",
+      "sequence": {
+        "value": "MEVESGVTTPTALLDDDGRPKRTGNEWTASAHIINAVIGTGVLSLPWAMAQMGWALGLLSIFIFAAVTLYTSNLLADCYRSPDPVTGKRNTTYMDAVKVHLGGKQHVFCGIIQYANLAGFTIGFVVTTSTSIVTILKNICFRKNGFGAPCRFSNNPYMIGIGVVEIILSQIPNFHKLSVLSIVAATMAFGYASIGVGLSLASVIQGNVKSTSFWGSNKGSSSDIAWNMLVAIGDITLASAYTQIAVDIQDSLKSYPPENKVMKKANMIGIFTMTVFFTLNACSGYAAFGSNAPGNILMSTGFHKPFWLLELANVFIIVHLLGAFQVIIQPLYRIVEIIAVQKWPESSFVTREIPMSIGKIKFSINYFRLVWRTVFVMVVTVLAMAMPFFNDMIALLGALGFWPSVVYFPVEMYIVRQKIRKGTIRWIGLQSLSFFCLLVSLAAACGAIHGLAQAVGKYKPFMYKA",
+        "length": 465,
+        "molWeight": 50774,
+        "crc64": "E88698D27857EDE7",
+        "md5": "EA3BE52792F7FF3A5BC02EBF563E0283"
+      },
+      "features": [
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 29,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 48,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 54,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 76,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 177,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 204,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 224,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 246,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 267,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 286,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 306,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 328,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 369,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 389,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 395,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 415,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        },
+        {
+          "type": "Transmembrane",
+          "location": {
+            "start": {
+              "value": 427,
+              "modifier": "EXACT"
+            },
+            "end": {
+              "value": 452,
+              "modifier": "EXACT"
+            }
+          },
+          "description": "Helical",
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000256",
+              "source": "SAM",
+              "id": "Phobius"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

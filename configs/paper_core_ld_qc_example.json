@@ -1,0 +1,10 @@
+{
+  "core_source_root": "../data/paper_core_ld",
+  "output_root": "../results/paper_core_ld_usable",
+  "traits": {
+    "Rice_PH": {
+      "panel_directory": "../data/rice_discovery_genotypes",
+      "species": "rice"
+    }
+  }
+}

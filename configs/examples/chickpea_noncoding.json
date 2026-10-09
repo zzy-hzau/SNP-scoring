@@ -1,0 +1,49 @@
+{
+  "species": "chickpea",
+  "model_type": "noncoding",
+  "main_feature_set": "strict_dna_cons_regionfix_context",
+  "features": [
+    "S_dna",
+    "dna_cons__phastCons",
+    "dna_cons__phyloP",
+    "dist_to_TSS",
+    "dist_to_gene",
+    "promoter_core_flag",
+    "promoter_proximal_flag",
+    "promoter_distal_flag",
+    "canonical_splice_core_flag",
+    "donor_offset",
+    "acceptor_offset",
+    "region_type_intron",
+    "region_type_promoter",
+    "region_type_splice_near",
+    "region_subtype_intron",
+    "region_subtype_promoter_core",
+    "region_subtype_promoter_distal",
+    "region_subtype_promoter_proximal",
+    "region_subtype_splice_core",
+    "region_subtype_splice_near_other"
+  ],
+  "dna_conservation": true,
+  "redundancy_prefix": null,
+  "resources": {
+    "splits": "chickpea_noncoding/splits",
+    "redundancy": null,
+    "gene_map_splits": null,
+    "gene_map": null
+  },
+  "training": {
+    "max_depth": 4,
+    "eta": 0.03,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "min_child_weight": 20.0,
+    "lambda_reg": 1.0,
+    "alpha_reg": 0.0,
+    "max_bin": 64,
+    "seed": 42,
+    "num_boost_round": 3000,
+    "early_stopping_rounds": 100
+  },
+  "folds": "5"
+}

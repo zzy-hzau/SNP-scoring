@@ -1,0 +1,54 @@
+{
+  "status": "PASSED",
+  "scope": "Three real stored variants,21evidence records,8nodes and17edges,extracted without copying or writing the full source database",
+  "original_read_only_database_result_equal": true,
+  "original_vs_ported_planner_equal": true,
+  "portable_snapshot_entry_equal": true,
+  "runtime_fields_removed": [
+    "tool_runs.lease_owner",
+    "tool_runs.lease_expires_at",
+    "tool_runs.artifact_id",
+    "evidence_records.artifact_id"
+  ],
+  "scientific_fields_modified": false,
+  "generation_and_network_calls": 0,
+  "snapshot_sha256": "9a0aa2cc62c67c3fea016b948bd6e681bed6ae3ad31766bb95dedcc9398b2a9c",
+  "cases": [
+    {
+      "snp_key": "rice|IRGSP-1.0|1|594195|T|C",
+      "trait": "Plant_height",
+      "actual_records": 8,
+      "node_count": 6,
+      "edge_count": 8,
+      "actual_vs_snapshot_equal": true,
+      "native_vs_ported_equal": true,
+      "decision": "need_gene_anchor"
+    },
+    {
+      "snp_key": "rice|IRGSP-1.0|1|23717214|C|A",
+      "trait": "Plant_height",
+      "actual_records": 8,
+      "node_count": 6,
+      "edge_count": 8,
+      "actual_vs_snapshot_equal": true,
+      "native_vs_ported_equal": true,
+      "decision": "need_gene_anchor"
+    },
+    {
+      "snp_key": "rice|IRGSP-1.0|1|23717685|T|C",
+      "trait": "Plant_height",
+      "actual_records": 5,
+      "node_count": 5,
+      "edge_count": 4,
+      "actual_vs_snapshot_equal": true,
+      "native_vs_ported_equal": true,
+      "decision": "need_gene_anchor"
+    }
+  ],
+  "not_a_new_benchmark_performance_estimate": true,
+  "not_covered": [
+    "Live supervisor LLM planning",
+    "Full retrieval/tool execution",
+    "Whole-paper release completion"
+  ]
+}

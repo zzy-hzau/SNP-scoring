@@ -1,0 +1,49 @@
+{
+  "profile_id": "chickpea_coding_verified_existing",
+  "version": "v3_strict_coding",
+  "species": "chickpea",
+  "model_type": "coding",
+  "folds": "1-8",
+  "main_feature_set": "strict_lm_dna_cons_prot_safe",
+  "features": [
+    "S_esm",
+    "S_dna",
+    "dna_cons__phastCons",
+    "dna_cons__phyloP",
+    "prot_safe_ref_aa_freq",
+    "prot_safe_alt_aa_freq",
+    "prot_safe_entropy",
+    "prot_safe_delta_log_odds",
+    "prot_safe_conservation_penalty",
+    "prot_safe_abs_delta_log_odds",
+    "prot_safe_alt_absent_flag"
+  ],
+  "dna_conservation": true,
+  "redundancy_prefix": null,
+  "resources": {
+    "splits": "chickpea_coding/splits",
+    "redundancy": null,
+    "gene_map_splits": null,
+    "gene_map": null
+  },
+  "training": {
+    "max_depth": 4,
+    "eta": 0.03,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "min_child_weight": 20.0,
+    "lambda_reg": 1.0,
+    "alpha_reg": 0.0,
+    "max_bin": 64,
+    "seed": 42,
+    "num_boost_round": 3000,
+    "early_stopping_rounds": 100
+  },
+  "inference": {
+    "fold_layout": "folds/foldNN",
+    "model_filename": "xgboost_strict_lm_dna_cons_prot_safe.json",
+    "imputation_filename": "train_fold_median_imputation.tsv",
+    "iteration_rule": "xgb_best_iteration + 1",
+    "base_margin": null
+  }
+}

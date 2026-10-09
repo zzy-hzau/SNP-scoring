@@ -1,0 +1,19 @@
+{
+  "target_id": "strict_best_test_fold_20261003",
+  "panel": "Figure 6b",
+  "original_cases_per_condition": 30,
+  "conditions": [
+    "B0",
+    "B1",
+    "FULL"
+  ],
+  "public_fixture_cases_per_condition": 9,
+  "bootstrap_seed": 20260812,
+  "bootstrap_resamples": 5000,
+  "primary_metric_policy": "mean of available scores per metric;retain fractional evidence coverage and null/not-applicable values",
+  "binary_composite_policy": "native separate full-recall criterion lit_recall>=1, keyword claim labels, conditional direction and citation-ID membership",
+  "primary_curated_mode": "include original returned evidence;exclude-curated is a separate diagnostic",
+  "model_generation": "not invoked",
+  "native_keyword_task_ids": "Preserve scientific task IDs in raw-card mode because claim keyword tables key on those IDs;public aggregation demo uses publication IDs and contains no raw text",
+  "live_PMID_validation": "not executed; optional caller-supplied frozen existence-cache diagnostics only"
+}

@@ -1,0 +1,52 @@
+{
+  "profile": "native_rice_coding_strict_LOCO_proxy_labels",
+  "script": "src/phenofuncrank_repro/plantvimpact/native_upstream/coding_labels.py",
+  "resources": {
+    "input": "data/rice/coding_preLM_universe.parquet",
+    "rate_cache": "data/rice/rice_rate_tables_cache.clean.pkl",
+    "out_dir": "results/rice/coding_proxy_labels_locoNe"
+  },
+  "scientific_options": {
+    "n_chr": 12,
+    "folds": "1-12",
+    "max_callable_n": 50,
+    "fallback_mu": 4.56e-09,
+    "mu_base": 4.56e-09,
+    "pmut_pseudo_count": 0.5,
+    "min_callable_n": 5,
+    "opportunity_min_quantile": 0.2,
+    "opportunity_bins": 10,
+    "callable_n_bins": 10,
+    "label1_per_label0": 1.0,
+    "max_label0_per_group": 20000,
+    "min_group_label0": 3,
+    "min_group_label1": 3,
+    "sample_rows_for_bins": 50000000,
+    "edge_sample_fraction": 1.0,
+    "seed": 17,
+    "ne_calibration_iter": 80,
+    "ne_calibration_max": 1000000000000.0,
+    "match_aa_change": false
+  },
+  "scan_batch_size": 300000,
+  "rate_count_group_prefix": "Maize",
+  "group_prefix_note": "The native diploid rate-cache/script intentionally retains the generic single-group prefix; this does not select maize biological data.",
+  "rate_exclusions": {
+    "train": [
+      "test_chr",
+      "val_chr"
+    ],
+    "val": [
+      "test_chr",
+      "val_chr"
+    ],
+    "test": [
+      "test_chr"
+    ]
+  },
+  "calibration": "One Ne and opportunity/coverage boundaries from train chromosomes per fold; do not recalibrate from a sampled comparison.",
+  "label_semantics": {
+    "0": "Wild-observed callable missense tolerated/neutral-like proxy",
+    "1": "Wild-unobserved callable high-opportunity depletion proxy"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "profile": "cotton_recovered_primary_genomes_Cactus",
+  "target": "tm1",
+  "tree": "((garb:1,grai:1):1,(tm1:1,(gbar:1,gtom:1):1):1);",
+  "genomes": [
+    {
+      "name": "tm1",
+      "path": "${PHENO_REFERENCE_ROOT}/cotton/genomes/TM-1_CRI.fa",
+      "assembly": "TM-1_CRI"
+    },
+    {
+      "name": "garb",
+      "url": "https://www.cottongen.org/cottongen_downloads/Gossypium_arboreum/CRI-Updated_G.arboreum_A2genome/assembly/G.arboreum_CRI-A2_assembly_v1.0.fasta.gz",
+      "filename": "G.arboreum_CRI-A2_assembly_v1.0.fasta.gz"
+    },
+    {
+      "name": "grai",
+      "url": "https://www.cottongen.org/cottongen_downloads/Gossypium_raimondii/JGI_221_G.raimondii_Dgenome/assembly/G.raimondii_JGI_221_v2.0.psuedomolecules.fasta.gz",
+      "filename": "G.raimondii_JGI_221_v2.0.psuedomolecules.fasta.gz"
+    },
+    {
+      "name": "gbar",
+      "url": "https://www.cottongen.org/cottongen_downloads/Gossypium_barbadense/HAU_v3.0_AD2genome/assembly/3-79_HAU_v3.fa.gz",
+      "filename": "3-79_HAU_v3.fa.gz"
+    },
+    {
+      "name": "gtom",
+      "url": "https://www.cottongen.org/cottongen_downloads/Gossypium_tomentosum/AD3_HGS_v1.1/assembly/GCA_007990485.1_Gossypium_tomentosum_v1.1_genomic.fna.gz",
+      "filename": "GCA_007990485.1_Gossypium_tomentosum_v1.1_genomic.fna.gz"
+    }
+  ],
+  "fasta_policy": "cotton_primary",
+  "primary_counts": {
+    "garb": 13,
+    "grai": 13,
+    "gbar": 26,
+    "gtom": 26
+  },
+  "threads": 16,
+  "align_by_sequence": true,
+  "default_memory": 214748364800,
+  "maf_threads": 4,
+  "phylofit_model": "REV",
+  "phastcons": {
+    "target_coverage": 0.25,
+    "expected_length": 45
+  },
+  "phylop": {
+    "method": "LRT",
+    "mode": "CONACC"
+  },
+  "score_mode": "direct"
+}

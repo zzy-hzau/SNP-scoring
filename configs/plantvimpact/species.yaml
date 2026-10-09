@@ -1,0 +1,73 @@
+species:
+  rice:
+    genome_assembly: IRGSP1.0_RAP
+    loco_folds: 1-12
+    n_chromosomes: 12
+    coding:
+      registry_key: models.rice.coding
+      features_file: configs/plantvimpact/features/rice_coding.json
+    noncoding:
+      registry_key: models.rice.noncoding
+      features_file: configs/plantvimpact/features/rice_noncoding.json
+  maize:
+    genome_assembly: AGPv3.25
+    loco_folds: 1-10
+    n_chromosomes: 10
+    coding:
+      registry_key: models.maize.coding
+      features_file: configs/plantvimpact/features/maize_coding.json
+    noncoding:
+      registry_key: models.maize.noncoding
+      features_file: configs/plantvimpact/features/maize_noncoding.json
+  tomato:
+    genome_assembly: SL5.0
+    loco_folds: 1-12
+    n_chromosomes: 12
+    coding:
+      registry_key: models.tomato.coding
+      features_file: configs/plantvimpact/features/tomato_coding.json
+    noncoding:
+      registry_key: models.tomato.noncoding
+      features_file: configs/plantvimpact/features/tomato_noncoding.json
+  chickpea:
+    genome_assembly: CDCFrontier
+    loco_folds: 1-8
+    n_chromosomes: 8
+    coding:
+      registry_key: models.chickpea.coding
+      features_file: configs/plantvimpact/features/chickpea_coding.json
+      claim_caveat: Full XGBoost and raw LM O/E are approximately tied.
+    noncoding:
+      registry_key: models.chickpea.noncoding
+      features_file: configs/plantvimpact/features/chickpea_noncoding.json
+  cotton:
+    genome_assembly: AD1_at_dt
+    loco_folds: 1-13
+    n_chromosomes: 26
+    loco_groups: 13
+    paired_subgenome_folds: true
+    coding:
+      registry_key: models.cotton.coding
+      features_file: configs/plantvimpact/features/cotton_coding.json
+      universe_policy: full_universe_only
+    noncoding:
+      registry_key: models.cotton.noncoding
+      features_file: configs/plantvimpact/features/cotton_noncoding.json
+loco:
+  validation_mode: Leave-One-Chromosome-Out
+  chr_leak_check: true
+  ne_calibration:
+    mode: train_loco
+    iterations: 80
+    maximum: 1.0e12
+  negative_sampling:
+    method: CRC32_hash
+    seed: 17
+    coding_match_dimensions:
+    - opportunity
+    - callability
+    noncoding_match_dimensions:
+    - opportunity
+    - callability
+    - context
+    - region

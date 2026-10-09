@@ -1,0 +1,78 @@
+{
+  "species": "rice",
+  "trait": "Grain_size",
+  "evidence_items": [
+    {
+      "claim": {
+        "gene_match": "exact",
+        "supports": "variant",
+        "text": "A single-nucleotide mutation in GL4 produces a premature stop codon and causes smaller grain size and loss of seed shattering.",
+        "variant_match": "exact"
+      },
+      "claim_scope": "variant",
+      "directness": "direct",
+      "evidence_class": "literature",
+      "evidence_id": "veib3_052_lit_28481332_1",
+      "evidence_level": "A",
+      "evidence_type": "variant_specific_natural_allele",
+      "limitations": [
+        "Anchor is source-checked at the paper/abstract level and is not an exhaustive gold-paper list.",
+        "Variant identity is paper-defined; reference-assembly coordinate reconciliation is pending for this v0.3 construction set."
+      ],
+      "provenance": {
+        "artifact_id": null,
+        "chunk_id": "abstract",
+        "input_hash": null,
+        "paper_id": "28481332",
+        "paper_id_type": "PMID",
+        "quote": "Grain size is one of the most important components of grain yield and selecting large seeds has been a main target during plant domestication. Surprisingly,",
+        "quote_hash": "27f3fcb105f11994eeb914f98fa280d1926cf8bf5e8a6fe774c449f7268073f3",
+        "source_name": "Europe PMC",
+        "source_record_id": "PMID_28481332",
+        "source_url": "https://europepmc.org/article/MED/28481332",
+        "status": "valid",
+        "title": "A single-nucleotide polymorphism causes smaller grain size and loss of seed shattering during African rice domestication.",
+        "tool_run_id": null,
+        "verification": "exact_source_checked"
+      },
+      "stance": "support",
+      "pack_item_id": "veib3_052_lit_28481332_1",
+      "veib_evidence_level": "L1",
+      "veib_directness": "direct",
+      "subject_type": "variant",
+      "subject_id": "GL4_domestication_SNP_premature_stop",
+      "source_name": "Europe PMC",
+      "source_record_id": "PMID_28481332",
+      "species": "rice",
+      "reference_assembly": "paper-defined_or_reference_pending",
+      "statement": "A single-nucleotide mutation in GL4 produces a premature stop codon and causes smaller grain size and loss of seed shattering.",
+      "supports": true,
+      "trait": "Grain_size",
+      "source_type": "literature",
+      "proximity_level": "L1",
+      "claim_support": "direct",
+      "provenance_status": "valid",
+      "admission_status": "trusted",
+      "variant_key": "GL4_domestication_SNP_premature_stop",
+      "retrieved_at": "2000-01-01T00:00:00Z"
+    }
+  ],
+  "_fixture_metadata": {
+    "purpose": "Actual archived biological evidence input subset, not a new analysis or reported performance estimate",
+    "source_case_id": "veib3_052",
+    "quote_transformation": "Only source quotation is restricted to its first at most25words, exact original substring. Original curated annotations, IDs and evidence classes unchanged.",
+    "retrieved_at_note": "A fixed timestamp fills absent retrieval metadata.",
+    "candidate_note": "Only original archive identity/consequence fields; no invented PhenoFuncRank scores or core assignment.",
+    "excerpts": [
+      {
+        "evidence_id": "veib3_052_lit_28481332_1",
+        "source_record_id": "28481332",
+        "full_quote_sha256": "27f3fcb105f11994eeb914f98fa280d1926cf8bf5e8a6fe774c449f7268073f3",
+        "original_word_count": 158,
+        "excerpt_word_count": 25,
+        "excerpt_start_character": 0,
+        "excerpt_end_character": 156
+      }
+    ]
+  }
+}

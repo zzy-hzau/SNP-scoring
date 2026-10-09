@@ -1,0 +1,50 @@
+{
+  "profile": "chickpea_recovered_Cactus_PHAST",
+  "target": "Car_CDC_Frontier",
+  "tree": "((Car_CDC_Frontier,Mtr_A17_4_0),(Pvu_PhaVulg1_0,(Vra_ver6,Van_Vigan1_1)));",
+  "genomes": [
+    {
+      "name": "Car_CDC_Frontier",
+      "assembly": "Chickpea_CDC_Frontier",
+      "filename": "Car_CDC_Frontier.fa.gz",
+      "url": "https://iagr.genomics.cn/jbrowse/GSTP012/reference/chickpea/Chickpea.CDC_Frontier.fa.gz"
+    },
+    {
+      "name": "Mtr_A17_4_0",
+      "assembly": "Medicago_truncatula_A17_4.0",
+      "filename": "Mtr_A17_4_0.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/medicago_truncatula/dna/Medicago_truncatula.MedtrA17_4.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Pvu_PhaVulg1_0",
+      "assembly": "Phaseolus_vulgaris_PhaVulg1_0",
+      "filename": "Pvu_PhaVulg1_0.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/phaseolus_vulgaris/dna/Phaseolus_vulgaris.PhaVulg1_0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Vra_ver6",
+      "assembly": "Vigna_radiata_ver6",
+      "filename": "Vra_ver6.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/vigna_radiata/dna/Vigna_radiata.Vradiata_ver6.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Van_Vigan1_1",
+      "assembly": "Vigna_angularis_Vigan1.1",
+      "filename": "Van_Vigan1_1.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/vigna_angularis/dna/Vigna_angularis.Vigan1.1.dna.toplevel.fa.gz"
+    }
+  ],
+  "threads": 32,
+  "maf_threads": 4,
+  "phylofit_model": "REV",
+  "phastcons": {
+    "target_coverage": 0.25,
+    "expected_length": 45
+  },
+  "phylop": {
+    "method": "LRT",
+    "mode": "CONACC"
+  },
+  "score_mode": "direct",
+  "window_bp": 20000
+}

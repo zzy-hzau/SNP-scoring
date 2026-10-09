@@ -1,0 +1,108 @@
+{
+  "cotton": {
+    "raw_metadata_entries": 126,
+    "real_quant_QC_samples": 125,
+    "retained_QC_samples": 108,
+    "contexts": 42,
+    "context_keys": [
+      "tissue",
+      "condition"
+    ],
+    "context_summary": "median TPM; exact control->normal before lowercase condition",
+    "minimum_expressed_genes": 20000,
+    "expressed_gene_TPM_strictly_greater_than": 1.0,
+    "minimum_total_TPM": 500000,
+    "minimum_mapping_fraction": 0.6,
+    "source_TPM_dtype": "float32",
+    "correlation": "Pearson log2(context_TPM+1)",
+    "minimum_samples_for_correlation": 4,
+    "TPM_cutoffs": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "pair_redundancy": "signed expr_corr*breadth",
+    "BH_method": "fdr_bh",
+    "FDR_alpha": 0.05,
+    "breadth_high_confidence_strictly_greater_than": 0.3,
+    "configured_bootstrap_iterations": 1000,
+    "bootstrap_used_for_saved_primary_pair_stats": false,
+    "actual_ComBat_branch": "skipped due batch/tissue confounding",
+    "metadata_SHA256": "ec6d46af6cf4b4e4b0e366f10531e82308763533a9363ae743dfd3d467ab4459"
+  },
+  "rice_salmon": {
+    "index_k": 31,
+    "index_threads": 8,
+    "quant_threads_per_job": 4,
+    "concurrent_jobs": 4,
+    "library_type": "A",
+    "validateMappings": true,
+    "mapping_rate_units": "percent",
+    "matrix_QC_cutoffs": [
+      40,
+      50,
+      60
+    ],
+    "tx_mapping_duplicate_policy": "first tx_id mapping",
+    "gene_TPM": "sum of available quantified transcript TPM",
+    "RAP_namespace_normalization": "explicit OsXXt->OsXXg flag; TPM unchanged"
+  },
+  "syntenic_gene_redundancy": {
+    "TPM_cutoff": 1.0,
+    "correlation_input": "log2(TPM+1)",
+    "minimum_valid_samples": 4,
+    "missing_or_constant_pair": "r=0,p=1",
+    "breadth": "either gene raw TPM>cutoff across expression runs",
+    "gene_value": "max signed pair redundancy over all syntenic partners",
+    "tie_fields": [
+      "sequence_weight_desc",
+      "bitscore_desc"
+    ],
+    "sequence_weight_multiplied_into_redundancy": false
+  },
+  "source_provenance": [
+    {
+      "file": "cotton_expression_context_native.py",
+      "ported_sha256": "191260ef910563e46b960c458eeeccd6c7950614d16c5cc893b06e4764615bc1",
+      "functions": [
+        "Logger",
+        "collapse_to_context",
+        "load_and_qc_samples",
+        "diagnose_batch_effect",
+        "combat_correction_with_validation",
+        "compute_correlation_with_stats",
+        "vectorized_correlation_analysis",
+        "sensitivity_analysis",
+        "visualize_results",
+        "generate_final_feature_table",
+        "main",
+        "calculate_tau",
+        "post_validation_analysis"
+      ],
+      "changes": "explicit CLI file paths; initialization under CLI; optional ComBat and plotting imports deferred; scientific functions unchanged"
+    },
+    {
+      "file": "build_gene_tpm_salmon_native.py",
+      "ported_sha256": "9068434f2d9ec40a8bc1ecb08bfe846b37a2cfaaef9553abb7a30ac4229d78a0",
+      "byte_identical": true
+    },
+    {
+      "file": "collect_salmon_mapping_qc_native.py",
+      "ported_sha256": "48406c9f68ea048e57773d92293d8f2f9c86a8cfb47dbccd80891f9510819d48",
+      "byte_identical": true
+    },
+    {
+      "file": "compute_syntenic_redundancy_native.py",
+      "ported_sha256": "5b96ae091f0720e268c7b3857c9fae2fc2c6169e215012327962d7f566725529",
+      "byte_identical": true
+    }
+  ],
+  "portable_inputs": {
+    "metadata": "resources/cotton_metadata.tsv",
+    "TPM": "resources/cotton_TPM.tsv",
+    "homoeologs": "resources/homoeolog_pairs.tsv",
+    "Salmon_root": "resources/rice_salmon"
+  },
+  "whole_raw_quantification_or_models_rerun": false,
+  "whole_release_ready": false
+}

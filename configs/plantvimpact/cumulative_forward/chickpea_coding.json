@@ -1,0 +1,102 @@
+{
+  "species": "chickpea",
+  "model_type": "coding",
+  "split_root": "inputs/cumulative_forward/chickpea_coding",
+  "out_dir": "results/cumulative_forward/chickpea_coding",
+  "feature_levels": [
+    [
+      "L1_lm",
+      [
+        "S_esm",
+        "S_dna"
+      ]
+    ],
+    [
+      "L2_lm_dna_cons",
+      [
+        "S_esm",
+        "S_dna",
+        "dna_cons__phastCons",
+        "dna_cons__phyloP"
+      ]
+    ],
+    [
+      "L3_lm_dna_cons_protcons",
+      [
+        "S_esm",
+        "S_dna",
+        "dna_cons__phastCons",
+        "dna_cons__phyloP",
+        "prot_safe_ref_aa_freq",
+        "prot_safe_alt_aa_freq",
+        "prot_safe_entropy",
+        "prot_safe_delta_log_odds",
+        "prot_safe_conservation_penalty",
+        "prot_safe_abs_delta_log_odds",
+        "prot_safe_alt_absent_flag"
+      ]
+    ],
+    [
+      "L4_lm_dna_cons_protcons",
+      [
+        "S_esm",
+        "S_dna",
+        "dna_cons__phastCons",
+        "dna_cons__phyloP",
+        "prot_safe_ref_aa_freq",
+        "prot_safe_alt_aa_freq",
+        "prot_safe_entropy",
+        "prot_safe_delta_log_odds",
+        "prot_safe_conservation_penalty",
+        "prot_safe_abs_delta_log_odds",
+        "prot_safe_alt_absent_flag"
+      ]
+    ],
+    [
+      "L5_full",
+      [
+        "S_esm",
+        "S_dna",
+        "dna_cons__phastCons",
+        "dna_cons__phyloP",
+        "prot_safe_ref_aa_freq",
+        "prot_safe_alt_aa_freq",
+        "prot_safe_entropy",
+        "prot_safe_delta_log_odds",
+        "prot_safe_conservation_penalty",
+        "prot_safe_abs_delta_log_odds",
+        "prot_safe_alt_absent_flag"
+      ]
+    ]
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "params": {
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "logloss",
+      "auc",
+      "aucpr"
+    ],
+    "tree_method": "hist",
+    "device": "cuda:0",
+    "max_depth": 4,
+    "eta": 0.03,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "min_child_weight": 20.0,
+    "lambda": 1.0,
+    "alpha": 0.0,
+    "max_bin": 64,
+    "nthread": 8,
+    "seed": 42
+  }
+}

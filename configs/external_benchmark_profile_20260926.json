@@ -1,0 +1,75 @@
+{
+  "version": "Frozen repaired external benchmarks20260926",
+  "datasets": {
+    "maize_coding": "maize_coding",
+    "rice_coding": "rice_coding",
+    "rice_noncoding": "rice_noncoding",
+    "rice_coding_classic": "rice_coding"
+  },
+  "profiles": {
+    "rice_coding": {
+      "model_group": "rice_coding_uniform",
+      "heldout_fold_by_chromosome": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      },
+      "manifest_sha256": "4035d0992f1d1f634c04732e5a948665477a6d901cda39091a724851a2df4a53",
+      "manifest_filename": "manifest_all.json"
+    },
+    "rice_noncoding": {
+      "model_group": "rice_noncoding_uniform",
+      "heldout_fold_by_chromosome": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12
+      },
+      "manifest_sha256": "10de252c15c4d98cd18b7c604dd7e88f700a956ff3ed7220fc0344248ce1d516",
+      "manifest_filename": "manifest_all.json"
+    },
+    "maize_coding": {
+      "model_group": "maize_coding",
+      "heldout_fold_by_chromosome": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10
+      },
+      "manifest_sha256": "b8622ef8f4755ef085775a0210ffc006e1d8ca2324fd1ae650d452ed42501ece",
+      "manifest_filename": "manifest_all.json"
+    }
+  },
+  "score_direction": "higher predicted impact",
+  "sift_direction": "1-SIFT",
+  "negative_truth_available": false,
+  "comparator_stage_primary_tags": [
+    "maize_coding",
+    "rice_coding",
+    "rice_noncoding"
+  ],
+  "classic_pool_created_after_primary_comparator_scoring": true
+}

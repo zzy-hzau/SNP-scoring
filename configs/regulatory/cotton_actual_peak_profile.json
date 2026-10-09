@@ -1,0 +1,69 @@
+{
+  "source_before_sha256": "31671910ab1b240b949183ab581521779c7b49c48d7159453693098575139d12",
+  "inputs": {
+    "ATAC": "resources/ATAC.clean.feature_peaks.bed",
+    "H3K27ac": "resources/H3K27ac.clean.q05.feature_peaks.bed",
+    "labels": "resources/cotton_label_folds"
+  },
+  "parameters": {
+    "collect_fold": "all",
+    "enhancer_TSS_absolute_distance_bp": 1000,
+    "sample_column_1based": 11,
+    "tissue_column_1based": 14,
+    "signal_column_1based": 7,
+    "qvalue_column_1based": 9,
+    "ATAC_summit_column_1based": 10,
+    "derived_ATAC_summit_coordinate_mode": "absolute",
+    "raw_narrowPeak_default_coordinate_mode": "offset",
+    "overlap_peak_coordinate_base": "0based_halfopen",
+    "SNP_Pos_coordinate_base": 1,
+    "output_numeric_dtype": "float32",
+    "missing_nearest_distance": 1000000000
+  },
+  "observed_bedtools": "2.31.1",
+  "actual_summit_source_example": {
+    "chrom": "A01",
+    "start": 2198976,
+    "end": 2199311,
+    "raw_offset": 150,
+    "derived_absolute": 2199126,
+    "original_summit_end": 2199127
+  },
+  "source_processing_recipe_identified": {
+    "BioProject": "PRJNA1041939",
+    "cutadapt_quality": "20,20",
+    "minimum_read_length": 20,
+    "samtools_mapping_quality": 30,
+    "samtools_excluded_flags": 3844,
+    "MACS2_genome_size": 2289066421,
+    "ATAC_qvalue": 0.01,
+    "H3K27ac_qvalue": 0.05,
+    "H3K27ac_broad_cutoff": 0.1,
+    "keep_duplicates": "all",
+    "raw_peak_calling_rerun": false
+  },
+  "historical_current_feature_difference": {
+    "log_dist_to_nearest_atac_summit": {
+      "rows": 32,
+      "max_abs_difference": 5.522017955780029
+    },
+    "h3k27ac_tissue_group_count": {
+      "rows": 2,
+      "max_abs_difference": 1.0
+    },
+    "h3k27ac_overlap_reproductive": {
+      "rows": 2,
+      "max_abs_difference": 1.0
+    },
+    "active_regulatory_tissue_group_count": {
+      "rows": 2,
+      "max_abs_difference": 1.0
+    },
+    "active_regulatory_reproductive": {
+      "rows": 2,
+      "max_abs_difference": 1.0
+    }
+  },
+  "historical_values_or_models_edited": false,
+  "whole_release_ready": false
+}

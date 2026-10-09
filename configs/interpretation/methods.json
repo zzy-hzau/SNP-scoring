@@ -1,0 +1,183 @@
+{
+  "extraction": {
+    "extractor_context_k": 10,
+    "context_environment": "RICE_PH_AGENT_EXTRACTOR_CONTEXT_K",
+    "per_chunk_char_limit": 1500,
+    "response_max_tokens": 1500,
+    "reasoning_effort": "low",
+    "empty_response_behavior": "Original typed-gap deterministic fallback; no invented proposals"
+  },
+  "genomic_context": {
+    "source_parameters": {
+      "nearest_gene_window_bp": 500000,
+      "gene_annotation_max_distance_bp": 2000,
+      "variant_upstream_window_bp": 2000,
+      "A2_probe_flank_bp": 100
+    }
+  },
+  "genomic_tools": {
+    "tools": [
+      "blast_search",
+      "fetch_protein_sequence",
+      "interpro_scan",
+      "jaspar_motif_scan",
+      "pfam_domain_for_protein",
+      "plantregmap_search",
+      "quick_blastn",
+      "resolve_to_uniprot"
+    ],
+    "deployment_resource_variable": "RICE_PH_AGENT_BLAST_DB_DIR",
+    "BLAST": {
+      "threads": 4,
+      "evalue": 0.001,
+      "max_hits_default": 5,
+      "local_max_target_seqs": "max(5,max_hits*3)",
+      "original_nr_alias": "local Swiss-Prot"
+    },
+    "JASPAR": {
+      "PWM_pseudocount": 0.8,
+      "background": 0.25
+    }
+  },
+  "literature": {
+    "source_parameters": {
+      "llm_timeout_seconds": 90.0,
+      "literature_engine_enabled": false,
+      "fulltext_enabled": false,
+      "bio_rerank_enabled": true,
+      "rcs_enabled": false,
+      "retrieval_weight": 0.4,
+      "bio_weight": 0.6,
+      "max_fulltext_papers_per_candidate": 3,
+      "metadata_candidate_pool_k": 30,
+      "abstract_enrichment_k": 10,
+      "abstract_enrichment_min_chars": 900,
+      "abstract_max_chars": 6000,
+      "retrieval_pool_k": 100,
+      "fulltext_fetch_k": 5,
+      "metadata_enrichment_enabled": true,
+      "pre_ingest_bio_filter_enabled": false,
+      "llm_rewrite_rounds": 2,
+      "missing_text_policy": "unknown",
+      "missing_text_neutral_prior": 0.5,
+      "max_queries_per_candidate": 12,
+      "source_discovery_mode": "legacy_epmc",
+      "source_discovery_use_alias": false,
+      "source_discovery_providers": "europepmc,openalex",
+      "variant_relation_prefilter_enabled": true,
+      "variant_relation_prefilter_alias_k": 8,
+      "max_rerank_chunks_per_candidate": 60,
+      "chunk_size_chars": 1500,
+      "chunk_overlap_chars": 150,
+      "fulltext_max_bytes": 2097152,
+      "rerank_threshold": 0.6,
+      "traversal_degree": 1,
+      "traversal_trigger_mode": "threshold",
+      "traversal_topk": 3,
+      "traversal_threshold": 0.6,
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "fulltext_whitelist_hosts": [
+        "www.ebi.ac.uk",
+        "ebi.ac.uk",
+        "www.ncbi.nlm.nih.gov",
+        "ncbi.nlm.nih.gov",
+        "api.unpaywall.org",
+        "api.openalex.org",
+        "api.semanticscholar.org"
+      ]
+    },
+    "model_repo": "sentence-transformers/all-MiniLM-L6-v2",
+    "model_resources": [
+      {
+        "file": "config.json",
+        "snapshot_commit": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "bytes": 612,
+        "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+      },
+      {
+        "file": "model.safetensors",
+        "snapshot_commit": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "bytes": 90868376,
+        "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db"
+      },
+      {
+        "file": "tokenizer.json",
+        "snapshot_commit": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "bytes": 466247,
+        "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "snapshot_commit": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "bytes": 350,
+        "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b"
+      },
+      {
+        "file": "modules.json",
+        "snapshot_commit": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "bytes": 349,
+        "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+      },
+      {
+        "file": "sentence_bert_config.json",
+        "snapshot_commit": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "bytes": 53,
+        "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7"
+      }
+    ],
+    "frozen_candidate_mode": "Original candidates_override and llm_rewrite=False source options"
+  },
+  "roles": {
+    "source_default_parameters": {
+      "agent_max_output_tokens": 16384,
+      "llm_max_prompt_chars": 300000,
+      "llm_synthesis_max_tokens": 32000,
+      "llm_timeout_seconds": 90,
+      "hybrid_a4_enabled": true,
+      "hybrid_a4_model": "deepseek-v4-flash",
+      "hybrid_a4_base_url": "https://api.deepseek.com",
+      "hybrid_a4_max_tokens": 12000,
+      "hybrid_a4_max_evidence_items": 80,
+      "hybrid_a4_max_claims": 40
+    },
+    "source_environment_names": [
+      "RICE_PH_AGENT_ROOT",
+      "RICE_PH_AGENT_WORKSPACE",
+      "RICE_PH_AGENT_ENV",
+      "RICE_PH_AGENT_LLM_TIMEOUT",
+      "RICE_PH_AGENT_MAX_OUTPUT_TOKENS",
+      "RICE_PH_AGENT_LLM_MAX_PROMPT_CHARS",
+      "RICE_PH_AGENT_LLM_SYNTHESIS_MAX_TOKENS",
+      "RICE_PH_AGENT_HYBRID_A4_ENABLED",
+      "RICE_PH_AGENT_LLM_MODEL",
+      "DEEPSEEK_BASE_URL",
+      "RICE_PH_AGENT_HYBRID_A4_MAX_TOKENS",
+      "RICE_PH_AGENT_HYBRID_A4_MAX_EVIDENCE_ITEMS",
+      "RICE_PH_AGENT_HYBRID_A4_MAX_CLAIMS"
+    ],
+    "resource_environment_names": [
+      "PHENO_REACTOME_DIR",
+      "PHENO_UNIPROT_GO_DIR",
+      "PHENO_NCBI_GO_DIR"
+    ],
+    "historical_profiles": "configs/benchmarks/figure6_protocol_20261003.json"
+  },
+  "supervisor_graph": {
+    "parameters": {
+      "graph_guided_retrieval": true,
+      "parallel_evidence_prefetch_max_candidates": 20,
+      "graph_hops": 2,
+      "ego_graph_max_nodes": 250,
+      "graph_ld_max_neighbors": 50,
+      "graph_ld_max_distance_bp": 500000,
+      "graph_stats_max_bytes": 268435456
+    },
+    "external_resource_variables": [
+      "RICE_PH_AGENT_ROOT",
+      "RICE_PH_AGENT_RESOURCE_FILE",
+      "PHENO_GRAPH_LD_PROXY_TABLE"
+    ],
+    "reference_registry": "configs/interpretation/graph_plant_registry.json",
+    "SQLite_snapshot_input": "examples/data/interpretation/graph_small_real/snapshot.json"
+  }
+}

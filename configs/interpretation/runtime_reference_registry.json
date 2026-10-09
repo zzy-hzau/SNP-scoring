@@ -1,0 +1,47 @@
+{
+  "rice": {
+    "reference_assembly": "IRGSP-1.0",
+    "reference_fasta": "${PHENO_REFERENCE_ROOT}/rice/IRGSP-1.0_genome.fasta",
+    "gff_path": "${PHENO_REFERENCE_ROOT}/rice/IRGSP-1.0_representative.all.gff.gz",
+    "observed_reference_bytes": 379466370,
+    "observed_fai_sha256": "2ac01a052f263e92d45a2529df3b18f61f547e0a983ae2d5a94a468e510583be",
+    "observed_gff_bytes": 15507041,
+    "identity_scope": "Actual runtime resource names/assembly labels and FASTA-index fingerprint;not full FASTA SHA or inferred acquisition release"
+  },
+  "maize": {
+    "reference_assembly": "AGPv3.25",
+    "reference_fasta": "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.dna.toplevel.fa",
+    "gff_path": "${PHENO_REFERENCE_ROOT}/maize/Zea_mays.AGPv3.25.gff3.gz",
+    "observed_reference_bytes": 2102115808,
+    "observed_fai_sha256": "deca9c8c210875c54305a8feb13df6c4308959f75a0fff19eb6239c748233308",
+    "observed_gff_bytes": 86781567,
+    "identity_scope": "Actual runtime resource names/assembly labels and FASTA-index fingerprint;not full FASTA SHA or inferred acquisition release"
+  },
+  "tomato": {
+    "reference_assembly": "SL4.0",
+    "reference_fasta": "${PHENO_REFERENCE_ROOT}/tomato/SL4.0_genome.fasta",
+    "gff_path": "${PHENO_REFERENCE_ROOT}/tomato/ITAG4.1_gene_models.gff",
+    "observed_reference_bytes": 795562190,
+    "observed_fai_sha256": "0c6c93ec02b9dc6d1df735d689c85c9707845904871f066525a0d87065f27b93",
+    "observed_gff_bytes": 54295222,
+    "identity_scope": "Actual runtime resource names/assembly labels and FASTA-index fingerprint;not full FASTA SHA or inferred acquisition release"
+  },
+  "chickpea": {
+    "reference_assembly": "CDC_Frontier",
+    "reference_fasta": "${PHENO_REFERENCE_ROOT}/chickpea/Chickpea.CDC_Frontier.fa",
+    "gff_path": "${PHENO_REFERENCE_ROOT}/chickpea/Chickpea.CDC_Frontier_sorted.gff",
+    "observed_reference_bytes": 538498988,
+    "observed_fai_sha256": "392fd056a39e702a8af81fbc8565038e78c5a0e96fa94d9297ad828db0cd32ce",
+    "observed_gff_bytes": 156404092,
+    "identity_scope": "Actual runtime resource names/assembly labels and FASTA-index fingerprint;not full FASTA SHA or inferred acquisition release"
+  },
+  "cotton": {
+    "reference_assembly": "TM-1_CRI",
+    "reference_fasta": "${PHENO_REFERENCE_ROOT}/cotton/genomes/TM-1_CRI.fa",
+    "gff_path": "${PHENO_REFERENCE_ROOT}/cotton/GFF/TM-1.final.gene.gff3",
+    "observed_reference_bytes": 2289087124,
+    "observed_fai_sha256": "fc58d66ccfcfefafc03a473c7a414dff0fd8fa4efa73d56b939837f59d59a483",
+    "observed_gff_bytes": 59822706,
+    "identity_scope": "Actual runtime resource names/assembly labels and FASTA-index fingerprint;not full FASTA SHA or inferred acquisition release"
+  }
+}

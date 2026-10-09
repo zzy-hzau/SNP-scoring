@@ -1,0 +1,78 @@
+{
+  "species": "tomato",
+  "trait": "Fruit_locule_number",
+  "evidence_items": [
+    {
+      "claim": {
+        "gene_match": "exact",
+        "supports": "variant",
+        "text": "Two SNPs near WUSCHEL were shown to be responsible for the increase in tomato locule number.",
+        "variant_match": "haplotype"
+      },
+      "claim_scope": "variant",
+      "directness": "direct",
+      "evidence_class": "literature",
+      "evidence_id": "veib3_054_lit_21673133_1",
+      "evidence_level": "A",
+      "evidence_type": "variant_specific_natural_allele",
+      "limitations": [
+        "Anchor is source-checked at the paper/abstract level and is not an exhaustive gold-paper list.",
+        "Variant identity is paper-defined; reference-assembly coordinate reconciliation is pending for this v0.3 construction set."
+      ],
+      "provenance": {
+        "artifact_id": null,
+        "chunk_id": "abstract",
+        "input_hash": null,
+        "paper_id": "21673133",
+        "paper_id_type": "PMID",
+        "quote": "In tomato (Solanum lycopersicum) fruit, the number of locules (cavities containing seeds that are derived from carpels) varies from two to up to 10 or",
+        "quote_hash": "959877b0343648a623e3d00307360c6042caf2972ac6bf103c5d30fa48a756a0",
+        "source_name": "Europe PMC",
+        "source_record_id": "PMID_21673133",
+        "source_url": "https://europepmc.org/article/MED/21673133",
+        "status": "valid",
+        "title": "Increase in tomato locule number is controlled by two single-nucleotide polymorphisms located near WUSCHEL.",
+        "tool_run_id": null,
+        "verification": "exact_source_checked"
+      },
+      "stance": "support",
+      "pack_item_id": "veib3_054_lit_21673133_1",
+      "veib_evidence_level": "L1",
+      "veib_directness": "direct",
+      "subject_type": "variant",
+      "subject_id": "WUSCHEL_lc_two_SNP_haplotype",
+      "source_name": "Europe PMC",
+      "source_record_id": "PMID_21673133",
+      "species": "tomato",
+      "reference_assembly": "paper-defined_or_reference_pending",
+      "statement": "Two SNPs near WUSCHEL were shown to be responsible for the increase in tomato locule number.",
+      "supports": true,
+      "trait": "Fruit_locule_number",
+      "source_type": "literature",
+      "proximity_level": "L1",
+      "claim_support": "direct",
+      "provenance_status": "valid",
+      "admission_status": "trusted",
+      "variant_key": "WUSCHEL_lc_two_SNP_haplotype",
+      "retrieved_at": "2000-01-01T00:00:00Z"
+    }
+  ],
+  "_fixture_metadata": {
+    "purpose": "Actual archived biological evidence input subset, not a new analysis or reported performance estimate",
+    "source_case_id": "veib3_054",
+    "quote_transformation": "Only source quotation is restricted to its first at most25words, exact original substring. Original curated annotations, IDs and evidence classes unchanged.",
+    "retrieved_at_note": "A fixed timestamp fills absent retrieval metadata.",
+    "candidate_note": "Only original archive identity/consequence fields; no invented PhenoFuncRank scores or core assignment.",
+    "excerpts": [
+      {
+        "evidence_id": "veib3_054_lit_21673133_1",
+        "source_record_id": "21673133",
+        "full_quote_sha256": "959877b0343648a623e3d00307360c6042caf2972ac6bf103c5d30fa48a756a0",
+        "original_word_count": 193,
+        "excerpt_word_count": 25,
+        "excerpt_start_character": 0,
+        "excerpt_end_character": 150
+      }
+    ]
+  }
+}

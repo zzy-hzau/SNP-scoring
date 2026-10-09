@@ -1,0 +1,40 @@
+{
+  "status": "PASSED",
+  "scope": "Resource configuration and example inputs.",
+  "cases": [
+    {
+      "case_id": "veib3_051",
+      "PMIDs": [
+        "16614172"
+      ],
+      "original_excerpt_words": 25,
+      "dense_active": true,
+      "retained_hits": 2,
+      "input_sha256": "21a250eb3cf66664ad74c3e4962646f0c0d163a30e3d3231b5e548966cc74a00"
+    },
+    {
+      "case_id": "veib3_054",
+      "PMIDs": [
+        "21673133"
+      ],
+      "original_excerpt_words": 25,
+      "dense_active": true,
+      "retained_hits": 2,
+      "input_sha256": "8b1b2fbc72999e0d6c6fbefdc6952ab7fc17adffd6e2f69a78c0de07a351c44c"
+    },
+    {
+      "case_id": "veib3_052",
+      "PMIDs": [
+        "28481332"
+      ],
+      "original_excerpt_words": 25,
+      "dense_active": true,
+      "retained_hits": 2,
+      "input_sha256": "b03ee743bf8bf8910511e0627cbe66d5218c99651a99cad89f810cd6250f2968"
+    }
+  ],
+  "network_calls": 0,
+  "LLM_generation_calls": 0,
+  "input_original_variant_gene_trait_PMID_unchanged": true,
+  "unavailable_citation_lists_not_evaluated": true
+}

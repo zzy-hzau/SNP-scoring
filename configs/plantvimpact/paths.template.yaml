@@ -1,0 +1,328 @@
+codebase:
+  project_root: /path/to/optional-project-assets
+  caddlike_root: '{codebase.project_root}/plant_caddlike_github_clean'
+  plant_cadd_root: '{codebase.project_root}/plant_cadd_github'
+  upstream_methods_root: /path/to/plant-cadd-supplementary-methods
+  dpcformer_root: '{codebase.project_root}/dpcformer_paper_strict_no_leakage_fix'
+  strict_external_validation_script: scripts/external_validation/strict_external_validations.py
+  msa_root: /path/to/species-msa-root
+output:
+  root: ./outputs
+  features: '{output.root}/features'
+  labels: '{output.root}/labels'
+  models: '{output.root}/models'
+  scores: '{output.root}/scores'
+  oe: '{output.root}/oe'
+  external_validation: '{output.root}/external_validation'
+  dpcformer: '{output.root}/dpcformer'
+  level1_ld: '{output.root}/level1_ld'
+upstream_repo:
+  root: '{codebase.upstream_methods_root}'
+  results_root: '{upstream_repo.root}/results'
+  species:
+    rice:
+      candidate_universe_coding: '{upstream_repo.results_root}/rice/candidates/coding_candidates.tsv'
+      candidate_universe_noncoding: '{upstream_repo.results_root}/rice/candidates/noncoding_candidates.tsv'
+      callable_n: '{upstream_repo.results_root}/rice/callability/callability.tsv'
+      an_obs: '{upstream_repo.results_root}/rice/callability/callability.tsv'
+      phastcons: '{upstream_repo.results_root}/rice/conservation/phastCons_features.tsv'
+      phylop: '{upstream_repo.results_root}/rice/conservation/phyloP_features.tsv'
+      protein_safe: '{upstream_repo.results_root}/rice/protein_safe/safe_features.tsv'
+      paralog_redundancy: '{upstream_repo.results_root}/rice/redundancy/paralog_redundancy.tsv'
+    maize:
+      candidate_universe_coding: '{upstream_repo.results_root}/maize/candidates/coding_candidates.tsv'
+      candidate_universe_noncoding: '{upstream_repo.results_root}/maize/candidates/noncoding_candidates.tsv'
+      callable_n: '{upstream_repo.results_root}/maize/callability/callability.tsv'
+      an_obs: '{upstream_repo.results_root}/maize/callability/callability.tsv'
+      phastcons: '{upstream_repo.results_root}/maize/conservation/phastCons_features.tsv'
+      phylop: '{upstream_repo.results_root}/maize/conservation/phyloP_features.tsv'
+      protein_safe: '{upstream_repo.results_root}/maize/protein_safe/safe_features.tsv'
+      paralog_redundancy: '{upstream_repo.results_root}/maize/redundancy/paralog_redundancy.tsv'
+      maize_pcsd: '{upstream_repo.results_root}/maize/chromatin_state/pcsd_features.tsv'
+    tomato:
+      candidate_universe_coding: '{upstream_repo.results_root}/tomato/candidates/coding_candidates.tsv'
+      candidate_universe_noncoding: '{upstream_repo.results_root}/tomato/candidates/noncoding_candidates.tsv'
+      callable_n: '{upstream_repo.results_root}/tomato/callability/callability.tsv'
+      an_obs: '{upstream_repo.results_root}/tomato/callability/callability.tsv'
+      phastcons: '{upstream_repo.results_root}/tomato/conservation/phastCons_features.tsv'
+      phylop: '{upstream_repo.results_root}/tomato/conservation/phyloP_features.tsv'
+      protein_safe: '{upstream_repo.results_root}/tomato/protein_safe/safe_features.tsv'
+      paralog_redundancy: '{upstream_repo.results_root}/tomato/redundancy/paralog_redundancy.tsv'
+    chickpea:
+      candidate_universe_coding: '{upstream_repo.results_root}/chickpea/candidates/coding_candidates.tsv'
+      candidate_universe_noncoding: '{upstream_repo.results_root}/chickpea/candidates/noncoding_candidates.tsv'
+      callable_n: '{upstream_repo.results_root}/chickpea/callability/callability.tsv'
+      an_obs: '{upstream_repo.results_root}/chickpea/callability/callability.tsv'
+      phastcons: '{upstream_repo.results_root}/chickpea/conservation/phastCons_features.tsv'
+      phylop: '{upstream_repo.results_root}/chickpea/conservation/phyloP_features.tsv'
+      protein_safe: '{upstream_repo.results_root}/chickpea/protein_safe/safe_features.tsv'
+    cotton:
+      candidate_universe_coding: '{upstream_repo.results_root}/cotton/candidates/coding_candidates.tsv'
+      candidate_universe_noncoding: '{upstream_repo.results_root}/cotton/candidates/noncoding_candidates.tsv'
+      callable_n: '{upstream_repo.results_root}/cotton/callability/callability.tsv'
+      an_obs: '{upstream_repo.results_root}/cotton/callability/callability.tsv'
+      protein_safe: '{upstream_repo.results_root}/cotton/protein_safe/safe_features.tsv'
+      functional_redundancy: '{upstream_repo.results_root}/cotton/redundancy/functional_redundancy.tsv'
+      regulatory_features: '{upstream_repo.results_root}/cotton/regulatory/regulatory_features.tsv'
+reference_data:
+  genome_fasta:
+    rice: /path/to/rice_IRGSP1.0.fa
+    maize: /path/to/maize_AGPv3.25.fa
+    tomato: /path/to/tomato_SL5.0.fa
+    chickpea: /path/to/chickpea.fa
+    cotton: /path/to/cotton.fa
+  gff:
+    rice: /path/to/rice_IRGSP1.0.gff3
+    maize: /path/to/maize_AGPv3.25.gff3
+    tomato: /path/to/tomato_SL5.0.gff3
+    chickpea: /path/to/chickpea.gff3
+    cotton: /path/to/cotton.gff3
+lm_models:
+  plantcaduceus: /path/to/PlantCaduceus_l32_512bp
+  esm: /path/to/esm1b_t33_650M_UR50S
+  predmoter: /path/to/Predmoter_Combined_02.ckpt
+label_inputs:
+  rice:
+    coding_pre_lm: '{output.root}/prelm/rice/coding_preLM_universe.parquet'
+    noncoding_pre_lm: '{output.root}/prelm/rice/noncoding_preLM_universe.parquet'
+    callrate: /path/to/rice/coding_callrate.parquet
+    coding_callrate: /path/to/rice/coding_callrate.parquet
+    noncoding_callrate: /path/to/rice/noncoding_callrate.parquet
+    wild_vcf: /path/to/rice/wild.vcf.gz
+    sites_4d: /path/to/rice/4d_sites.tsv
+    rate_cache: /path/to/rice_rate_tables_cache.pkl
+    max_callable_n: 50
+    group_label: Maize
+  maize:
+    coding_pre_lm: '{output.root}/prelm/maize/coding_preLM_universe.parquet'
+    noncoding_pre_lm: '{output.root}/prelm/maize/noncoding_preLM_universe.parquet'
+    callrate: /path/to/maize/coding_callrate.parquet
+    coding_callrate: /path/to/maize/coding_callrate.parquet
+    noncoding_callrate: /path/to/maize/noncoding_callrate.parquet
+    wild_vcf: /path/to/maize/wild.vcf.gz
+    sites_4d: /path/to/maize/4d_sites.tsv
+    rate_cache: /path/to/maize_rate_tables_cache.pkl
+    max_callable_n: 55
+    group_label: Maize
+  tomato:
+    coding_pre_lm: '{output.root}/prelm/tomato/coding_preLM_universe.parquet'
+    noncoding_pre_lm: '{output.root}/prelm/tomato/noncoding_preLM_universe.parquet'
+    callrate: /path/to/tomato/coding_callrate.parquet
+    coding_callrate: /path/to/tomato/coding_callrate.parquet
+    noncoding_callrate: /path/to/tomato/noncoding_callrate.parquet
+    wild_vcf: /path/to/tomato/wild.vcf.gz
+    sites_4d: /path/to/tomato/4d_sites.tsv
+    rate_cache: /path/to/tomato_rate_tables_cache.pkl
+    max_callable_n: 55
+    group_label: Maize
+  chickpea:
+    coding_pre_lm: '{output.root}/prelm/chickpea/coding_preLM_universe.parquet'
+    noncoding_pre_lm: '{output.root}/prelm/chickpea/noncoding_preLM_universe.parquet'
+    callrate: /path/to/chickpea/coding_callrate.parquet
+    coding_callrate: /path/to/chickpea/coding_callrate.parquet
+    noncoding_callrate: /path/to/chickpea/noncoding_callrate.parquet
+    wild_vcf: /path/to/chickpea/wild.vcf.gz
+    sites_4d: /path/to/chickpea/4d_sites.tsv
+    rate_cache: /path/to/chickpea_rate_tables_cache.pkl
+    max_callable_n: 37
+    group_label: Maize
+  cotton:
+    coding_pre_lm: '{output.root}/prelm/cotton/coding_preLM_universe.parquet'
+    noncoding_pre_lm: '{output.root}/prelm/cotton/noncoding_preLM_universe.parquet'
+    callrate: /path/to/cotton/callrate.parquet
+    coding_callrate: /path/to/cotton/callrate.parquet
+    noncoding_callrate: /path/to/cotton/callrate.parquet
+    wild_vcf: /path/to/cotton/wild.vcf.gz
+    sites_4d: /path/to/cotton/4d_sites.tsv
+    rate_cache: /path/to/cotton_rate_tables_cache.pkl
+    max_callable_n: 161
+    group_label: Cotton
+model_inputs:
+  rice:
+    coding:
+      split_root: '{output.root}/features/rice_coding/loco_splits'
+      model_root: '{output.root}/models/rice/coding'
+      universe_table: /path/to/rice/coding_full_universe.parquet
+      sample_feature_table: /path/to/rice/coding_sample_features.parquet
+    noncoding:
+      split_root: '{output.root}/features/rice_noncoding/loco_splits'
+      model_root: '{output.root}/models/rice/noncoding'
+      universe_table: /path/to/rice/noncoding_full_universe.parquet
+      sample_feature_table: /path/to/rice/noncoding_sample_features.parquet
+  maize:
+    coding:
+      split_root: '{output.root}/features/maize_coding/loco_splits'
+      model_root: '{output.root}/models/maize/v3_strict_rawbase91_resid500_coding'
+      sample_feature_table: /path/to/maize/coding_sample_features.parquet
+    noncoding:
+      split_root: '{output.root}/features/maize_noncoding/loco_splits'
+      model_root: '{output.root}/models/maize/noncoding'
+      universe_table: /path/to/maize/raw_noncoding_full_universe_or_dataset
+      sample_feature_table: /path/to/maize/noncoding_sample_features.parquet
+      oe_bin_metadata: /path/to/maize/maize_noncoding_pmut_bins_v2.json
+  tomato:
+    coding:
+      split_root: '{output.root}/features/tomato_coding/loco_splits'
+      model_root: '{output.root}/models/tomato/coding'
+      universe_table: /path/to/tomato/coding_full_universe.parquet
+      sample_feature_table: /path/to/tomato/coding_sample_features.parquet
+    noncoding:
+      split_root: '{output.root}/features/tomato_noncoding/loco_splits'
+      model_root: '{output.root}/models/tomato/noncoding'
+      universe_table: /path/to/tomato/noncoding_full_universe.parquet
+      sample_feature_table: /path/to/tomato/noncoding_v3_strict_sample_features.parquet
+  chickpea:
+    coding:
+      split_root: '{output.root}/features/chickpea_coding/loco_splits'
+      model_root: '{output.root}/models/chickpea/coding'
+      universe_table: /path/to/chickpea/coding_full_universe.parquet
+      sample_feature_table: /path/to/chickpea/coding_sample_features.parquet
+    noncoding:
+      split_root: '{output.root}/features/chickpea_noncoding/loco_splits'
+      model_root: '{output.root}/models/chickpea/noncoding'
+      universe_table: /path/to/chickpea/noncoding_full_universe.parquet
+      sample_feature_table: /path/to/chickpea/noncoding_sample_features.parquet
+  cotton:
+    coding:
+      split_root: '{output.root}/features/cotton_coding/loco_splits'
+      model_root: '{output.root}/models/cotton/coding'
+      universe_table: /path/to/cotton/coding_full_universe.parquet
+      sample_feature_table: /path/to/cotton/coding_sample_features.parquet
+      exhaustive_feature_table: /path/to/cotton/coding_exhaustive_features.parquet
+    noncoding:
+      split_root: '{output.root}/features/cotton_noncoding/loco_splits'
+      model_root: '{output.root}/models/cotton/noncoding'
+      universe_table: /path/to/cotton/noncoding_full_universe.parquet
+      sample_feature_table: /path/to/cotton/noncoding_sample_features.parquet
+      exhaustive_feature_table: /path/to/cotton/noncoding_exhaustive_features.parquet
+feature_sources:
+  rice:
+    coding:
+      label_root: '{output.root}/labels/rice/coding'
+      lm_score: '{output.root}/features/rice_coding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/rice/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/rice/conservation/phyloP_features.tsv'
+      protein_cons: '{upstream_repo.results_root}/rice/protein_safe/safe_features.tsv'
+      paralog: '{upstream_repo.results_root}/rice/redundancy/paralog_redundancy.tsv'
+      fill_unmatched_redundancy: true
+      extra_features: []
+    noncoding:
+      label_root: '{output.root}/labels/rice/noncoding'
+      lm_score: '{output.root}/features/rice_noncoding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/rice/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/rice/conservation/phyloP_features.tsv'
+      protein_cons: null
+      paralog: '{upstream_repo.results_root}/rice/redundancy/paralog_redundancy.tsv'
+      gene_map: '{label_inputs.rice.noncoding_pre_lm}'
+      pcsd26: null
+      fill_unmatched_redundancy: true
+      extra_features:
+      - '{output.root}/features/rice_noncoding/predmoter'
+  maize:
+    coding:
+      label_root: '{output.root}/labels/maize/coding'
+      lm_score: '{output.root}/features/maize_coding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/maize/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/maize/conservation/phyloP_features.tsv'
+      protein_cons: '{upstream_repo.results_root}/maize/protein_safe/safe_features.tsv'
+      paralog: '{upstream_repo.results_root}/maize/redundancy/paralog_redundancy.tsv'
+      fill_unmatched_redundancy: true
+      extra_features: []
+    noncoding:
+      label_root: '{output.root}/labels/maize/noncoding'
+      lm_score: '{output.root}/features/maize_noncoding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/maize/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/maize/conservation/phyloP_features.tsv'
+      protein_cons: null
+      paralog: '{upstream_repo.results_root}/maize/redundancy/paralog_redundancy.tsv'
+      gene_map: '{label_inputs.maize.noncoding_pre_lm}'
+      pcsd26: '{upstream_repo.results_root}/maize/chromatin_state/pcsd_features.tsv'
+      fill_unmatched_redundancy: true
+      extra_features: []
+  tomato:
+    coding:
+      label_root: '{output.root}/labels/tomato/coding'
+      lm_score: '{output.root}/features/tomato_coding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/tomato/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/tomato/conservation/phyloP_features.tsv'
+      protein_cons: '{upstream_repo.results_root}/tomato/protein_safe/safe_features.tsv'
+      paralog: '{upstream_repo.results_root}/tomato/redundancy/paralog_redundancy.tsv'
+      fill_unmatched_redundancy: true
+      extra_features: []
+    noncoding:
+      label_root: '{output.root}/labels/tomato/noncoding'
+      lm_score: '{output.root}/features/tomato_noncoding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/tomato/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/tomato/conservation/phyloP_features.tsv'
+      protein_cons: null
+      paralog: '{upstream_repo.results_root}/tomato/redundancy/paralog_redundancy.tsv'
+      gene_map: '{label_inputs.tomato.noncoding_pre_lm}'
+      pcsd26: null
+      fill_unmatched_redundancy: true
+      extra_features: []
+  chickpea:
+    coding:
+      label_root: '{output.root}/labels/chickpea/coding'
+      lm_score: '{output.root}/features/chickpea_coding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/chickpea/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/chickpea/conservation/phyloP_features.tsv'
+      protein_cons: '{upstream_repo.results_root}/chickpea/protein_safe/safe_features.tsv'
+      paralog: null
+      extra_features: []
+    noncoding:
+      label_root: '{output.root}/labels/chickpea/noncoding'
+      lm_score: '{output.root}/features/chickpea_noncoding/lm_scores'
+      dna_cons:
+      - '{upstream_repo.results_root}/chickpea/conservation/phastCons_features.tsv'
+      - '{upstream_repo.results_root}/chickpea/conservation/phyloP_features.tsv'
+      protein_cons: null
+      paralog: null
+      pcsd26: null
+      extra_features: []
+  cotton:
+    coding:
+      label_root: '{output.root}/labels/cotton/coding'
+      lm_score: '{output.root}/features/cotton_coding/lm_scores'
+      dna_cons: []
+      protein_cons: '{upstream_repo.results_root}/cotton/protein_safe/safe_features.tsv'
+      paralog: '{upstream_repo.results_root}/cotton/redundancy/functional_redundancy.tsv'
+      fill_unmatched_redundancy: true
+      pcsd26: null
+      extra_features: []
+    noncoding:
+      label_root: '{output.root}/labels/cotton/noncoding'
+      lm_score: '{output.root}/features/cotton_noncoding/lm_scores'
+      dna_cons: []
+      protein_cons: null
+      paralog: '{upstream_repo.results_root}/cotton/redundancy/functional_redundancy.tsv'
+      fill_unmatched_redundancy: true
+      pcsd26: null
+      extra_features:
+      - '{output.root}/features/cotton_noncoding/regulatory_features.atac_h3k27ac.parquet'
+      - '{output.root}/features/cotton_noncoding/motif_features.parquet'
+oe_inputs:
+  observed_column: Y_Label
+  id_column: snp_id
+  sample_weight_column: null
+external_validation:
+  maize_3dm:
+    positives: /path/to/maize/3md_positive45_features.parquet
+    redundancy: /path/to/maize/paralog_redundancy.tsv
+    random_missense_background: /path/to/maize/3md_random_missense_background.parquet
+    synonymous_background: /path/to/maize/3md_synonymous_background.parquet
+  rice_gwas_atlas:
+    usable_211: /path/to/rice/gwas_atlas_211.tsv
+    primary_157: /path/to/rice/gwas_atlas_primary_clear_effect_157.tsv
+    model_oof_keys: /path/to/rice/proxy_model_oof_variant_keys.tsv
+    selected_91: /path/to/rice/primary_no_oof_overlap_91.tsv
+    completed_scores: /path/to/rice/gwas_atlas_completed_scores.parquet
+    redundancy: /path/to/rice/paralog_redundancy.tsv
+    coding_dna_conservation: /path/to/rice/coding_SAFE_dna_conservation.parquet
+    coding_protein_conservation: /path/to/rice/coding_SAFE_protein_conservation.parquet

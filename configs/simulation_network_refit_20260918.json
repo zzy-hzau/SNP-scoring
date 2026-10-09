@@ -1,0 +1,56 @@
+{
+  "method": "Original frozen-map simulation network refit",
+  "folds": 10,
+  "test_ratio": 0.1,
+  "validation_ratio": 0.2,
+  "validation_ratio_note": "Legacy argument; actual validation is inner KFold with effective fraction1/folds.",
+  "selected_snp_count": 1000,
+  "selector": "minepy_mic",
+  "selection_workers": 1,
+  "epochs": 300,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "min_learning_rate": 1e-08,
+  "lr_patience": 10,
+  "early_stopping_patience": 20,
+  "min_delta": 0,
+  "seed": 42,
+  "fold_seed_formula": "seed + fold*1009",
+  "snp_selection": "Original per-fold real-run map; no new MIC in simulation.",
+  "optimizer": "Adam",
+  "loss": "MSE",
+  "scheduler": {
+    "name": "ReduceLROnPlateau",
+    "factor": 0.1,
+    "patience": 10,
+    "threshold": 0
+  },
+  "precision": {
+    "dtype": "float32",
+    "cudnn_allow_tf32": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false
+  },
+  "source_parameter_evidence": "Original parallel_train_folds.py delegates to train_diploid.parse_args defaults.",
+  "execution": {
+    "min_available_mem_gb": 0,
+    "note": "Memory guard is an execution choice, separated from scientific parameters; original server guard was80GiB."
+  },
+  "numeric_profiles": {
+    "Rice_PH": {
+      "python": "3.10",
+      "torch": "2.1.0+cu121",
+      "cuda": "12.1",
+      "cudnn": 8902,
+      "numpy": "1.26.4"
+    },
+    "Cotton_FS": {
+      "python": "3.10",
+      "torch": "2.6.0+cu124",
+      "cuda": "12.4",
+      "cudnn": 90100,
+      "numpy": "2.2.6"
+    }
+  }
+}

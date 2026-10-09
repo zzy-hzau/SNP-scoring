@@ -1,0 +1,56 @@
+{
+  "profile": "rice_recovered_Cactus_PHAST",
+  "target": "Osj_IRGSP1_RAPDB",
+  "tree": "(((Osj_IRGSP1_RAPDB,(Oin_ASM465v1,(Oru_ORW1943,Oni_v1))),Ogl_V1),Obr_v14b);",
+  "genomes": [
+    {
+      "name": "Osj_IRGSP1_RAPDB",
+      "assembly": "IRGSP-1.0_RAPDB",
+      "filename": "Osj_IRGSP1_RAPDB.fa.gz",
+      "path": "${PHENO_REFERENCE_ROOT}/rice/IRGSP-1.0_genome.fasta.gz"
+    },
+    {
+      "name": "Oin_ASM465v1",
+      "assembly": "Oryza_indica_ASM465v1",
+      "filename": "Oin_ASM465v1.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/oryza_indica/dna/Oryza_indica.ASM465v1.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Oru_ORW1943",
+      "assembly": "Oryza_rufipogon_OR_W1943",
+      "filename": "Oru_ORW1943.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/oryza_rufipogon/dna/Oryza_rufipogon.OR_W1943.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Oni_v1",
+      "assembly": "Oryza_nivara_v1.0",
+      "filename": "Oni_v1.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/oryza_nivara/dna/Oryza_nivara.Oryza_nivara_v1.0.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Ogl_V1",
+      "assembly": "Oryza_glaberrima_V1",
+      "filename": "Ogl_V1.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/oryza_glaberrima/dna/Oryza_glaberrima.Oryza_glaberrima_V1.dna.toplevel.fa.gz"
+    },
+    {
+      "name": "Obr_v14b",
+      "assembly": "Oryza_brachyantha_v1.4b",
+      "filename": "Obr_v14b.fa.gz",
+      "url": "https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/fasta/oryza_brachyantha/dna/Oryza_brachyantha.Oryza_brachyantha.v1.4b.dna.toplevel.fa.gz"
+    }
+  ],
+  "threads": 32,
+  "maf_threads": 4,
+  "phylofit_model": "REV",
+  "phastcons": {
+    "target_coverage": 0.25,
+    "expected_length": 45
+  },
+  "phylop": {
+    "method": "LRT",
+    "mode": "CONACC"
+  },
+  "score_mode": "direct",
+  "window_bp": 20000
+}

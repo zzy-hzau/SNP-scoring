@@ -1,0 +1,9 @@
+{
+  "project": "DPCformer",
+  "source": "SNP-scoring-main.zip",
+  "license": "MIT",
+  "components": [
+    "network architecture",
+    "input-format example"
+  ]
+}

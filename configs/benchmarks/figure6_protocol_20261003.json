@@ -1,0 +1,38 @@
+{
+  "target_id": "PhenoFuncRank_Figure6",
+  "judging_passes": 3,
+  "consensus_minimum_votes": 2,
+  "quality_success_label": "yes",
+  "partial_is_quality_success": false,
+  "reasoning_excluded_cases": [
+    "R003"
+  ],
+  "critic_excluded_cases": [
+    "C001",
+    "C005",
+    "C006",
+    "C009",
+    "C010",
+    "C051",
+    "C103"
+  ],
+  "refinement_excluded_cases": [
+    "E005"
+  ],
+  "critic_cohort_policy": "Use published construction cohort, not adjudicated support state, to define challenges and controls",
+  "contradiction_subset_policy": "Constructed challenge category contradiction unresolved",
+  "partial_subset_policy": "Adjudicated reference state PARTIALLY_SUPPORTED among included challenges",
+  "exclusion_source": {
+    "file": "Source_Data.xlsx",
+    "sheet": "Figure 6",
+    "anchors": [
+      "A468",
+      "A1925"
+    ]
+  },
+  "refinement_exclusion_source": {
+    "file": "Supplementary_Data_1.xlsx",
+    "sheet": "Refinement benchmark",
+    "anchor": "A2"
+  }
+}

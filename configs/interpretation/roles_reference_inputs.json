@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "environment_directory": "PHENO_REACTOME_DIR",
+      "file": "UniProt2PlantReactome.txt",
+      "bytes": 406589,
+      "sha256": "852e448f244e46209e80ba13973938f75b411d05519529836983181fc29a236a"
+    },
+    {
+      "environment_directory": "PHENO_REACTOME_DIR",
+      "file": "NCBI2PlantReactome.txt",
+      "bytes": 569071,
+      "sha256": "6d68894400a2962ebf6142241183f7d2a30981b848bbd6b8cee802bb34b511cf"
+    },
+    {
+      "environment_directory": "PHENO_REACTOME_DIR",
+      "file": "Ensembl2PlantReactome.txt",
+      "bytes": 34987331,
+      "sha256": "237d6dcf96054a8fb5df350f5d1bab9422f3a8e6e62fc399cedfb14cf05e4da6"
+    },
+    {
+      "environment_directory": "PHENO_REACTOME_DIR",
+      "file": "UniProt2Reactome.txt",
+      "bytes": 42697206,
+      "sha256": "64e5c9ea768dbc87d2a9f2a1aba22a00b2647cad059243876b4f2bc66a3dc762"
+    },
+    {
+      "environment_directory": "PHENO_REACTOME_DIR",
+      "file": "ReactomePathways.txt",
+      "bytes": 2411093,
+      "sha256": "e35787536ec4ff23cfc89cdabb529dabae9a0b2b27ab02031891f83ddadde471"
+    },
+    {
+      "environment_directory": "PHENO_UNIPROT_GO_DIR",
+      "file": "rice.go.tsv.gz",
+      "bytes": 1339926,
+      "sha256": "214324e0da226cc52a5c730b92e8b5c4b95c18b2a314b4c654f253614afd1fe3"
+    },
+    {
+      "environment_directory": "PHENO_UNIPROT_GO_DIR",
+      "file": "tomato.go.tsv.gz",
+      "bytes": 806918,
+      "sha256": "d4739c5fbf26ef949e70c4ca6f2d76df569dfb8fdc38be30dc29dc69d2b67d91"
+    },
+    {
+      "environment_directory": "PHENO_NCBI_GO_DIR",
+      "file": "rice.go.tsv",
+      "bytes": 5720136,
+      "sha256": "4d433603cfb7da722b228ab06e4eef03183a87b50820dc5b5989f573ad19f24e"
+    },
+    {
+      "environment_directory": "PHENO_NCBI_GO_DIR",
+      "file": "tomato.go.tsv",
+      "bytes": 2436824,
+      "sha256": "93487b76babfd4832e5eff25124d21afe6335979e165e6e547cd65b6e8b97a7c"
+    }
+  ],
+  "resource_files_bundled": false
+}

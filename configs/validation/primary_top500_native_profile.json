@@ -1,0 +1,67 @@
+{
+  "target_id": "strict_best_test_fold_20261003",
+  "current_panels": [
+    "Figure 4b",
+    "Figure 4c"
+  ],
+  "source_module": "src/phenofuncrank_repro/validation/primary_top500_associations.py",
+  "source_function_policy": "Four mathematical function ASTs preserved; parameterized prepared-input boundary",
+  "nominal_candidates_per_trait": 500,
+  "alpha": 0.05,
+  "Bonferroni_family_size": 500,
+  "n_PC": 5,
+  "OLS_minimum_complete_n": 9,
+  "Welch_minimum_group_n": 2,
+  "Welch_comparator_fallback": "Use heterozygote group if REF/REF has fewer than two complete observations",
+  "raw_phenotype_missing_rule": "native preparation: coerce nonnumeric and values<=-9 to NaN",
+  "native_genotype_encoding": {
+    "0": "missing",
+    "1": "REF/REF",
+    "2": "heterozygote",
+    "3": "ALT/ALT"
+  },
+  "reversed_allele_rule": "2-dosage",
+  "OLS_covariance": "residual variance * pinv(X.T@X)",
+  "OLS_degrees_of_freedom": "n-k",
+  "PC_policy": "original fixed cohort PCs; no subset refit",
+  "subset_BH_policy": "No BH output for a regression subset; full500 family required",
+  "traits": [
+    {
+      "tag": "Rice_PH",
+      "original_samples": 529,
+      "phenotype_column": "Plant_height",
+      "complete_phenotypes": 528
+    },
+    {
+      "tag": "Cotton_FS",
+      "original_samples": 1245,
+      "phenotype_column": "FibStr_17_18",
+      "complete_phenotypes": 1245
+    },
+    {
+      "tag": "Chickpea_HSW",
+      "original_samples": 2920,
+      "phenotype_column": "Hundred_seed_weight",
+      "complete_phenotypes": 2917
+    },
+    {
+      "tag": "Chickpea_PW",
+      "original_samples": 2920,
+      "phenotype_column": "Plant_width",
+      "complete_phenotypes": 2915
+    }
+  ],
+  "RFGB_original_samples": 2666,
+  "RFGB_primary_testable_candidates": 499,
+  "small_real_ranks": [
+    1,
+    2,
+    10,
+    50,
+    100,
+    200,
+    400,
+    500
+  ],
+  "all_upstream_cohort_PCA_provenance_verified": false
+}

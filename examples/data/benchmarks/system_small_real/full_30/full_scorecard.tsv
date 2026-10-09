@@ -1,0 +1,10 @@
+task_id	task_type	gene_match	lit_recall	ev_type_coverage	direction_ok	label_match	negative_ok
+B019	claim_verification	True	1.0	1.0	True	False	
+B025	claim_verification	True	1.0	1.0		True	
+B022	claim_verification	True	1.0	1.0		True	
+B016	claim_verification	True	1.0	1.0	True	False	
+B007	variant_evidence	True	1.0	1.0			
+B010	variant_evidence	True	1.0	1.0			
+B026	negative_control						True
+B030	negative_control						True
+B018	claim_verification	True	1.0	1.0	True	False	

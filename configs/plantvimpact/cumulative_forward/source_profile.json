@@ -1,0 +1,212 @@
+{
+  "source_file_sha256": "a2e00b2d83f3b41a505ed2d311309be7c9038a4a4069d78e25b3e974f752dc7d",
+  "source_byte_identical": true,
+  "num_boost_round": 3000,
+  "early_stopping_rounds": 100,
+  "saved_parameter_source": "Actual recorded training_config.json files",
+  "reported_cases": [
+    {
+      "name": "cotton_coding",
+      "folds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "ordered_feature_levels": [
+        [
+          "L1_lm",
+          [
+            "S_esm",
+            "S_dna"
+          ]
+        ],
+        [
+          "L2_lm_dna_cons",
+          [
+            "S_esm",
+            "S_dna"
+          ]
+        ],
+        [
+          "L3_lm_dna_cons_protcons",
+          [
+            "S_esm",
+            "S_dna",
+            "prot_safe_ref_aa_freq",
+            "prot_safe_alt_aa_freq",
+            "prot_safe_entropy",
+            "prot_safe_delta_log_odds",
+            "prot_safe_conservation_penalty",
+            "prot_safe_abs_delta_log_odds",
+            "prot_safe_alt_absent_flag"
+          ]
+        ],
+        [
+          "L4_lm_dna_cons_protcons_red",
+          [
+            "S_esm",
+            "S_dna",
+            "prot_safe_ref_aa_freq",
+            "prot_safe_alt_aa_freq",
+            "prot_safe_entropy",
+            "prot_safe_delta_log_odds",
+            "prot_safe_conservation_penalty",
+            "prot_safe_abs_delta_log_odds",
+            "prot_safe_alt_absent_flag",
+            "has_homolog",
+            "functional_redundancy"
+          ]
+        ],
+        [
+          "L5_full",
+          [
+            "S_esm",
+            "S_dna",
+            "prot_safe_ref_aa_freq",
+            "prot_safe_alt_aa_freq",
+            "prot_safe_entropy",
+            "prot_safe_delta_log_odds",
+            "prot_safe_conservation_penalty",
+            "prot_safe_abs_delta_log_odds",
+            "prot_safe_alt_absent_flag",
+            "has_homolog",
+            "functional_redundancy"
+          ]
+        ]
+      ],
+      "parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": [
+          "logloss",
+          "auc",
+          "aucpr"
+        ],
+        "tree_method": "hist",
+        "device": "cuda:0",
+        "max_depth": 4,
+        "eta": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 20.0,
+        "lambda": 1.0,
+        "alpha": 0.0,
+        "max_bin": 256,
+        "nthread": 8,
+        "seed": 2026
+      },
+      "source_config_sha256": "8d117bfb1b39ecb65c270d0c57e3708dedd7992903e750f047c524b7b507d4c3",
+      "recorded_run_config_sha256": "105638dca16c5edffe9a4e39e8555ef1f70f2e9b4dd96bc033fc7cf057046cca"
+    },
+    {
+      "name": "chickpea_coding",
+      "folds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "ordered_feature_levels": [
+        [
+          "L1_lm",
+          [
+            "S_esm",
+            "S_dna"
+          ]
+        ],
+        [
+          "L2_lm_dna_cons",
+          [
+            "S_esm",
+            "S_dna",
+            "dna_cons__phastCons",
+            "dna_cons__phyloP"
+          ]
+        ],
+        [
+          "L3_lm_dna_cons_protcons",
+          [
+            "S_esm",
+            "S_dna",
+            "dna_cons__phastCons",
+            "dna_cons__phyloP",
+            "prot_safe_ref_aa_freq",
+            "prot_safe_alt_aa_freq",
+            "prot_safe_entropy",
+            "prot_safe_delta_log_odds",
+            "prot_safe_conservation_penalty",
+            "prot_safe_abs_delta_log_odds",
+            "prot_safe_alt_absent_flag"
+          ]
+        ],
+        [
+          "L4_lm_dna_cons_protcons",
+          [
+            "S_esm",
+            "S_dna",
+            "dna_cons__phastCons",
+            "dna_cons__phyloP",
+            "prot_safe_ref_aa_freq",
+            "prot_safe_alt_aa_freq",
+            "prot_safe_entropy",
+            "prot_safe_delta_log_odds",
+            "prot_safe_conservation_penalty",
+            "prot_safe_abs_delta_log_odds",
+            "prot_safe_alt_absent_flag"
+          ]
+        ],
+        [
+          "L5_full",
+          [
+            "S_esm",
+            "S_dna",
+            "dna_cons__phastCons",
+            "dna_cons__phyloP",
+            "prot_safe_ref_aa_freq",
+            "prot_safe_alt_aa_freq",
+            "prot_safe_entropy",
+            "prot_safe_delta_log_odds",
+            "prot_safe_conservation_penalty",
+            "prot_safe_abs_delta_log_odds",
+            "prot_safe_alt_absent_flag"
+          ]
+        ]
+      ],
+      "parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": [
+          "logloss",
+          "auc",
+          "aucpr"
+        ],
+        "tree_method": "hist",
+        "device": "cuda:0",
+        "max_depth": 4,
+        "eta": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 20.0,
+        "lambda": 1.0,
+        "alpha": 0.0,
+        "max_bin": 64,
+        "nthread": 8,
+        "seed": 42
+      },
+      "source_config_sha256": "92f99fe839648fa32f5ff1b51c78c8082027379535a0209857f3c94a825047d7",
+      "recorded_run_config_sha256": "2f7518e94ada4535783906ef38dbd15c8dccdd42023367e8f850c87b9ddc3f9f"
+    }
+  ]
+}

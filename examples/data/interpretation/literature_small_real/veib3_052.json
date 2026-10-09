@@ -1,0 +1,52 @@
+{
+  "case_id": "veib3_052",
+  "candidate_context": {
+    "species": "rice",
+    "trait": "Grain_size",
+    "gene": "GL4",
+    "snp_id": "GL4_domestication_SNP_premature_stop",
+    "assembly": "paper-defined_or_reference_pending",
+    "region": "",
+    "consequence": "coding_SNP",
+    "variant_description": "A single-nucleotide mutation in GL4 produces a premature stop codon and causes smaller grain size and loss of seed shattering."
+  },
+  "gap_intents": [
+    {
+      "gap_id": "veib3_052_variant_support",
+      "candidate_id": "GL4_domestication_SNP_premature_stop",
+      "layer": "variant",
+      "missing_link": "variant_trait",
+      "priority": "important",
+      "query_intent": "A single-nucleotide mutation in GL4 produces a premature stop codon and causes smaller grain size and loss of seed shattering.",
+      "required_evidence_types": [
+        "natural_allele"
+      ],
+      "query_templates": []
+    }
+  ],
+  "article_candidates": [
+    {
+      "article_id": "PMID:28481332",
+      "pmid": "28481332",
+      "title": "A single-nucleotide polymorphism causes smaller grain size and loss of seed shattering during African rice domestication.",
+      "abstract_snippet": "Grain size is one of the most important components of grain yield and selecting large seeds has been a main target during plant domestication. Surprisingly,",
+      "source": "europepmc",
+      "text_status": "abstract_available",
+      "abstract_source": "archived_evidence_pack",
+      "abstract_char_count": 156
+    }
+  ],
+  "_fixture_note": {
+    "scope": "Resource configuration and example inputs.",
+    "excerpts": [
+      {
+        "pmid": "28481332",
+        "original_quote_sha256": "27f3fcb105f11994eeb914f98fa280d1926cf8bf5e8a6fe774c449f7268073f3",
+        "excerpt_words": 25,
+        "excerpt_start": 0,
+        "excerpt_end": 156
+      }
+    ],
+    "gap_command": "API command built from variant and claim metadata."
+  }
+}
